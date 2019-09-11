@@ -49,7 +49,7 @@ function createMap(){
 		L.control.layers(null, overlayMaps).addTo(spainMap);
 
 		// Loading in the geoPoints.json file with the points and data of paintings of alhambra
-		$.ajax("geoPoints.json", {
+		$.ajax("file:///data/geoPoints.json", {
 			dataType: "json",
 			success: function(response){
 				// Create custom marker style
@@ -61,11 +61,46 @@ function createMap(){
 		         	opacity: 1,
 		         	fillOpacity: 0.8
 				};
+
+				var geoJsonPoints = L.geoJSON(response.features, {
+					pointToLayer: function(feature, latlng){
+						console.log("Feature: " + feature + " LatLng: " + latlng);
+						return L.circleMarker(latlng, geojsonMarkerOptions);
+					},
+					onEachFeature: function(feature, layer) {
+						layer.on('click', function(e) {
+							popupContent(feature, layer);
+						});
+					}
+				});
+
+				var clusteredMarkers = L.markerClusterGroup({
+					spiderfyOnMaxZoom: false,
+					showCoverageOnHover: false,
+					disableCLusterAtZoom: boydMap.options.maxZoom
+				});
+
+				clusteredMarkers.addLayer(photoPoints);
+				clusteredMarkers.addTo(map);
+
+				function popupContent(feature, layer) {
+
+					var descriptionContent = 'Default Desc';
+
+				}
 			}
 		});
 
 		// Create a Leaflet GeoJSON Layer to store points in and add to map
-		//var geoPoints = L.geoJSON
+		// var geoPoints = L.geoJSON
+
+		/**
+		*	Take a look at how the GetData function works, what's in it or not
+		*	How popups interact with Bootstrap html sections
+		*	Work more on the json file, adding another point and some other text.
+		**/
+
+		// Create popups - bootstrap or leaflet?
 	};
 };
 
