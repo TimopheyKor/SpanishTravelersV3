@@ -1,12 +1,16 @@
 { "type": "FeatureCollection",
 	"features": [
 		{"type": "Feature",
-			"geometry": {"type": "Point", "coordinates": [37.18, -3.59]},
+			"geometry": {"type": "Point", "coordinates": [-3.592829, 37.178247]},
 			"properties": {"name": "The Darro"}
 		},
 		{"type": "Feature",
-			"geometry": {"type": "Point", "coordinates": [37.18, -3.60]},
-			"properties": {"name": "Puente del Carbon"}
+			"geometry": {"type": "Point", "coordinates": [-3.59846, 37.175173]},
+			"properties": {"name": "Old Bridge, Puente del Carbón"}
+		},
+		{"type": "Feature",
+			"geometry": {"type": "Point", "coordinates": [-3.59259, 37.18585]},
+			"properties": {"name": "Albaicín"}
 		}
 	]
 }
