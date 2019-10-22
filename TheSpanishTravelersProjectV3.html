@@ -24,12 +24,17 @@
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
 		<!-- Adding Leaflet -->
-		<link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
-    	integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
-    	crossorigin=""/>
-   		<script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"
-    	integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="
-    	crossorigin=""></script>
+		<link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css" integrity="sha512-07I2e+7D8p6he1SIM+1twR5TIrhUQn9+I6yjqD53JQjFiMf8EtC93ty0/5vJTZGF8aAocvHYNEDJajGdNx1IsQ==" crossorigin="">
+		<script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet-src.js" integrity="sha512-WXoSHqw/t26DszhdMhOXOkI7qCiv5QWXhH9R7CgvgZMHz1ImlkVQ3uNsiQKu5wwbbxtPzFXd1hK4tzno2VqhpA==" crossorigin=""></script>
+			<!-- Adding Leaflet-AJAX plugin-->
+		<script src="leaflet-ajax/dist/leaflet.ajax.min.js"></script>
+
+    	<!-- Leaflet markerClusterGroup plugin and CSS-->
+    	<link rel="stylesheet" href="Leaflet.markercluster-1.0.0-beta.2.0/dist/MarkerCluster.css">
+    	<script src="https://unpkg.com/leaflet.markercluster@1.4.1/dist/"></script>
+    	<link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.css">
+    	<link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.Default.css">
+		<script src="Leaflet.markercluster-1.0.0-beta.2.0/dist/leaflet.markercluster-src.js"></script>
 
 		<!-- Adding Esri -->
 		<meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
@@ -46,6 +51,8 @@
 	</head>
 
 	<body>
+
+		<!-- Research Bootstrap, categorize HTML parts into <meta>s -->
 
 		<!-- Creating a div for the map and a div for the title -->
 		<div id="map"></div>

@@ -7,12 +7,160 @@ The structure of this JS is learned from an example of a similar project, the Bo
 
 // Declare a general variable for the Leaflet map
 var spainMap;
+var esriBase;
 
 // Additional map variables
 var centerCoordinates = [37.18, -3.59];
 var initialZoom = 10;
 var maxZoom = 13;
 
+/* Steps:
+1.) Implement leaflet map
+2.) Add geoJSON points
+3.) Attempt to cluster
+4.) Attempt popups
+5.) Switch 3 and 4 if errors occur
+6.) Attempt to use ajax and data functions to preload data before the website is ready
+7.) Intersperse 6 between other steps if errors occur
+ALSO: WRITE A CODE TO SCAN THE EXCEL SPREADSHEET INTO A JSON FILE
+*/
+
+// Step 1
+spainMap = L.map('map').setView(centerCoordinates, maxZoom);
+esriBase = L.esri.basemapLayer('Imagery');
+esriBase.addTo(spainMap);
+
+// Importing other maps
+// Importing georeferenced tile layers and adding them to the map
+var spainTileLayer = L.esri.tiledMapLayer({
+	url: "https://tiles.arcgis.com/tiles/O7h3OCRVxKceyg19/arcgis/rest/services/Espagne1860/MapServer"
+	});
+	var alhambraTileLayer = L.esri.tiledMapLayer({
+	url: "https://tiles.arcgis.com/tiles/O7h3OCRVxKceyg19/arcgis/rest/services/AlhambraPlan/MapServer"
+	});
+	var granadaTileLayer = L.esri.tiledMapLayer({
+	url: "https://tiles.arcgis.com/tiles/O7h3OCRVxKceyg19/arcgis/rest/services/Granada_1894/MapServer"
+	});
+spainTileLayer.addTo(spainMap);
+granadaTileLayer.addTo(spainMap);
+alhambraTileLayer.addTo(spainMap);
+var overlayMaps = {
+	"Spain" : spainTileLayer,
+	"Granada" : granadaTileLayer,
+	"Alhambra" : alhambraTileLayer
+};
+// Adding a layer control box
+L.control.layers(null, overlayMaps).addTo(spainMap);
+
+// Step 2
+/*
+var pointStyle = {
+
+}
+var geoPoints = new L.GeoJSON.AJAX("https://raw.githubusercontent.com/TimopheyKor/SpanishTravelersV3/master/geoPoints.json");
+var geoJsonLayer = L.geoJSON().addTo(spainMap);
+geoJsonLayer.addData(geoPoints);
+*/
+
+// Using regular Ajax instead of plugin
+$.ajax("https://raw.githubusercontent.com/TimopheyKor/SpanishTravelersV3/master/geoPoints.json", {
+	dataType: "json",
+	success: function(response){
+		// Create custom marker style
+		var geojsonMarkerOptions = {
+			radius: 15,
+         	fillColor: "#00d458",
+        	color: "#000",
+        	weight: 2,
+         	opacity: 1,
+         	fillOpacity: 0.7
+		};
+
+		// Check on Marker Style Variables
+		console.log("GeojsonMarkerOptions radius: " + geojsonMarkerOptions.radius);
+
+		var geoJsonPoints = L.geoJSON(response.features, {
+			pointToLayer: function(feature, latlng){
+				// Check on inputs
+				console.log("Feature: " + feature + " LatLng: " + latlng);
+				return L.circleMarker(latlng, geojsonMarkerOptions);
+			},
+			onEachFeature: function(feature, layer) {
+				// Check on inputs
+				console.log("Feature: " + feature + " layer: " + layer);
+				layer.on('click', function(e) {
+					popupContent(feature, layer);
+				});
+			}
+		});
+
+		//geoJsonPoints.addTo(spainMap);
+		var markerCluster = L.markerClusterGroup();
+		markerCluster.addLayer(geoJsonPoints);
+		markerCluster.addTo(spainMap);
+
+		/*
+		var clusteredMarkers = L.markerClusterGroup({
+			spiderfyOnMaxZoom: false,
+			showCoverageOnHover: false,
+			disableCLusterAtZoom: spainMap.options.maxZoom
+		});
+
+		// Check on markerClusterGroup
+		console.log("L.markerClusterGroup spiderfyOnMaxZoom = " + clusteredMarkers.spiderfyOnMaxZoom);
+
+		clusteredMarkers.addLayer(geoJsonPoints);
+		clusteredMarkers.addTo(spainMap);
+		
+		*/
+		function popupContent(feature, layer) {
+
+			var name = feature.properties.name;
+			//var image = feature.properties.imageURL;
+			//var description = feature.properties.description;
+			//var source = feature.properties.source;
+			//console.log('clicked');
+			layer.bindPopup(name);
+
+		}
+		
+	}
+});
+
+
+// Try to use the geoJSON layer in-line.
+/*
+var artPoints = {
+ "type": "Feature",
+	"features": [
+		{"type": "Feature",
+			"geometry": {"type": "Point", "coordinates": [37.18, -3.59]},
+			"properties": {"name": "The Darro"}
+		},
+		{"type": "Feature",
+			"geometry": {"type": "Point", "coordinates": [37.18, -3.60]},
+			"properties": {"name": "Puente del Carbon"}
+		}
+	]
+}
+
+var geoJsonLayer = L.geoJSON().addTo(spainMap);
+geoJsonLayer.addData(artPoints);
+*/
+
+// Step 3
+
+// Step 4
+
+// Step 5
+
+// Step 6
+
+// Step 7
+
+
+// WORKING CODE DERIVED FROM BOYS MAP, NO ERRORS BUT POINTS DONT SHOW:
+/*
 // Create a function to instantiate the map with everything on it preloaded
 function createMap(){
 	spainMap = L.map('map').setView(centerCoordinates, initialZoom);
@@ -49,12 +197,12 @@ function createMap(){
 		L.control.layers(null, overlayMaps).addTo(spainMap);
 
 		// Loading in the geoPoints.json file with the points and data of paintings of alhambra
-		$.ajax("file:///data/geoPoints.json", {
+		$.ajax("https://raw.githubusercontent.com/TimopheyKor/SpanishTravelersV3/master/geoPoints.json", {
 			dataType: "json",
 			success: function(response){
 				// Create custom marker style
 				var geojsonMarkerOptions = {
-					radius: 10,
+					radius: 20,
 		         	fillColor: "#ff7800",
 		        	color: "#000",
 		        	weight: 1,
@@ -62,12 +210,18 @@ function createMap(){
 		         	fillOpacity: 0.8
 				};
 
+				// Check on Marker Style Variables
+				console.log("GeojsonMarkerOptions radius: " + geojsonMarkerOptions.radius);
+
 				var geoJsonPoints = L.geoJSON(response.features, {
 					pointToLayer: function(feature, latlng){
+						// Check on inputs
 						console.log("Feature: " + feature + " LatLng: " + latlng);
 						return L.circleMarker(latlng, geojsonMarkerOptions);
 					},
 					onEachFeature: function(feature, layer) {
+						// Check on inputs
+						console.log("Feature: " + feature + " layer: " + layer);
 						layer.on('click', function(e) {
 							popupContent(feature, layer);
 						});
@@ -77,11 +231,14 @@ function createMap(){
 				var clusteredMarkers = L.markerClusterGroup({
 					spiderfyOnMaxZoom: false,
 					showCoverageOnHover: false,
-					disableCLusterAtZoom: boydMap.options.maxZoom
+					disableCLusterAtZoom: spainMap.options.maxZoom
 				});
 
-				clusteredMarkers.addLayer(photoPoints);
-				clusteredMarkers.addTo(map);
+				// Check on markerClusterGroup
+				console.log("L.markerClusterGroup spiderfyOnMaxZoom = " + clusteredMakers.spiderfyOnMaxZoom);
+
+				clusteredMarkers.addLayer(geoJsonPoints);
+				clusteredMarkers.addTo(spainMap);
 
 				function popupContent(feature, layer) {
 
@@ -101,9 +258,11 @@ function createMap(){
 		**/
 
 		// Create popups - bootstrap or leaflet?
-	};
-};
+	//};
+//};
+
+
 
 
 // Call the function to instantiate the map once the page is ready
-$(document).ready(createMap);
+//$(document).ready(createMap);
