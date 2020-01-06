@@ -116,12 +116,20 @@ $.ajax("https://raw.githubusercontent.com/TimopheyKor/SpanishTravelersV3/master/
 		function popupContent(feature, layer) {
 
 			var name = feature.properties.name;
+			var customPopup = '<h2> ' + name + ' </h2>'
+  					+ '<table style="color:white;height:90%;width:300%;"><tr>'
+  					+ '<th> "Display_Author_Comments" <br> Source: Book_Picture_Information </th>'
+  					+ '</tr></table>';
+  			var customOptions =
+  				{
+  					'width': '100%',
+  					'className' : 'custom-popup-options'
+  				};
 			//var image = feature.properties.imageURL;
 			//var description = feature.properties.description;
 			//var source = feature.properties.source;
 			//console.log('clicked');
-			layer.bindPopup(name);
-
+			layer.bindPopup(customPopup, customOptions);
 		}
 		
 	}

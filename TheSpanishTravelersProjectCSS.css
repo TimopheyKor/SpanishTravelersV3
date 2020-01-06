@@ -28,3 +28,22 @@ html{
 	height:100%;
 	width: 100%;
 }
+.custom-popup-options .leaflet-popup-content-wrapper {
+  	background: rgba(0, 0, 0, 0.85);
+  	color:#fff;
+  	border-radius: 0px;
+}
+.custom-popup-options .leaflet-popup[style] {
+	position: fixed !important;
+	top: 0px !important;
+	transform: none !important;
+	bottom: none !important;
+	left: 0px !important;
+}
+.custom-popup-options .leaflet-popup-content {
+	width: 100vw !important;
+	height: 100vh;
+}
+.custom-popup-options .leaflet-popup-pane {
+	position: fixed !important;
+}

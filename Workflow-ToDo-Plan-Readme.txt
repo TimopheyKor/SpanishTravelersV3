@@ -2,6 +2,11 @@
 
 Next Steps (Current Point):
 1.) Figure out how to get proper popups from points, same as in the previous iteration of site
+	- Current goals:
+		+ Properly fullscreen popup (get rid of weird margins)
+		+ Re-align text so that it looks better fullscreen
+		+ Add picture links into json file, and other stuff, etc.
+		+ Code a slide-out of the title when a popup comes up, and a slide-in when it's exited
 2.) Import all the data points from the previous iteration of site
 3.) Test how site works with any .json file
 	- Spread out points
