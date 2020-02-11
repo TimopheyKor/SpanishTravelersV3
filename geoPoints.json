@@ -5,6 +5,11 @@
 			"properties": {"name": "The Darro"}
 		},
 		{"type": "Feature",
+			"geometry": {"type": "Point", "coordinates": [-3.589356, 37.179104]},
+			"properties": { "name": "Alameda",
+							"picture-url": "..."}
+		},
+		{"type": "Feature",
 			"geometry": {"type": "Point", "coordinates": [-3.59846, 37.175173]},
 			"properties": {"name": "Old Bridge, Puente del Carbón"}
 		},
