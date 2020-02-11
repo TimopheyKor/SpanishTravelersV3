@@ -12,7 +12,7 @@
 		{"type": "Feature",
 			"geometry": {"type": "Point", "coordinates": [-3.589356, 37.179104]},
 			"properties": { "name": "Alameda",
-							"pictureURL": "https://marq-my.sharepoint.com/personal/eugenia_afinoguenova_marquette_edu/Documents/GIS/MAM%20Prototype/Source%201%20line%208%20Clifford%20Alhambra%20from%20Alameda%20del%20Darro.jpg",
+							"pictureURL": "http://www.alhambra-patronato.es/ria/bitstream/handle/10514/9964/F-05771.jpg?sequence=1",
 							"bookInformation": "Thomas Roscoe. The Tourist in Spain: Granada. Robert Jennings and Company, 1835. Note p. 108.",
 							"authorComments": "Still keeping along the bed of the Darro, the tourist comes to the Alameda…",
 							"nameLit": "Alameda",
