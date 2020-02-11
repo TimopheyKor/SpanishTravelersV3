@@ -3,38 +3,38 @@
 		{"type": "Feature",
 			"geometry": {"type": "Point", "coordinates": [-3.592829, 37.178247]},
 			"properties": { "name": "The Darro",
-							"picture-url": "",
-							"book-information": "",
-							"author-comments": "",
-							"name-lit": "",
-							"name-local": ""}
+							"pictureURL": "",
+							"bookInformation": "",
+							"authorComments": "",
+							"nameLit": "",
+							"nameLocal": ""}
 		},
 		{"type": "Feature",
 			"geometry": {"type": "Point", "coordinates": [-3.589356, 37.179104]},
 			"properties": { "name": "Alameda",
-							"picture-url": "https://marq-my.sharepoint.com/personal/eugenia_afinoguenova_marquette_edu/Documents/GIS/MAM%20Prototype/Source%201%20line%208%20Clifford%20Alhambra%20from%20Alameda%20del%20Darro.jpg",
-							"book-information": "Thomas Roscoe. The Tourist in Spain: Granada. Robert Jennings and Company, 1835. Note p. 108.",
-							"author-comments": "Still keeping along the bed of the Darro, the tourist comes to the Alameda…",
-							"name-lit": "Alameda",
-							"name-local": "Paseo de los Tristes"}
+							"pictureURL": "https://marq-my.sharepoint.com/personal/eugenia_afinoguenova_marquette_edu/Documents/GIS/MAM%20Prototype/Source%201%20line%208%20Clifford%20Alhambra%20from%20Alameda%20del%20Darro.jpg",
+							"bookInformation": "Thomas Roscoe. The Tourist in Spain: Granada. Robert Jennings and Company, 1835. Note p. 108.",
+							"authorComments": "Still keeping along the bed of the Darro, the tourist comes to the Alameda…",
+							"nameLit": "Alameda",
+							"nameLocal": "Paseo de los Tristes"}
 		},
 		{"type": "Feature",
 			"geometry": {"type": "Point", "coordinates": [-3.59846, 37.175173]},
 			"properties": { "name": "Old Bridge, Puente del Carbón",
-							"picture-url": "",
-							"book-information": "",
-							"author-comments": "",
-							"name-lit": "",
-							"name-local": ""}
+							"pictureURL": "",
+							"bookInformation": "",
+							"authorComments": "",
+							"nameLit": "",
+							"nameLocal": ""}
 		},
 		{"type": "Feature",
 			"geometry": {"type": "Point", "coordinates": [-3.59259, 37.18585]},
 			"properties": { "name": "Albaicín",
-							"picture-url": "",
-							"book-information": "",
-							"author-comments": "",
-							"name-lit": "",
-							"name-local": ""}
+							"pictureURL": "",
+							"bookInformation": "",
+							"authorComments": "",
+							"nameLit": "",
+							"nameLocal": ""}
 		}
 	]
 }
