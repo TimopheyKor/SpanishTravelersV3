@@ -1,4 +1,4 @@
-<!--
+ <!--
 	This is the third iteration of The Spanish Travelers Project, previously dubbed The Artist Travels, for the Milwaukee Art Museum.
 	The main difference in this version is that it will use GeoJSON data instead of an ArcGIS layer to preload and cluster the points.
 	Additionally, the JS will be structured so that the data is preloaded before appearing on the website,
@@ -58,6 +58,17 @@
 		<div id="map"></div>
 		<div id="title">
 			<h1>The Spanish Travelers Project</h1>
+		</div>
+		<div id="my-popup">
+			<div id="my-popup-content">
+				<a class="close-button" href="javascript:void(0)" onclick="closePopup()">
+					 &times  <!-- "x" -->
+				</a>
+				<div id="my-popup-title"><!-- Custom HTML content written from JS goes here --></div>
+				<div id="my-popup-image"><!-- Custom HTML content written from JS goes here --></div>
+				<div id="my-popup-description"><!-- Custom HTML content written from JS goes here --></div>
+				<div id="my-popup-gallery"><!-- Custom HTML content written from JS goes here --></div>
+			</div>
 		</div>
 
 		<!-- Linking (LOCAL) JS for map creation -->

@@ -1,0 +1,81 @@
+/* Custom CSS for The Spanish Travelers Project Landing Page */
+body {
+    margin: 0px;
+    background: 
+        radial-gradient(circle, transparent 50%, black 105%),
+        url("Spain_Map_Snippet_1.jpg");
+    box-shadow: 100vw 100vh 0px 0px inset rgba(0, 0, 0, 0.7);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 64px;
+}
+.titleDiv {
+    position: fixed;
+    color: white;
+    left: 0;
+    top: 0;
+    right: 70vw;
+    bottom: 0;
+    width: 30vw;
+    padding: 0px 10px;
+    text-align: left;
+    margin-top: 0px;
+}
+
+.tabsDiv {
+    position: fixed;
+    color: white;
+    right: 0;
+    left: 40vw;
+    top: 0;
+    bottom: 70vh;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.menuBar:link, .menuBar:visited {
+    color: gray;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 35px;
+    padding: 10px 10px;
+}
+
+.menuBar:hover, .menuBar:active {
+    color: white;
+    font-size: 36px;
+}
+
+.contentDiv {
+    position: fixed;
+    color: white;
+    right: 0;
+    top: 30vh;
+    bottom: 0;
+    left: 40vw;
+    padding: 0px 0;
+    text-align: center;
+}
+
+.toMapButton:link, .toMapButton:visited {
+    background-color: rgba(0, 0, 0, 0);
+    color: white;
+    border: 5px solid white;
+    padding: 14px 25px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 50px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+  }
+  
+  .toMapButton:hover, .toMapButton:active {
+    background-color: white;
+    color: black;
+    border: 5px solid rgba(0, 0, 0, 0);
+  }

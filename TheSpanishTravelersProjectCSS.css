@@ -1,18 +1,18 @@
 /* Custom CSS for The Spanish Travelers Project V3 */
 #title h1{
-	position: fixed;
+	position: absolute;
 	left: 60px;
 	top: 10px;
 	z-index: 20;
 	font-family: "Lato", sans-serif;
 	font-weight: black;
 	font-style: italic;
-	font-color: white;
 	font-size: 55px;
 	color: white;
 	text-shadow:-5px 10px 15px black;
 	-webkit-text-stroke: 2px black;
 	padding: 0px;
+	transition: 0.5s;
 }
 #map {
 	height:100%;
@@ -28,22 +28,100 @@ html{
 	height:100%;
 	width: 100%;
 }
-.custom-popup-options .leaflet-popup-content-wrapper {
-  	background: rgba(0, 0, 0, 0.85);
-  	color:#fff;
-  	border-radius: 0px;
+
+#my-popup {
+	position: fixed;
+	height: 0;
+	width: 100%;
+	z-index: 1000;
+	left: 0;
+	top: 0;
+	background-color: rgba(0, 0, 0, 0.8);
+	overflow: hidden;
+	transition: 0.5s;
+
 }
-.custom-popup-options .leaflet-popup[style] {
-	position: fixed !important;
-	top: 0px !important;
-	transform: none !important;
-	bottom: none !important;
-	left: 0px !important;
+#my-popup-content {
+	position: absolute;
+	background-color: rgba(0, 0, 0, 0);
+	top: 20px;
+	left: 20px;
+	right: 20px;
+	bottom: 20px;
 }
-.custom-popup-options .leaflet-popup-content {
-	width: 100vw !important;
-	height: 100vh;
+#my-popup-title {
+	position: absolute;
+	background-color: rgba(0, 0, 0, 0);
+	color: white;
+	font-size: 50px;
+	text-align: center;
+	top: 20px;
+	left: 20px;
+	right: 50vw;
 }
-.custom-popup-options .leaflet-popup-pane {
-	position: fixed !important;
+#my-popup-image {
+	position: absolute;
+	background-color: rgba(0, 0, 0, 0);
+	top: 80px;
+	left: 20px;
+	right: 50vw;
+	bottom: 20px;
+}
+#specific-image {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: auto;
+	height: 100%;
+}
+#my-popup-description {
+	position: absolute;
+	padding: 50px 20px;
+	background-color:  rgba(0, 0, 0, 0);
+	color: white;
+	font-size: 20px;
+	text-align: center;
+	top: 20px;
+	left: 50vw;
+	right: 20px;
+	bottom: 30vh;
+}
+#my-popup-gallery {
+	position: absolute;
+	background-color: black;
+	top: 70vh;
+	bottom: 20px;
+	left: 50vw;
+	right: 20px;
+}
+
+.close-button {
+	position: absolute;
+	top: -15px;
+	right: 25px;
+	font-weight: black;
+	color: white;
+	opacity: 0.6;
+	font-size: 70px;
+	z-index: 1000;
+}
+.close-button:link {
+	color: white;
+	text-decoration: none;
+	opacity: 0.6;
+}
+.close-button:visited {
+	color: white;
+	text-decoration: none;
+	opacity: 0.8;
+}
+.close-button:hover {
+	color: white;
+	text-decoration: none;
+	opacity: 1;
+}
+.close-button:active {
+	color: white;
+	text-decoration: none;
+	opacity: 1;
 }

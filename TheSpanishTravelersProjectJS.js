@@ -89,7 +89,9 @@ $.ajax("https://raw.githubusercontent.com/TimopheyKor/SpanishTravelersV3/master/
 				// Check on inputs
 				console.log("Feature: " + feature + " layer: " + layer);
 				layer.on('click', function(e) {
-					popupContent(feature, layer);
+					//hideTitle();
+					openPopup(feature, layer);
+					//popupContent(feature, layer);
 				});
 			}
 		});
@@ -113,8 +115,9 @@ $.ajax("https://raw.githubusercontent.com/TimopheyKor/SpanishTravelersV3/master/
 		clusteredMarkers.addTo(spainMap);
 		
 		*/
-		function popupContent(feature, layer) {
 
+		function popupContent(feature, layer) {
+			
 			var name = feature.properties.name;
 			var customPopup = '<h2> ' + name + ' </h2>'
   					+ '<table style="color:white;height:90%;width:300%;"><tr>'
@@ -125,6 +128,7 @@ $.ajax("https://raw.githubusercontent.com/TimopheyKor/SpanishTravelersV3/master/
   					'width': '100%',
   					'className' : 'custom-popup-options'
   				};
+  			
 			//var image = feature.properties.imageURL;
 			//var description = feature.properties.description;
 			//var source = feature.properties.source;
@@ -134,6 +138,44 @@ $.ajax("https://raw.githubusercontent.com/TimopheyKor/SpanishTravelersV3/master/
 		
 	}
 });
+
+function openPopup(feature, layer) {
+	console.log("Opening Popup");
+	hideTitle();
+	getPopupContent(feature, layer);
+	document.getElementById("my-popup").style.height = "100%";
+}
+function closePopup() {
+	document.getElementById("my-popup").style.height = "0";
+	showTitle();
+}
+
+function hideTitle() {
+	console.log("Hiding Title");
+	document.getElementById("title").style.opacity = 0;
+};
+function showTitle() {
+	document.getElementById("title").style.opacity = 1;
+}
+
+function getPopupContent(feature, layer) {
+	console.log("Getting PopupContent Variables");
+	// First, get all the variables needed from the .json file.
+	var name = feature.properties.name;
+	var pictureURL = feature.properties.pictureURL;
+	var bookInformation = feature.properties.bookInformation;
+	var authorComments = feature.properties.authorComments;
+	var nameLit = feature.properties.nameLit;
+	var nameLocal = feature.properties.nameLocal;
+
+	console.log("Changing innerHTML of Popup");
+	// Then, assign them to their spots in the innerHTML accordingly.
+	document.getElementById("my-popup-title").innerHTML = '<h2>' + name + '</h2>';
+	document.getElementById("my-popup-image").innerHTML = '<img id = "specific-image" src = "' + pictureURL + '">';
+	document.getElementById("my-popup-description").innerHTML = '<p>"' + authorComments + '"</p>'
+															+ '<p> Local Name:<br />' + nameLocal + '</p>'
+															+ '<p> Book Information:<br />' + bookInformation + '<p>';
+}
 
 
 // Try to use the geoJSON layer in-line.
