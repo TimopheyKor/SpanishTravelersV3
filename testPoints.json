@@ -1,0 +1,213 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    "Latitude",
+                    "Longitude"
+                ]
+            },
+            "properties": {
+                "imgURL": "Links to images",
+                "name": "Name",
+                "tombstone": "Caption/Label",
+                "relations": "Relations/Links"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    37.181195,
+                    -3.592495
+                ]
+            },
+            "properties": {
+                "imgURL": "./JPEGS/Fortress-of-the-Alhambra_David-Roberts.jpg",
+                "name": "The Fortress of Alhambra",
+                "tombstone": "David Roberts (Scottish, 1796\u20131864)\nThe Fortress of the Alhambra, Granada, 1836\nOil on canvas\nHarvard Art Museums/Fogg Museum, Gift of Richard L. Feigen\n\n",
+                "relations": "1. Wilkie, Washington Irving in the Archives\n2. Wilkie, Christopher Columbus in the Convent"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    37.17712,
+                    -3.58926
+                ]
+            },
+            "properties": {
+                "imgURL": "No_image_available.svg",
+                "name": "The Slaughter of the Abencerrajes",
+                "tombstone": "Mariano Fortuny (Spanish, 1838-1874)\nThe Slaughter of the Abencerrajes, 1870\nOil on canvas\nMuseu Nacional d'Art de Catalunya",
+                "relations": "1. Laurent, Granada, Capitel de la Sala de Justivia, Alhambra\n2. Frith, Porch, Hall of Justice \n3. Boott, The Alhambra\n4. Camino, Granada, Patio de los Leones, Alhambra"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    39.855735,
+                    -4.021607
+                ]
+            },
+            "properties": {
+                "imgURL": "./JPEGS/Sunny-Spain_William-Chase.jpg",
+                "name": "Sunny Spain",
+                "tombstone": "William Merritt Chase (American, 1849-1916)\nSunny Spain, 1882\nOil on canvas\nCollection of Lois and Arthur Stainman, New York",
+                "relations": "1. Chase, Sunny Spain\n2. Blum, Toledo Water-Carrier"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    37.381224,
+                    -5.990587
+                ]
+            },
+            "properties": {
+                "imgURL": "No_image_available.svg",
+                "name": "Cigarette Girls",
+                "tombstone": "Walter Gay (American, 1856-1937)\nCigarette Girls, Seville, 1895\nOil on canvas\nColby College Museum of Art, Gift of Mr. and Mrs. Bronson Griscom",
+                "relations": "1. Gay, Cigar Makers (Musee d'Orsay--I can forward an image)\n2. Clifford, [Cathedral, Torre del Oro and Guadalquivir River, Seville]"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    37.175759,
+                    -3.597596
+                ]
+            },
+            "properties": {
+                "imgURL": "./JPEGS/Washing-Day_Samuel-Colman.jpg",
+                "name": "Washing Day",
+                "tombstone": "Samuel Colman (American, 1838-1920)\nWashing Day, ca. 1872\nOil on canvas, , tacked over panel\nPrivate Collection",
+                "relations": "1. Roberts, Remains of the Old Bridge Across the Darro, from Roscoe, The Tourist in Spain\n2. Lewis, Alhambra from the Alameda del Darro\n3. Dor\u00e9, Banks of the Darro, from Davillier, Spain: Social Life"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    38.842021,
+                    0.102558
+                ]
+            },
+            "properties": {
+                "imgURL": "./JPEGS/Church-Procession_Childe-Hassam.jpg",
+                "name": "Church Proecession, Spanish Steps",
+                "tombstone": "Childe Hassam (American, 1859-1935)\nChurch Procession, Spanish Steps, ca. 1883\nOil on canvas\nPrivate Collection",
+                "relations": "1. Hassam, Plaza de la Merced, Ronda\n2. Chase, Sunny Spain\n3. Sargent, Ilex Wood, Majorca"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    40.950169,
+                    -4.125331
+                ]
+            },
+            "properties": {
+                "imgURL": "./JPEGS/Segovia_Ernest-Lawson.jpg",
+                "name": "Segovia",
+                "tombstone": "Ernest Lawson (American, 1873-1939)\nSegovia, ca. 1916\nOil on canvas\nMinneapolis Institute of Arts, The John R. Van Derlip Fund",
+                "relations": ".JPEGS/Hill, View of Segovia, BMA, Dr. Linn.jpg\n.JPEGS/Laurent_Segovia_382.jpg"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    37.177615,
+                    -3.589585
+                ]
+            },
+            "properties": {
+                "imgURL": "No_image_available.svg",
+                "name": "Hall of the Ambassadors",
+                "tombstone": "Joaqu\u00edn Sorolla y Bastida (Spanish, 1863-1923)\nHall of the Ambassadors, Alhambra, Granada, 1909\nOil on canvas\nThe J. Paul Getty Museum, Los Angeles",
+                "relations": "1. Frith, The Ambassadors' Court. Granada\n2. Sorolla, Calle de Granada"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    39.860393,
+                    -4.02748
+                ]
+            },
+            "properties": {
+                "imgURL": "No_image_available.svg",
+                "name": "Spanish Courtyard",
+                "tombstone": "Robert Frederick Blum (American, 1857-1903)\nSpanish Courtyard, 1883\nOil on canvas\nCincinnati Art Museum, Gift of Joni Herschede and Museum Purchase with funds from the Fanny Bryce Lehmer Endowment",
+                "relations": "1. Sargent, Moorish Courtyard\n2. Blum, Toledo Water-Carrier\n3. Aranda, Figaro's Shop"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    37.177569,
+                    -3.589688
+                ]
+            },
+            "properties": {
+                "imgURL": "./JPEGS/The-Alhambra_Mary-Titcomb.jpg",
+                "name": "The Alhambra",
+                "tombstone": "Mary Bradish Titcomb (American, 1858-1927) \nThe Alhambra, ca. 1906 \nOil on canvas\nChrysler Museum of Art, Museum purchase with funds given in memory of Joan Foy French by her daughters Wendy and Christina\n",
+                "relations": "1. Weir, The Alhambra\n2. Sorolla, Hall of the Ambassadors"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    37.181108,
+                    -3.588498
+                ]
+            },
+            "properties": {
+                "imgURL": "No_image_available.svg",
+                "name": "Moorish Courtyard",
+                "tombstone": "John Singer Sargent (American, 1856-1925)\nMoorish Courtyard, 1913\nOil on canvas\nMyron Kunin Collection of American Art, Minneapolis, MN",
+                "relations": "1. Laurent, Patio de una casa morisca en el Albaycin\n2. Bum, Spanish Courtyard"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    37.181108,
+                    -3.588498
+                ]
+            },
+            "properties": {
+                "imgURL": "No_image_available.svg",
+                "name": "Interior of a Mosque at Cordova",
+                "tombstone": "Edwin Lord Weeks (American, 1838-1920)\nInterior of a Mosque at Cordova, ca. 1880\nOil on canvas\nWalters Art Museum, Baltimore",
+                "relations": "1. Lewis, The Mosque at Cordova\n2. Laurent, Vista interior de la Mezquita o Catedral \n3. Fortuny, Slaughter of the Abencerrajes\n4. Fortuny, Arab Fantasia"
+            }
+        }
+    ]
+}
