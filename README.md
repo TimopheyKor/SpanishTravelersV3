@@ -27,3 +27,17 @@ As of the latest version, many images are still local and not included in the Gi
   - Change of JS popup-populating functions to reflect change in JSON format
   - Changes to HTML / CSS to update the visual design
   - Code cleanup and refactoring
+  
+## Attributions
+
+*"No Image Available" .svg file:
+By en:User:Cburnett - Own work (Original text: Own work in Inkscape), Public Domain, https://commons.wikimedia.org/w/index.php?curid=1841287*
+
+## Credits
+
+- Design and development: Timophey Korolev
+- Concept and project director: Eugenia Afinoguénova
+- Mapping visualization consultants: Stephen Appel, Andrea Ballard, Belle Lipton, Max Rock
+- Collaboration with the Milwaukee Art Museum's Americans in Spain exhibition
+- Project initiated and developed at Marquette University together with MarVL (Marquette Visualization Lab) and the American Geographical Society Library
+
