@@ -6,10 +6,10 @@
 
   **For the Landing Page + WebApp:**
   - JavaScript
-      |-> jQuery library
-      |-> Leaflet library
-      |-> Leaflet MarkerCluster plugin
-      |-> Leaflet Esri library
+      + jQuery library
+      + Leaflet library
+      + Leaflet MarkerCluster plugin
+      + Leaflet Esri library
   - HTML
   - CSS
   - JSON
