@@ -8,8 +8,13 @@ The structure of this JS is learned from an example of a similar project, the Bo
 // Declare a general variable for the Leaflet map
 var spainMap;
 var esriBase;
+//console.log('I love christian');
 
 // Additional map variables
+// var centerCoordinates = [40.9429, -4.1088]; - segovia
+// [37.39075, -5.99845] - sevilla
+// [37.18, -3.59] - regular start
+// [39.85880, -4.02543] - Toledo
 var centerCoordinates = [37.18, -3.59];
 var initialZoom = 10;
 var maxZoom = 13;
@@ -34,20 +39,51 @@ esriBase.addTo(spainMap);
 // Importing georeferenced tile layers and adding them to the map
 var spainTileLayer = L.esri.tiledMapLayer({
 	url: "https://tiles.arcgis.com/tiles/O7h3OCRVxKceyg19/arcgis/rest/services/Espagne1860/MapServer"
-	});
-	var alhambraTileLayer = L.esri.tiledMapLayer({
+});
+var alhambraTileLayer = L.esri.tiledMapLayer({
 	url: "https://tiles.arcgis.com/tiles/O7h3OCRVxKceyg19/arcgis/rest/services/AlhambraPlan/MapServer"
-	});
-	var granadaTileLayer = L.esri.tiledMapLayer({
+});
+var granadaTileLayer = L.esri.tiledMapLayer({
 	url: "https://tiles.arcgis.com/tiles/O7h3OCRVxKceyg19/arcgis/rest/services/Granada_1894/MapServer"
+});
+// var toledoTileLayer = L.esri.tiledMapLayer({
+// 	url: "https://tiles.arcgis.com/tiles/O7h3OCRVxKceyg19/arcgis/rest/services/Toledo/MapServer"
+// });
+// var segoviaTileLayer = L.esri.tiledMapLayer({
+// 	url: "https://tiles.arcgis.com/tiles/O7h3OCRVxKceyg19/arcgis/rest/services/Segovia/MapServer"
+// });
+var sevillaTileLayer = L.tileLayer(
+	'https://api.maptiler.com/tiles/10c58a9f-085b-4471-9228-0bc017aaf169/{z}/{x}/{y}?key=VQGDLzTLM54Idfavr6jT',
+	{
+		attribution: 'None',
+		crossOrigin: true
+	});
+var toledoTileLayer = L.tileLayer(
+	'https://api.maptiler.com/tiles/1aea9aa7-4337-4e9e-99e1-3261897ee7a0/{z}/{x}/{y}?key=VQGDLzTLM54Idfavr6jT',
+	{
+		attribution: 'None',
+		crossOrigin: true
+	});
+var segoviaTileLayer = L.tileLayer(
+	'https://api.maptiler.com/tiles/b79483e6-57d0-45fc-b9e5-c31406e12d0c/{z}/{x}/{y}?key=VQGDLzTLM54Idfavr6jT',
+	{
+		attribution: 'None',
+		crossOrigin: true
 	});
 spainTileLayer.addTo(spainMap);
 granadaTileLayer.addTo(spainMap);
 alhambraTileLayer.addTo(spainMap);
+//toledoTileLayer.addTo(spainMap);
+segoviaTileLayer.addTo(spainMap);
+sevillaTileLayer.addTo(spainMap);
+toledoTileLayer.addTo(spainMap);
 var overlayMaps = {
 	"Spain" : spainTileLayer,
 	"Granada" : granadaTileLayer,
-	"Alhambra" : alhambraTileLayer
+	"Alhambra" : alhambraTileLayer,
+	"Toledo" : toledoTileLayer,
+	"Segovia" : segoviaTileLayer,
+	"Sevilla" : sevillaTileLayer
 };
 // Adding a layer control box
 L.control.layers(null, overlayMaps).addTo(spainMap);
@@ -63,7 +99,7 @@ geoJsonLayer.addData(geoPoints);
 */
 
 // Using regular Ajax instead of plugin
-$.ajax("https://raw.githubusercontent.com/TimopheyKor/SpanishTravelersV3/master/geoPoints.json", {
+$.ajax("https://raw.githubusercontent.com/TimopheyKor/SpanishTravelersV3/master/testPoints.json", {
 	dataType: "json",
 	success: function(response){
 		// Create custom marker style
@@ -89,9 +125,7 @@ $.ajax("https://raw.githubusercontent.com/TimopheyKor/SpanishTravelersV3/master/
 				// Check on inputs
 				console.log("Feature: " + feature + " layer: " + layer);
 				layer.on('click', function(e) {
-					//hideTitle();
-					openPopup(feature, layer);
-					//popupContent(feature, layer);
+					openPopup(feature, layer); // Custom helper function to create custom popup
 				});
 			}
 		});
@@ -116,25 +150,25 @@ $.ajax("https://raw.githubusercontent.com/TimopheyKor/SpanishTravelersV3/master/
 		
 		*/
 
-		function popupContent(feature, layer) {
+		// function popupContent(feature, layer) {
 			
-			var name = feature.properties.name;
-			var customPopup = '<h2> ' + name + ' </h2>'
-  					+ '<table style="color:white;height:90%;width:300%;"><tr>'
-  					+ '<th> "Display_Author_Comments" <br> Source: Book_Picture_Information </th>'
-  					+ '</tr></table>';
-  			var customOptions =
-  				{
-  					'width': '100%',
-  					'className' : 'custom-popup-options'
-  				};
+		// 	var name = feature.properties.name;
+		// 	var customPopup = '<h2> ' + name + ' </h2>'
+  		// 			+ '<table style="color:white;height:90%;width:300%;"><tr>'
+  		// 			+ '<th> "Display_Author_Comments" <br> Source: Book_Picture_Information </th>'
+  		// 			+ '</tr></table>';
+  		// 	var customOptions =
+  		// 		{
+  		// 			'width': '100%',
+  		// 			'className' : 'custom-popup-options'
+  		// 		};
   			
-			//var image = feature.properties.imageURL;
-			//var description = feature.properties.description;
-			//var source = feature.properties.source;
-			//console.log('clicked');
-			layer.bindPopup(customPopup, customOptions);
-		}
+		// 	//var image = feature.properties.imageURL;
+		// 	//var description = feature.properties.description;
+		// 	//var source = feature.properties.source;
+		// 	//console.log('clicked');
+		// 	layer.bindPopup(customPopup, customOptions);
+		// }
 		
 	}
 });
@@ -162,21 +196,105 @@ function getPopupContent(feature, layer) {
 	console.log("Getting PopupContent Variables");
 	// First, get all the variables needed from the .json file.
 	var name = feature.properties.name;
-	var pictureURL = feature.properties.pictureURL;
-	var bookInformation = feature.properties.bookInformation;
-	var authorComments = feature.properties.authorComments;
-	var nameLit = feature.properties.nameLit;
-	var nameLocal = feature.properties.nameLocal;
+	var pictureURL = feature.properties.imgURL;
+	var bookInformation = feature.properties.tombstone;
+	var relations = feature.properties.relations;
+	relations = relations.split("|");
+	//var authorComments = feature.properties.authorComments;
+	//var nameLit = feature.properties.nameLit;
+	//var nameLocal = feature.properties.nameLocal;
 
 	console.log("Changing innerHTML of Popup");
 	// Then, assign them to their spots in the innerHTML accordingly.
-	document.getElementById("my-popup-title").innerHTML = '<h2>' + name + '</h2>';
-	document.getElementById("my-popup-image").innerHTML = '<img id = "specific-image" src = "' + pictureURL + '">';
-	document.getElementById("my-popup-description").innerHTML = '<p>"' + authorComments + '"</p>'
-															+ '<p> Local Name:<br />' + nameLocal + '</p>'
-															+ '<p> Book Information:<br />' + bookInformation + '<p>';
+	document.getElementById("my-popup-title").innerHTML = '<h2 id="specific-image-title">' + name + '</h2>';
+	document.getElementById("my-popup-subtitle").innerHTML = '<h3 id="specific-image-subtitle">  </h2>';
+	document.getElementById("my-popup-image").innerHTML = '<img id = "specific-image" src = "' + pictureURL + '" alt="' + name + '">';
+	document.getElementById("my-popup-description").innerHTML = '<p> <br />' + bookInformation + '<br /> <p>';
+	document.getElementById('im1').alt = relations[0];
+	document.getElementById('im1').src = relations[1];
+	document.getElementById('im2').alt = relations[2];
+	document.getElementById('im2').src = relations[3];
+	//document.getElementById('im3').src = relations[2];
 }
 
+// Implementing the gallery, using a YouTube tutorial by Dev Ed with my own adjustments to fit the site, and adding image swapping functionality
+const gallerySlide = document.querySelector('.gallery-slide');
+const galleryImages = document.querySelectorAll('.gallery-slide img');
+
+const prevBtn = document.querySelector('#prevBtn');
+const nextBtn = document.querySelector('#nextBtn');
+
+// Counter for image tracking
+let counter = 0;
+let size = galleryImages[0].clientWidth;
+
+// Setting the position of the gallery
+gallerySlide.style.transform = 'translateX(' + (-size * counter ) + 'px)';
+darkenBtn(prevBtn);
+
+// Helper functions for slide button limits
+function darkenBtn(btn) {
+	btn.style.color = 'darkgray';
+	btn.style.opacity = '0.5'
+}
+function activateBtn(btn) {
+	btn.style.color = 'white';
+	btn.style.opacity = '0.8'
+}
+
+// Slide Button Listeners
+function slideNext() {
+	gallerySlide.style.transition = "transform 0.4s ease-in-out";
+	if(counter < (galleryImages.length-2)) {
+		counter++;
+		gallerySlide.style.transform = 'translateX(' + (-size * counter ) + 'px)';
+		activateBtn(prevBtn);
+	} else {
+		console.log('Last image reached: no next');
+	}
+	if(counter == (galleryImages.length-2)){
+		darkenBtn(nextBtn);
+	}
+}
+nextBtn.addEventListener('click', slideNext);
+
+function slidePrev(){
+	console.log("click registered");
+	gallerySlide.style.transition = "transform 0.4s ease-in-out";
+	if(counter > 0) {
+		counter--;
+		gallerySlide.style.transform = 'translateX(' + (-size * counter ) + 'px)';
+		activateBtn(nextBtn);
+	} else {
+		console.log('First image reached: no previous, counter: ' + counter)
+	}
+	if(counter == 0){
+		darkenBtn(prevBtn);
+	}
+}
+prevBtn.addEventListener('click', slidePrev);
+
+// Event listeners for selecting specific images from the gallery
+galleryImages.forEach(image => {
+	image.addEventListener('click', event => {
+		//var mainImage = document.getElementById("specific-image").src;
+		var selectedImage = document.getElementById("specific-image");
+		var selectedImageTitle = document.getElementById("specific-image-subtitle");
+		var prevSelected = selectedImage.src;
+		var prevSelectedTitle = selectedImageTitle.textContent;
+		console.log(prevSelected);
+		var newSelected = image.src;
+		var newSelectedTitle = image.alt;
+		console.log(newSelected);
+		selectedImage.src = newSelected;
+		selectedImageTitle.textContent = newSelectedTitle;
+		image.src = prevSelected;
+		image.alt = prevSelectedTitle;
+	});
+});
+
+// TODO: Implement gallery scalability, probably needs to be done with helper functions that are then used inside of the popup creation functions. 
+// Must first update JSON files, work on Python script
 
 // Try to use the geoJSON layer in-line.
 /*

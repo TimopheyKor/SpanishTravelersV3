@@ -49,6 +49,6 @@ for row in sheet.iter_rows(max_row=13, max_col=12, min_col=2):
     with open ("testPoints.json") as json_file:
         data = json.load(json_file)
         temp = data["features"]
-        y = {"type": "Feature", "geometry": {"type": "Point", "coordinates": [latitude, longitude]}, "properties": {"imgURL": imgLink, "name": imgName, "tombstone": tombstone, "relations": relations}}
+        y = {"type": "Feature", "geometry": {"type": "Point", "coordinates": [longitude, latitude]}, "properties": {"imgURL": imgLink, "name": imgName, "tombstone": tombstone, "relations": relations}}
         temp.append(y)
     write_json(data)

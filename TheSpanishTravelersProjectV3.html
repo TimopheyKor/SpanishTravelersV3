@@ -48,6 +48,9 @@
 		<!-- Adding Google Fonts -->
 		<link href="https://fonts.googleapis.com/css?family=Lato:400,900i&display=swap" rel="stylesheet">
 
+		<!-- Adding FontAwesome for Icons -->
+		<script src="https://kit.fontawesome.com/d1094010fc.js" crossorigin="anonymous"></script>
+
 	</head>
 
 	<body>
@@ -66,8 +69,24 @@
 				</a>
 				<div id="my-popup-title"><!-- Custom HTML content written from JS goes here --></div>
 				<div id="my-popup-image"><!-- Custom HTML content written from JS goes here --></div>
+				<div id="my-popup-subtitle"><!-- Custom HTML content written from JS goes here --></div>
 				<div id="my-popup-description"><!-- Custom HTML content written from JS goes here --></div>
-				<div id="my-popup-gallery"><!-- Custom HTML content written from JS goes here --></div>
+				<div id="my-popup-gallery">
+					<i class="fas fa-arrow-left" id="prevBtn"></i>
+					<div id="slide-container">
+						<div class="gallery-slide">
+							<!-- Related images will go in here -->
+							<img src="No_image_available.svg" class="gallery-image" id="im1" alt="image_title">
+							<img src="No_image_available.svg" class="gallery-image" id="im2" alt="image_title">
+							<img src="No_image_available.svg" class="gallery-image" id="im3" alt="image_title">
+							<img src="No_image_available.svg" class="gallery-image" id="im4" alt="image_title">
+							<img src="No_image_available.svg" class="gallery-image" id="im5" alt="image_title">
+							<img src="No_image_available.svg" class="gallery-image" id="im4" alt="image_title">
+							<img src="No_image_available.svg" class="gallery-image" id="im5" alt="image_title">
+						</div>
+					</div>
+					<i class="fas fa-arrow-right" id="nextBtn"></i>
+				</div>
 			</div>
 		</div>
 
