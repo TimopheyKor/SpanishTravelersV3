@@ -110,7 +110,13 @@
                 "imgURL": "https://mam.org/images/artist-travellers/Lawson,%20Segovia/Lawson,%20Segovia,%20Mia,%2039.54.jpg",
                 "name": "Segovia",
                 "tombstone": "Ernest Lawson (American, 1873-1939)\nSegovia, ca. 1916\nOil on canvas\nMinneapolis Institute of Arts, The John R. Van Derlip Fund",
-                "relations": "View of the Alcázar and the Cathedral of Toledo from Fuencisla|https://mam.org/images/artist-travellers/Lawson,%20Segovia/Laurent%20Segovia%20IPCE.jpg|Segovia, Spain|https://mam.org/images/artist-travellers/Lawson,%20Segovia/Henri,%20Segovia,%20Spain,%20Collection%20of%20Stephen%20and%20Miriam%20Seidel,%201.jpg"
+                "relation_1": "Jean Laurent |(French, 1816-1886) and his studio |View of the Alcázar and the Cathedral of Toledo from Fuencisla|, ca. 1870|Madrid, Instituto de Patrimonio Cultural de España| The similarities between Laurent's view and Lawson's landscape are as striking as their differences.  The photographer used  the point of view very similar to one inferred from the landscape. We can see, however, that Lawson changes the scale, making the cathedral belltower seem much higher. The Alcázar, still in ruins at the time of the photograph, was restored in the early 20th century.| https://mam.org/images/artist-travellers/Lawson,%20Segovia/Laurent%20Segovia%20IPCE.jpg",
+                "relation_2": "Robert Henri |(American, 1865-1929)\n Segovia, Spain |1906 Collection of Stephen and Miriam Seidel |  |  | Henri visited Segovia in___. This painting offers a simler view over the cathedral | https://mam.org/images/artist-travellers/Lawson,%20Segovia/Henri,%20Segovia,%20Spain,%20Collection%20of%20Stephen%20and%20Miriam%20Seidel,%201.jpg",
+                "relation_3": "Carrie Hill  |(American, 1875-1957)\n View of Segovia|, ca. 1925 Birmingham Museum of Art; Promised gift of Dr. Julius E. Linn, Jr.| The same view appears even more distorted than in Lawson's rendering, making the landscape resemple more El Greco's view of Toledo | https://mam.org/images/artist-travellers/Lawson,%20Segovia/Hill,%20View%20of%20Segovia,%20BMA,%20Dr.%20Linn.jpg",
+                "relation_4": "Jean Laurent |(French, 1816-1886) and his studio| View of the Aqueduct of Segovia|, ca. 1870| The Chrysler Museum of Arr| The aqueduct  is now considered Segovia's most prominent attraction. It is interesting, however, that it is nowhere to find on the views of Segovia featured here. In the 19th and early 20th centuries one would not travel to Spain hoping to find Roman monuments. |https://mam.org/images/artist-travellers/Lawson,%20Segovia/Laurent,%20Sergovia,%20Roman%20Aquaduct,%20Chrysler,%202019.27.2.jpg",
+                "relation_5": " | |Current view of Segovia from the Alcázar|https://mam.org/images/artist-travellers/Lawson,%20Segovia/Segovia%20from%20the%20Alcazar.jpg",
+                "relation_6": null,
+                "relation_7": null
             }
         },
         {
