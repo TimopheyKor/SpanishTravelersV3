@@ -107,14 +107,26 @@ html{
 #my-popup-description {
 	position: absolute;
 	padding: 50px 20px;
-	background-color:  rgba(0, 0, 0, 0);
+	background-color:  rgba(131, 23, 23, 0);
 	color: white;
 	font-size: 20px;
 	text-align: center;
-	top: 140px;
+	top: 40vh;
 	left: 50vw;
 	right: 20px;
 	bottom: 30vh;
+}
+#my-popup-tombstone {
+	position: absolute;
+	padding: 50px -25px;
+	background-color:  rgb(0, 0, 0, 0);
+	color: white;
+	font-size: 20px;
+	text-align: left;
+	top: 13vh;
+	left: 50vw;
+	right: 20px;
+	bottom: 60vh;
 }
 #my-popup-gallery {
 	position: absolute;

@@ -1,71 +1,74 @@
-/* For an overview of what this JS is for, see top comment of TheSpanishTravelersProjectV3.html
+/* The Spanish Travelers Project : Artist Travelers
+Artist Travelers is a collaboration between the Milwaukee Art Museum's Americans in Spain exhibition and Marquette University's Spanish Travelers project.
 Author: Timophey Korolev
-Email: timophey.korolev@marquette.edu
+Email: timophey.korolev@marquette.edu, timopheykor@gmail.com
 Libraries: jQuery, Bootstrap, Leaflet, Esri
-The structure of this JS is learned from an example of a similar project, the Boyd Map.
+The general structure of this JS is learned from an example of a similar project, the Boyd Map.
+The design is made in accordance with MAM guidelines.
 */
 
-// Declare a general variable for the Leaflet map
+// Declare general variables to store the Leaflet map and the esri basemap
 var spainMap;
 var esriBase;
-//console.log('I love christian');
 
-// Additional map variables
-// var centerCoordinates = [40.9429, -4.1088]; - segovia
-// [37.39075, -5.99845] - sevilla
-// [37.18, -3.59] - regular start
-// [39.85880, -4.02543] - Toledo
-var centerCoordinates = [37.18, -3.59];
-var initialZoom = 10;
-var maxZoom = 13;
-
-/* Steps:
-1.) Implement leaflet map
-2.) Add geoJSON points
-3.) Attempt to cluster
-4.) Attempt popups
-5.) Switch 3 and 4 if errors occur
-6.) Attempt to use ajax and data functions to preload data before the website is ready
-7.) Intersperse 6 between other steps if errors occur
-ALSO: WRITE A CODE TO SCAN THE EXCEL SPREADSHEET INTO A JSON FILE
+/* Additional map variables:
+== Lat/Long coordinates of relevant locations ==
+[40.9429, -4.1088]; - Segovia
+[37.39075, -5.99845] - Sevilla
+[37.18, -3.59] - Alhambra
+[39.85880, -4.02543] - Toledo
+[39.85880, -2.6] - At zoom level 7, centers the spain map on a 1920x1080 screen.
 */
 
-// Step 1
-spainMap = L.map('map').setView(centerCoordinates, maxZoom);
+// Set variables for the initial field of view and maximum zoom allowed on the map
+var centerCoordinates = [39.85880, -2.6];
+var initialZoom = 7;
+var maxZoom = 13;
+
+// Set the map variables to their proper values. spainMap appears in the "map" div of the HTML
+spainMap = L.map('map').setView(centerCoordinates, initialZoom);
 esriBase = L.esri.basemapLayer('Imagery');
 esriBase.addTo(spainMap);
 
-// Importing other maps
-// Importing georeferenced tile layers and adding them to the map
+// Importing georeferenced tile layers (historical maps) and adding them to the base map
 var spainTileLayer = L.esri.tiledMapLayer({
 	url: "https://tiles.arcgis.com/tiles/O7h3OCRVxKceyg19/arcgis/rest/services/Espagne1860/MapServer"
-});
-var alhambraTileLayer = L.esri.tiledMapLayer({
-	url: "https://tiles.arcgis.com/tiles/O7h3OCRVxKceyg19/arcgis/rest/services/AlhambraPlan/MapServer"
 });
 var granadaTileLayer = L.esri.tiledMapLayer({
 	url: "https://tiles.arcgis.com/tiles/O7h3OCRVxKceyg19/arcgis/rest/services/Granada_1894/MapServer"
 });
-// var toledoTileLayer = L.esri.tiledMapLayer({
-// 	url: "https://tiles.arcgis.com/tiles/O7h3OCRVxKceyg19/arcgis/rest/services/Toledo/MapServer"
-// });
-// var segoviaTileLayer = L.esri.tiledMapLayer({
-// 	url: "https://tiles.arcgis.com/tiles/O7h3OCRVxKceyg19/arcgis/rest/services/Segovia/MapServer"
-// });
+var alhambraTileLayer = L.tileLayer(
+	'https://api.maptiler.com/tiles/5e33a9ca-c3b1-4aea-90d9-1f061d12c31d/{z}/{x}/{y}.png?key=VQGDLzTLM54Idfavr6jT',
+	{
+		attribution: 'None',
+		crossOrigin: true
+	});
 var sevillaTileLayer = L.tileLayer(
-	'https://api.maptiler.com/tiles/10c58a9f-085b-4471-9228-0bc017aaf169/{z}/{x}/{y}?key=VQGDLzTLM54Idfavr6jT',
+	'https://api.maptiler.com/tiles/1dd002a8-5a13-4dc2-8a9d-b76fceb938de/{z}/{x}/{y}.png?key=VQGDLzTLM54Idfavr6jT',
 	{
 		attribution: 'None',
 		crossOrigin: true
 	});
 var toledoTileLayer = L.tileLayer(
-	'https://api.maptiler.com/tiles/1aea9aa7-4337-4e9e-99e1-3261897ee7a0/{z}/{x}/{y}?key=VQGDLzTLM54Idfavr6jT',
+	'https://api.maptiler.com/tiles/0519954d-8c4b-4ed5-a5f4-b85dc71fed62/{z}/{x}/{y}.png?key=VQGDLzTLM54Idfavr6jT',
 	{
 		attribution: 'None',
 		crossOrigin: true
 	});
 var segoviaTileLayer = L.tileLayer(
+	'https://api.maptiler.com/tiles/e0d913ca-7e11-4f94-8a6e-3b4916729e44/{z}/{x}/{y}.png?key=VQGDLzTLM54Idfavr6jT',
+	{
+		attribution: 'None',
+		crossOrigin: true
+	});
+var cordobaTileLayer = L.tileLayer(
 	'https://api.maptiler.com/tiles/b79483e6-57d0-45fc-b9e5-c31406e12d0c/{z}/{x}/{y}?key=VQGDLzTLM54Idfavr6jT',
+	{
+		attribution: 'None',
+		crossOrigin: true
+	});
+var alicanteTileLayer = L.tileLayer(
+	'https://api.maptiler.com/tiles/d392ad34-b58a-4e2c-a99d-e1c468712a8f/{z}/{x}/{y}.png?key=VQGDLzTLM54Idfavr6jT',
 	{
 		attribution: 'None',
 		crossOrigin: true
@@ -73,32 +76,24 @@ var segoviaTileLayer = L.tileLayer(
 spainTileLayer.addTo(spainMap);
 granadaTileLayer.addTo(spainMap);
 alhambraTileLayer.addTo(spainMap);
-//toledoTileLayer.addTo(spainMap);
 segoviaTileLayer.addTo(spainMap);
 sevillaTileLayer.addTo(spainMap);
 toledoTileLayer.addTo(spainMap);
+cordobaTileLayer.addTo(spainMap);
 var overlayMaps = {
 	"Spain" : spainTileLayer,
 	"Granada" : granadaTileLayer,
 	"Alhambra" : alhambraTileLayer,
 	"Toledo" : toledoTileLayer,
 	"Segovia" : segoviaTileLayer,
-	"Sevilla" : sevillaTileLayer
+	"Sevilla" : sevillaTileLayer,
+	"Cordoba" : cordobaTileLayer,
+	"Alicante" : alicanteTileLayer
 };
 // Adding a layer control box
 L.control.layers(null, overlayMaps).addTo(spainMap);
 
-// Step 2
-/*
-var pointStyle = {
-
-}
-var geoPoints = new L.GeoJSON.AJAX("https://raw.githubusercontent.com/TimopheyKor/SpanishTravelersV3/master/geoPoints.json");
-var geoJsonLayer = L.geoJSON().addTo(spainMap);
-geoJsonLayer.addData(geoPoints);
-*/
-
-// Using regular Ajax instead of plugin
+// Importing a .json file, which contains data on exhibition peicces to be displayed on the site, and using the markerCluster plugin to create interactive points on the map
 $.ajax("https://raw.githubusercontent.com/TimopheyKor/SpanishTravelersV3/master/testPoints.json", {
 	dataType: "json",
 	success: function(response){
@@ -130,49 +125,14 @@ $.ajax("https://raw.githubusercontent.com/TimopheyKor/SpanishTravelersV3/master/
 			}
 		});
 
-		//geoJsonPoints.addTo(spainMap);
 		var markerCluster = L.markerClusterGroup();
 		markerCluster.addLayer(geoJsonPoints);
 		markerCluster.addTo(spainMap);
-
-		/*
-		var clusteredMarkers = L.markerClusterGroup({
-			spiderfyOnMaxZoom: false,
-			showCoverageOnHover: false,
-			disableCLusterAtZoom: spainMap.options.maxZoom
-		});
-
-		// Check on markerClusterGroup
-		console.log("L.markerClusterGroup spiderfyOnMaxZoom = " + clusteredMarkers.spiderfyOnMaxZoom);
-
-		clusteredMarkers.addLayer(geoJsonPoints);
-		clusteredMarkers.addTo(spainMap);
-		
-		*/
-
-		// function popupContent(feature, layer) {
-			
-		// 	var name = feature.properties.name;
-		// 	var customPopup = '<h2> ' + name + ' </h2>'
-  		// 			+ '<table style="color:white;height:90%;width:300%;"><tr>'
-  		// 			+ '<th> "Display_Author_Comments" <br> Source: Book_Picture_Information </th>'
-  		// 			+ '</tr></table>';
-  		// 	var customOptions =
-  		// 		{
-  		// 			'width': '100%',
-  		// 			'className' : 'custom-popup-options'
-  		// 		};
-  			
-		// 	//var image = feature.properties.imageURL;
-		// 	//var description = feature.properties.description;
-		// 	//var source = feature.properties.source;
-		// 	//console.log('clicked');
-		// 	layer.bindPopup(customPopup, customOptions);
-		// }
 		
 	}
 });
 
+// Custom helper functions to create interactive popups when users click on points
 function openPopup(feature, layer) {
 	console.log("Opening Popup");
 	hideTitle();
@@ -184,6 +144,7 @@ function closePopup() {
 	showTitle();
 }
 
+// Hides title in background when transluscent popup shows
 function hideTitle() {
 	console.log("Hiding Title");
 	document.getElementById("title").style.opacity = 0;
@@ -192,29 +153,53 @@ function showTitle() {
 	document.getElementById("title").style.opacity = 1;
 }
 
+// Helper function to assign point-specific content to poups when they open, with data drawn from the .json file
 function getPopupContent(feature, layer) {
 	console.log("Getting PopupContent Variables");
-	// First, get all the variables needed from the .json file.
+	// First, get all the variables needed from the .json file
 	var name = feature.properties.name;
 	var pictureURL = feature.properties.imgURL;
-	var bookInformation = feature.properties.tombstone;
-	var relations = feature.properties.relations;
-	relations = relations.split("|");
-	//var authorComments = feature.properties.authorComments;
-	//var nameLit = feature.properties.nameLit;
-	//var nameLocal = feature.properties.nameLocal;
+	var tombstone = feature.properties.tombstone;
+	if (feature.properties.relation_1 != null) {
+		var relation_1 = feature.properties.relation_1;
+		relation_1 = relation_1.split("|");
+		console.log(relation_1);
+	} 
+	else {
+		var relation_1 = null
+	}
+	if (feature.properties.relation_2 != null) {var relation_2 = feature.properties.relation_2.split("|");} else {var relation_2 = null}
+	if (feature.properties.relation_3 != null) {var relation_3 = feature.properties.relation_3.split("|");} else {var relation_3 = null}
+	if (feature.properties.relation_4 != null) {var relation_4 = feature.properties.relation_4.split("|");} else {var relation_4 = null} 
+	if (feature.properties.relation_5 != null) {var relation_5 = feature.properties.relation_5.split("|");} else {var relation_5 = null}
+	if (feature.properties.relation_6 != null) {var relation_6 = feature.properties.relation_6.split("|");} else {var relation_6 = null}
+	if (feature.properties.relation_7 != null) {var relation_7 = feature.properties.relation_7.split("|");} else {var relation_7 = null}
+
 
 	console.log("Changing innerHTML of Popup");
-	// Then, assign them to their spots in the innerHTML accordingly.
+	// Then, assign them to their spots in the innerHTML accordingly
 	document.getElementById("my-popup-title").innerHTML = '<h2 id="specific-image-title">' + name + '</h2>';
 	document.getElementById("my-popup-subtitle").innerHTML = '<h3 id="specific-image-subtitle">  </h2>';
 	document.getElementById("my-popup-image").innerHTML = '<img id = "specific-image" src = "' + pictureURL + '" alt="' + name + '">';
-	document.getElementById("my-popup-description").innerHTML = '<p> <br />' + bookInformation + '<br /> <p>';
-	document.getElementById('im1').alt = relations[0];
-	document.getElementById('im1').src = relations[1];
-	document.getElementById('im2').alt = relations[2];
-	document.getElementById('im2').src = relations[3];
-	//document.getElementById('im3').src = relations[2];
+	document.getElementById("my-popup-tombstone").innerHTML = '<p>' + tombstone + '<br /> </p>';
+	document.getElementById('im1').alt = relation_1[2];
+	document.getElementById('im1').src = relation_1[6];
+	document.getElementById('im2').alt = relation_2[2];
+	document.getElementById('im2').src = relation_2[6];
+	document.getElementById('im3').alt = relation_3[2];
+	document.getElementById('im3').src = relation_3[6];
+	document.getElementById('im4').alt = relation_4[2];
+	document.getElementById('im4').src = relation_4[6];
+	document.getElementById('im5').alt = relation_5[2];
+	document.getElementById('im5').src = relation_5[6];
+	if (relation_6 != null) {
+		document.getElementById('im6').alt = relation_6[2];
+		document.getElementById('im6').src = relation_6[6];
+	}
+	if (relation_7 != null) {
+		document.getElementById('im7').alt = relation_7[2];
+		document.getElementById('im7').src = relation_7[6];
+	}
 }
 
 // Implementing the gallery, using a YouTube tutorial by Dev Ed with my own adjustments to fit the site, and adding image swapping functionality
@@ -280,6 +265,7 @@ galleryImages.forEach(image => {
 		//var mainImage = document.getElementById("specific-image").src;
 		var selectedImage = document.getElementById("specific-image");
 		var selectedImageTitle = document.getElementById("specific-image-subtitle");
+		document.getElementById("my-popup-tombstone").innerHTML = '<p>  <br /> </p>';
 		var prevSelected = selectedImage.src;
 		var prevSelectedTitle = selectedImageTitle.textContent;
 		console.log(prevSelected);
@@ -295,142 +281,5 @@ galleryImages.forEach(image => {
 
 // TODO: Implement gallery scalability, probably needs to be done with helper functions that are then used inside of the popup creation functions. 
 // Must first update JSON files, work on Python script
-
-// Try to use the geoJSON layer in-line.
-/*
-var artPoints = {
- "type": "Feature",
-	"features": [
-		{"type": "Feature",
-			"geometry": {"type": "Point", "coordinates": [37.18, -3.59]},
-			"properties": {"name": "The Darro"}
-		},
-		{"type": "Feature",
-			"geometry": {"type": "Point", "coordinates": [37.18, -3.60]},
-			"properties": {"name": "Puente del Carbon"}
-		}
-	]
-}
-
-var geoJsonLayer = L.geoJSON().addTo(spainMap);
-geoJsonLayer.addData(artPoints);
-*/
-
-// Step 3
-
-// Step 4
-
-// Step 5
-
-// Step 6
-
-// Step 7
-
-
-// WORKING CODE DERIVED FROM BOYS MAP, NO ERRORS BUT POINTS DONT SHOW:
-/*
-// Create a function to instantiate the map with everything on it preloaded
-function createMap(){
-	spainMap = L.map('map').setView(centerCoordinates, initialZoom);
-
-	// Call the below function to retrieve map, overlay, and point data
-	getData(spainMap);
-
-	// Put all of the map & point data into one function
-	function getData(map){
-		// Creating a basemap
-		var esriBase = L.esri.basemapLayer('Imagery');
-		esriBase.addTo(spainMap);
-
-		// Importing georeferenced tile layers and adding them to the map
-		var spainTileLayer = L.esri.tiledMapLayer({
-			url: "https://tiles.arcgis.com/tiles/O7h3OCRVxKceyg19/arcgis/rest/services/Espagne1860/MapServer"
-			});
-			var alhambraTileLayer = L.esri.tiledMapLayer({
-			url: "https://tiles.arcgis.com/tiles/O7h3OCRVxKceyg19/arcgis/rest/services/AlhambraPlan/MapServer"
-			});
-			var granadaTileLayer = L.esri.tiledMapLayer({
-			url: "https://tiles.arcgis.com/tiles/O7h3OCRVxKceyg19/arcgis/rest/services/Granada_1894/MapServer"
-			});
-		spainTileLayer.addTo(spainMap);
-		granadaTileLayer.addTo(spainMap);
-		alhambraTileLayer.addTo(spainMap);
-		var overlayMaps = {
-			"Spain" : spainTileLayer,
-			"Granada" : granadaTileLayer,
-			"Alhambra" : alhambraTileLayer
-		};
-
-		// Adding a layer control box
-		L.control.layers(null, overlayMaps).addTo(spainMap);
-
-		// Loading in the geoPoints.json file with the points and data of paintings of alhambra
-		$.ajax("https://raw.githubusercontent.com/TimopheyKor/SpanishTravelersV3/master/geoPoints.json", {
-			dataType: "json",
-			success: function(response){
-				// Create custom marker style
-				var geojsonMarkerOptions = {
-					radius: 20,
-		         	fillColor: "#ff7800",
-		        	color: "#000",
-		        	weight: 1,
-		         	opacity: 1,
-		         	fillOpacity: 0.8
-				};
-
-				// Check on Marker Style Variables
-				console.log("GeojsonMarkerOptions radius: " + geojsonMarkerOptions.radius);
-
-				var geoJsonPoints = L.geoJSON(response.features, {
-					pointToLayer: function(feature, latlng){
-						// Check on inputs
-						console.log("Feature: " + feature + " LatLng: " + latlng);
-						return L.circleMarker(latlng, geojsonMarkerOptions);
-					},
-					onEachFeature: function(feature, layer) {
-						// Check on inputs
-						console.log("Feature: " + feature + " layer: " + layer);
-						layer.on('click', function(e) {
-							popupContent(feature, layer);
-						});
-					}
-				});
-
-				var clusteredMarkers = L.markerClusterGroup({
-					spiderfyOnMaxZoom: false,
-					showCoverageOnHover: false,
-					disableCLusterAtZoom: spainMap.options.maxZoom
-				});
-
-				// Check on markerClusterGroup
-				console.log("L.markerClusterGroup spiderfyOnMaxZoom = " + clusteredMakers.spiderfyOnMaxZoom);
-
-				clusteredMarkers.addLayer(geoJsonPoints);
-				clusteredMarkers.addTo(spainMap);
-
-				function popupContent(feature, layer) {
-
-					var descriptionContent = 'Default Desc';
-
-				}
-			}
-		});
-
-		// Create a Leaflet GeoJSON Layer to store points in and add to map
-		// var geoPoints = L.geoJSON
-
-		/**
-		*	Take a look at how the GetData function works, what's in it or not
-		*	How popups interact with Bootstrap html sections
-		*	Work more on the json file, adding another point and some other text.
-		**/
-
-		// Create popups - bootstrap or leaflet?
-	//};
-//};
-
-
-
-
-// Call the function to instantiate the map once the page is ready
-//$(document).ready(createMap);
+// TODO: Write helper functions and iterative code for gallery images and data reading. The gallery functions need to be able to interact with the data, so it 
+// might be a good idea to create getter/setter functions with return statements to allow json data to be accessed outside of functions which take it in as a parameter.
