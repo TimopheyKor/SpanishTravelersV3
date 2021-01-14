@@ -5,50 +5,89 @@ import openpyxl
 import json
 from pathlib import Path
 
-# Creating a function definition to write to the json file
-def write_json(data, filename="testPoints.json"):
-    with open (filename, "w") as f:
-        json.dump(data, f, indent=4)
+I_TOMBSTONE = 0
+I_DESCRIPTION = 1
+I_IMAGE_URL = 2
+MINIMUM_RELATIONS = 3
+CELLNAME_ID_POS = slice(17, 19)
 
 # Setting the file path to the .xlsx checklist file...
-checklistFile = Path('checklist_file2.xlsx')
-#print(checklistFile)
+checklistFile = Path("Map_Points_Spreadsheet.xlsx")
 
 # Creating a workbook object to read the file...
 wb_obj = openpyxl.load_workbook(checklistFile)
-#print(wb_obj)
 sheet = wb_obj.active
-#print(sheet)
+
+# Creating the beginning of the json file
+data = {}                          # Container Dictionary
+data["type"] = "FeatureCollection" # JSON Type
+data["features"] = []              # Empty Feature List
+
+#TODO Create helper function to process the information in a sincle cell of the .xlsx file, converting it to usable variables.
+# def processCell(cellID):
+
+# Helper function to take in one row of data from the .xlsx file and output a JSON feature.
+def appendData(longitude, latitude, imageArray):
+    return {
+        "type": "feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                longitude,
+                latitude
+            ]
+        },
+        "properties": {
+            "images": imageArray
+        }
+    }
 
 # Iterating through the sheet to get URL / image location values
-for row in sheet.iter_rows(max_row=13, max_col=12, min_col=2):
+for row in sheet.iter_rows(max_row=13, max_col=15, min_row=2, min_col=2):
+    # Temporary variables to hold and create image objects.
+    tempImageArray = []
+    tempImageObject = {}
     for cell in row:
+        # Type casting the cell name to a string.
+        # Narrow the string down to the characters used to identify the cell.
         cellName = str(cell)
-        if ".B" in cellName: # Column B contains image links / locations
+        cellName = cellName[CELLNAME_ID_POS]
+        # Column B contains the URL of the main image
+        if ".B" in cellName:
             imgLink = str(cell.value)
             if imgLink == "None":
                 imgLink = "No_image_available.svg"
-            print(cellName + " : Link : " + imgLink, end="\n")
-        if ".D" in cellName: # Column D contains the captions / labels for the images (tombstone)
+            tempImageObject["imgURL"] = imgLink
+        # Column C contains the tombstone for the main image
+        if ".C" in cellName:
             tombstone = str(cell.value)
-            print(cellName + " : Tombstone : " + tombstone, end="\n")
-        if ".G" in cellName: # Column G contains the latitude of the feature
-            latitude = cell.value # Should be kept as a double
-            print(cellName + " : Latitude : " + str(latitude))
-        if ".H" in cellName: # Column H contains the longitude of the feature
-            longitude = cell.value # Should be kept as a double
-            print(cellName + " : Latitude : " + str(longitude))
-        if ".L" in cellName: # Column L contains the name of the feature
-            imgName = str(cell.value)
-            print(cellName + " : Name : " + imgName)
-        if ".J" in cellName: # Column J contains the relations to the feature
-            relations = str(cell.value)
-            print(cellName + " : Relations : " + relations)
-    print("Opening JSON file... \n")
-    # Reading through the current JSON file
-    with open ("testPoints.json") as json_file:
-        data = json.load(json_file)
-        temp = data["features"]
-        y = {"type": "Feature", "geometry": {"type": "Point", "coordinates": [longitude, latitude]}, "properties": {"imgURL": imgLink, "name": imgName, "tombstone": tombstone, "relations": relations}}
-        temp.append(y)
-    write_json(data)
+            tempImageObject["tombstone"] = tombstone
+            tempImageArray.append(tempImageObject)
+            tempImageObject = {} # Clear temp object after creating main image
+        # Column F contains the latitude of the feature
+        if ".F" in cellName:
+            latitude = cell.value
+        # Column G contains the longitude of the feature
+        if ".G" in cellName:
+            longitude = cell.value
+        # Columns containing related images
+        if cellName in ".I.J.K.L.M.N.O":
+            relation = str(cell.value)
+            # Split the relation image data by the separating |'s used in the .xlsx file
+            relationArray = relation.split("|") 
+            # To prevent OOB errors:
+            # This is to ensure that at least the three required fields are in the array.
+            if len(relationArray) >= MINIMUM_RELATIONS:
+                tempImageObject["imgURL"]      = relationArray[I_IMAGE_URL]
+                tempImageObject["tombstone"]   = relationArray[I_TOMBSTONE]
+                tempImageObject["description"] = relationArray[I_DESCRIPTION]
+                tempImageArray.append(tempImageObject)
+            tempImageObject = {} # Clear temp object after creating related image
+    
+    # Appending the data found in this row to the data dict...
+    obj = appendData(longitude, latitude, tempImageArray)
+    data["features"].append(obj)
+
+# Writing the collected data to a json file
+with open("Map_Points_Data.json", "w+") as outfile:
+    json.dump(data, outfile, indent=4)

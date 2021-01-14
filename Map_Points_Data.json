@@ -1,0 +1,321 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -3.592495,
+                    37.181195
+                ]
+            },
+            "properties": {
+                "images": [
+                    {
+                        "imgURL": "https://mam.org/images/artist-travellers/Roberts,%20The%20Alhambra/Roberts,%20Fortress%20of%20the%20Alhambra,%20Harvard,%201967.72.jpg",
+                        "tombstone": "David Roberts |(Scottish, 1796\u20131864)\nThe Fortress of the Alhambra, Granada|, 1836\nOil on canvas\nHarvard Art Museums/Fogg Museum, Gift of Richard L. Feigen\n\n"
+                    },
+                    {
+                        "imgURL": " https://mam.org/images/artist-travellers/Roberts,%20The%20Alhambra/The%20Alhambra%20and%20Generalife.jpg",
+                        "tombstone": "The Alhambra and Generalife\nPresent view",
+                        "description": "Roberts's improbably high point of view from the roof of an imaginary building close to the Mirador de San Nicol\u00e1s in Granada allows him to fit more into the view than a human eye can capture"
+                    },
+                    {
+                        "imgURL": "https://mam.org/images/artist-travellers/Darley,%20Frontispiece,%20The%20Alhambra/",
+                        "tombstone": "Darley, Felix Octavius Carr\n(American, 1822\u20131888)\nFrontispiece. From Washington Irving, The Alhambra, rev. ed.\nNew York: G.\u2009P. Putnam, 1851\nChrysler Museum of Art, Jean Outland Chrysler Library",
+                        "description": "One of the iconic views of the Tower of Comares from below, publicized thanks to the numerous etchings and reproductions in travel books"
+                    },
+                    {
+                        "imgURL": " https://mam.org/images/artist-travellers/Roberts,%20The%20Alhambra/Titcomb,%20The%20Alhambra,%20Chrysler,%202018.25.1.jpg",
+                        "tombstone": "Mary Bradish Titcomb\n(American, 1858-1927)\nThe Alhambra, ca. 1906\nChrysler Museum of Art, Museum\nPurchase with funds given in memory of Joan Foy French by her daughters Wendy and Christina ",
+                        "description": "The Tower of Comares, also prominent on Roberts's panorama, was among the most popular sites of the Alhambra. Artists had a convenient poin of view from the Darro River to capture the sight"
+                    },
+                    {
+                        "imgURL": "https://mam.org/images/artist-travellers/Roberts,%20The%20Alhambra/View%20toward%20the%20Alhambra,%20Torre%20de%20la%20Comares,%202.jpg",
+                        "tombstone": "The Tower of Comares, current view",
+                        "description": " One can see that, in order to capture the Alhambra closely, the artists were challenged by the lack of a view point that would not make the grand fortress look less grand on the steep hill."
+                    }
+                ]
+            }
+        },
+        {
+            "type": "feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -3.58926,
+                    37.17712
+                ]
+            },
+            "properties": {
+                "images": [
+                    {
+                        "imgURL": "No_image_available.svg",
+                        "tombstone": "Mariano Fortuny |(Spanish, 1838-1874)\nThe Slaughter of the Abencerrajes|, 1870\nOil on canvas\nMuseu Nacional d'Art de Catalunya"
+                    },
+                    {
+                        "imgURL": "https://tickets.alhambra-patronato.es/wp-content/uploads/2017/09/4.DobladeOro.EPIGRAFIA-ABENCERRAJES-17.jpg",
+                        "tombstone": "The Hall of Abencerrajes, current view",
+                        "description": "The Hall of Abencerrajes--a large room off the Patio de los Leones-- received this name after the legend of the slaughter of thirty members of a powerful family of the Abencerrajes by the father of Boabdil, the last ruler of the Kingdon of Granada. Several versions of this legend circulated in the chronicles and the oral poetry among the christian and the morisco (baptized muslim) communities, but the origins of the legen are confusing. An important mythological element of these stories is the alabaster fountain, shose waters were tainted by the blood of the victims."
+                    },
+                    {
+                        "imgURL": "link",
+                        "tombstone": "Rodriguez, Rafael Garz\u00f3n\n(Spanish, 1863-1923)\nGranada, Sala del Tribunal de Justicia. (Alhambra). Granada Interior de la Sala de los Abencerrajes. (Alhambra) 1870-1900\nUniversity of California, Berkeley Art Museum and Pacific Film Archive\nWilliam K. Ehrenfeld M.D. Collection",
+                        "description": " The photograph on the right captures a view of the Hall of the Abencerrajes--the location of Fortuny's painting--in Fortuny's times. You can see how Fortuny transforms the location into a decoration for an operatic scene, blurring the architectural details while also making them recognizable for those familiar with the space."
+                    },
+                    {
+                        "imgURL": "http://ceres.mcu.es/pages/Viewer?accion=41&Museo=&AMuseo=MCTGR&Ninv=CE00936&txt_id_imagen=1&txt_rotar=0&txt_contraste=0&txt_zoom=10&cabecera=N&viewName=visorZoom\n\n",
+                        "tombstone": "Muros\u00a0\u00dabeda,\u00a0Francisco\n(Spanish, 1836-1917)\nSala de los Abencerrajes\n1850-1917\nMuseo Casa de los Tiros, Granada",
+                        "description": "Mariano Fortuny, who lived in Granada at the time when he painted The Slaughter of the Abencerrajes hailed from a Catalan family and was connected through marriage to the family of the Madrazo, famous artists with cosmopolitan connections established in Madrid. (Federico de Madrazo, Fortuny's father-in-law, was a famous artist and director of The Prado museum.) Here is, in contrast, a painting from the same time by an artist rooted in Granada. Muros \u00dabeda's attention to historical detail and the costumes contrasts with Fortuny's approach to the scene, focused on the brightness of color."
+                    },
+                    {
+                        "imgURL": "http://www.mcu.es/fototeca_patrimonio/ImageServlet?accion=41&cabecera=N&txt_id_imagen=1&txt_rotar=0&txt_contraste=0&txt_zoom=10&appOrigen=",
+                        "tombstone": "Laurent, Jean\n(French, 1816-1886)\nGRANADA (Alhambra)- Sala de los Abencerrajes, interior view\n1860-1886\nMadrid, Instituto de Patrimonio Cultural de Espa\u00f1a",
+                        "description": "19th-centuryartists often used Laurent's photographs for inspiration or verification of details."
+                    },
+                    {
+                        "imgURL": "http://www.mcu.es/fototeca_patrimonio/ImageServlet?accion=41&cabecera=N&txt_id_imagen=1&txt_rotar=0&txt_contraste=0&txt_zoom=10&appOrigen=",
+                        "tombstone": "Laurent, Jean\n(French, 1816-1886)\nGRANADA (Alhambra)- Sala de los Abencerrajes, interior view\n1860-1886\nMadrid, Instituto de Patrimonio Cultural de Espa\u00f1a",
+                        "description": "Complementing the previpus one, this photograph adds another angle to the view. Fortuny's composition combines both views by establishing an artificially constructed point of view, which in reality was impossible because the small size of the Hall would make the viewer hit the wall."
+                    },
+                    {
+                        "imgURL": "get the image online",
+                        "tombstone": "Camino\n(Spanish, died 1888)\nGranada, Patio de los Leones, Alhambra\nca. 1880\nChrysler Museum of Art",
+                        "description": " The location of Fortuny's scene, the Hall of the Abencerrajes, is right off the Patio de los Leones. Photographs often capture the Patio from that Hall."
+                    }
+                ]
+            }
+        },
+        {
+            "type": "feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -4.021607,
+                    39.855735
+                ]
+            },
+            "properties": {
+                "images": [
+                    {
+                        "imgURL": "https://mam.org/images/artist-travellers/Chase,%20Outskirts%20of%20Madrid/Chase,%20Sunny%20Spain,%201882,%20Private%20Collection.jpg",
+                        "tombstone": "William Merritt Chase |(American, 1849-1916)\nSunny Spain|, 1882\nOil on canvas\nCollection of Lois and Arthur Stainman, New York"
+                    },
+                    {
+                        "imgURL": "https://mam.org/images/artist-travellers/Chase,%20Outskirts%20of%20Madrid/Chase,%20Outskirts%20of%20Madrid,%20Yale,%201939.265.jpg",
+                        "tombstone": "William Merritt Chase\n(American, 1849-1916)\nOutskirts of Madrid, 1882\nYale University Art Gallery, Gift of Duncan Phillips",
+                        "description": "Though it was finished almost forty years after the view of Toledo, this painting features a similar composition, with a wall on the right and the figures coded as typical and lower class. There is less insistence on the iconic \"Spanishness\" in this painting, however. Instead, we see a smoking pipe in the background--a sinister icon of modernization and its problems"
+                    },
+                    {
+                        "imgURL": "https://mam.org/images/artist-travellers/Chase,%20Outskirts%20of%20Madrid/Blum,%20Toledo%20Water-Carrier,%20Fred%20Baker%20Collection.jpg\n",
+                        "tombstone": "Robert Frederick Blum\n(American, 1857-1903)\nToledo Water-Carrier, ca. 1882\nFred Baker Collection",
+                        "description": "Mules were a popular part of the Spanish landscape among artists, as demonstrated on this painting, also set in Toledo. Note also the sue of the red details by both artists"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -5.990587,
+                    37.381224
+                ]
+            },
+            "properties": {
+                "images": [
+                    {
+                        "imgURL": "No_image_available.svg",
+                        "tombstone": "Walter Gay |(American, 1856-1937)\nCigarette Girls, Seville|, 1895\nOil on canvas\nColby College Museum of Art, Gift of Mr. and Mrs. Bronson Griscom"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -3.597596,
+                    37.175759
+                ]
+            },
+            "properties": {
+                "images": [
+                    {
+                        "imgURL": "https://mam.org/images/artist-travellers/Colman,%20Washing%20Day,%20Granada/Colman,%20Samuel%20Washing%20Day,%20ca%201872,%20PC.jpg",
+                        "tombstone": "Samuel Colman\n(American, 1838-1920)\nWashing Day, ca. 1872\nOil on canvas, , tacked over panel\nPrivate Collection"
+                    },
+                    {
+                        "imgURL": " link",
+                        "tombstone": "Torres Molina\n(Spanish, ?????)\nReform of the Plaza Isabel la Cat\u00f3lica de Granada, 02/13/1964\nArchivo de IDEAL",
+                        "description": "The location of Coleman's scene, former embankment of the Darro, is now irrecognizable. Already in Coleman's time, works had begun to encase the river under the pavement of a new street, the Calle de Reyes Cat\u00f3licos. The section captured by Coleman became a street in 1936-1938. In 1962, Coleman's location becae the site of a new square, Plaza de Isabel la Cat\u00f3lica"
+                    },
+                    {
+                        "imgURL": " link",
+                        "tombstone": "Torres Molina\n(Spanish, ?????)\nReform of the Plaza Isabel la Cat\u00f3lica de Granada, 1936\nArchivo de IDEAL",
+                        "description": "The section captured by Coleman became a part of the paved calle de Reyes Cat\u00f3licos in 1936-1938."
+                    },
+                    {
+                        "imgURL": "https://mam.org/images/artist-travellers/Colman,%20Washing%20Day,%20Granada/Lewis,%20Alhambra%20from%20the%20Alameda,%20V_A%20E.240-1932.jpg",
+                        "tombstone": "John Frederick\u00a0Lewis\n(English, 1805 - 1876)\nAlhambra from the Alameda del Darro, 1830s-1840s\nMilwaukee Art Museum",
+                        "description": " Coleman's paintings fit into the popular genre of landscapes featuring the Granada bridges. Thought Lewis portrays a different bridge, the composition shares with Coleman's the loving treatment of the arches and the buildings coming close to the water."
+                    }
+                ]
+            }
+        },
+        {
+            "type": "feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    0.102558,
+                    38.842021
+                ]
+            },
+            "properties": {
+                "images": [
+                    {
+                        "imgURL": "No_image_available.svg",
+                        "tombstone": "Childe Hassam |(American, 1859-1935)\nChurch Procession, Spanish Steps|, ca. 1883\nOil on canvas\nPrivate Collection"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -4.125331,
+                    40.950169
+                ]
+            },
+            "properties": {
+                "images": [
+                    {
+                        "imgURL": "https://mam.org/images/artist-travellers/Lawson,%20Segovia/Lawson,%20Segovia,%20Mia,%2039.54.jpg",
+                        "tombstone": "Ernest Lawson |(American, 1873-1939)\nSegovia|, ca. 1916\nOil on canvas\nMinneapolis Institute of Arts, The John R. Van Derlip Fund"
+                    },
+                    {
+                        "imgURL": " https://mam.org/images/artist-travellers/Lawson,%20Segovia/Laurent%20Segovia%20IPCE.jpg",
+                        "tombstone": "Jean Laurent\n(French, 1816-1886) and his studio\nView of the Alc\u00e1zar and the Cathedral of Toledo from Fuencisla, ca. 1870\nMadrid, Instituto de Patrimonio Cultural de Espa\u00f1a",
+                        "description": " The similarities between Laurent's view and Lawson's landscape are as striking as their differences.  The photographer used  the point of view very similar to one inferred from the landscape. We can see, however, that Lawson changes the scale, making the cathedral belltower seem much higher. The Alc\u00e1zar, still in ruins at the time of the photograph, was restored in the early 20th century."
+                    },
+                    {
+                        "imgURL": " https://mam.org/images/artist-travellers/Lawson,%20Segovia/Henri,%20Segovia,%20Spain,%20Collection%20of%20Stephen%20and%20Miriam%20Seidel,%201.jpg",
+                        "tombstone": "Robert Henri\n(American, 1865-1929)\nSegovia, Spain, 1906\nCollection of Stephen and Miriam Seidel ",
+                        "description": " Henri visited Segovia in___. This painting offers a simler view over the cathedral "
+                    },
+                    {
+                        "imgURL": " https://mam.org/images/artist-travellers/Lawson,%20Segovia/Hill,%20View%20of%20Segovia,%20BMA,%20Dr.%20Linn.jpg",
+                        "tombstone": "Carrie Hill\n(American, 1875-1957)\nView of Segovia, ca. 1925\nBirmingham Museum of Art; Promised gift of Dr. Julius E. Linn, Jr.",
+                        "description": " The same view appears even more distorted than in Lawson's rendering, making the landscape resemple more El Greco's view of Toledo "
+                    },
+                    {
+                        "imgURL": "https://mam.org/images/artist-travellers/Lawson,%20Segovia/Laurent,%20Sergovia,%20Roman%20Aquaduct,%20Chrysler,%202019.27.2.jpg",
+                        "tombstone": "Jean Laurent\n(French, 1816-1886) and his studio\nView of the Aqueduct of Segovia, ca. 1870\nThe Chrysler Museum of Arr",
+                        "description": " The aqueduct  is now considered Segovia's most prominent attraction. It is interesting, however, that it is nowhere to find on the views of Segovia featured here. In the 19th and early 20th centuries one would not travel to Spain hoping to find Roman monuments. "
+                    },
+                    {
+                        "imgURL": " https://mam.org/images/artist-travellers/Lawson,%20Segovia/Segovia%20from%20the%20Alcazar.jpg",
+                        "tombstone": "Current view of Segovia from the Alc\u00e1zar",
+                        "description": "This is a close current perspective of the Alc\u00e1zar"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -3.589585,
+                    37.177615
+                ]
+            },
+            "properties": {
+                "images": [
+                    {
+                        "imgURL": "No_image_available.svg",
+                        "tombstone": "Joaqu\u00edn Sorolla y Bastida |(Spanish, 1863-1923)\nHall of the Ambassadors, Alhambra, Granada|, 1909\nOil on canvas\nThe J. Paul Getty Museum, Los Angeles"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -4.02748,
+                    39.860393
+                ]
+            },
+            "properties": {
+                "images": [
+                    {
+                        "imgURL": "No_image_available.svg",
+                        "tombstone": "Robert Frederick Blum |(American, 1857-1903)\nSpanish Courtyard|, 1883\nOil on canvas\nCincinnati Art Museum, Gift of Joni Herschede and Museum Purchase with funds from the Fanny Bryce Lehmer Endowment"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -3.589688,
+                    37.177569
+                ]
+            },
+            "properties": {
+                "images": [
+                    {
+                        "imgURL": "No_image_available.svg",
+                        "tombstone": "Mary Bradish Titcomb |(American, 1858-1927) \nThe Alhambra|, ca. 1906 \nOil on canvas\nChrysler Museum of Art, Museum purchase with funds given in memory of Joan Foy French by her daughters Wendy and Christina\n"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -3.588498,
+                    37.181108
+                ]
+            },
+            "properties": {
+                "images": [
+                    {
+                        "imgURL": "No_image_available.svg",
+                        "tombstone": "John Singer Sargent |(American, 1856-1925)\nMoorish Courtyard|, 1913\nOil on canvas\nMyron Kunin Collection of American Art, Minneapolis, MN"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -3.588498,
+                    37.181108
+                ]
+            },
+            "properties": {
+                "images": [
+                    {
+                        "imgURL": "No_image_available.svg",
+                        "tombstone": "Edwin Lord Weeks |(American, 1838-1920)\nInterior of a Mosque at Cordova|, ca. 1880\nOil on canvas\nWalters Art Museum, Baltimore"
+                    }
+                ]
+            }
+        }
+    ]
+}
