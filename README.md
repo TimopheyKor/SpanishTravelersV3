@@ -22,9 +22,7 @@ JSON File in use for mapping as of latest version: testPoints.json
 As of the latest version, many images are still local and not included in the Git files. Most local images will eventually be replaced with hosted images.
 
 ## Planned Updates
-
-  - Change of JSON file format to be more readable
-  - Change of JS popup-populating functions to reflect change in JSON format
+  - Changes to Python update automation code to reflect new format
   - Changes to HTML / CSS to update the visual design
   - Code cleanup and refactoring
   
@@ -37,6 +35,7 @@ By en:User:Cburnett - Own work (Original text: Own work in Inkscape), Public Dom
 
 - Design and development: Timophey Korolev
 - Concept and project director: Eugenia Afinoguénova
+- Design: Rachel Stinebring
 - Mapping visualization consultants: Stephen Appel, Andrea Ballard, Belle Lipton, Max Rock
 - Collaboration with the Milwaukee Art Museum's Americans in Spain exhibition
 - Project initiated and developed at Marquette University together with MarVL (Marquette Visualization Lab) and the American Geographical Society Library
