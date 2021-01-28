@@ -24,6 +24,7 @@ As of the latest version, many images are still local and not included in the Gi
 ## Planned Updates
   - Changes to Python update automation code to reflect new format
   - Changes to HTML / CSS to update the visual design
+  - Remove local Leaflet files
   - Code cleanup and refactoring
   
 ## Attributions
