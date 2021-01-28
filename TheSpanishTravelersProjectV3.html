@@ -67,26 +67,23 @@
 				<a class="close-button" href="javascript:void(0)" onclick="closePopup()">
 					 &times  <!-- "x" -->
 				</a>
-				<div id="my-popup-title"><!-- Custom HTML content written from JS goes here --></div>
+				<!-- Put the tombstone divs inside another div, style to Rachel's design -->
 				<div id="my-popup-image"><!-- Custom HTML content written from JS goes here --></div>
-				<div id="my-popup-subtitle"><!-- Custom HTML content written from JS goes here --></div>
-				<div id="my-popup-tombstone"><!-- Custom HTML content written from JS goes here --></div>
-				<div id="my-popup-description"><!-- Custom HTML content written from JS goes here --></div>
+				<div id="my-popup-info">
+					<div id="my-popup-title"><!-- Custom HTML content written from JS goes here --></div>
+					<hr class="solid">
+					<div id="my-popup-tombstone"><!-- Custom HTML content written from JS goes here --></div>
+					<hr class="solid">
+					<div id="my-popup-description"><!-- Custom HTML content written from JS goes here --></div>
+				</div>
 				<div id="my-popup-gallery">
-					<i class="fas fa-arrow-left" id="prevBtn"></i>
+					<i class="fas fa-arrow-left" id="prevBtn" onclick="slidePrev()"></i>
 					<div id="slide-container">
 						<div class="gallery-slide">
 							<!-- Related images will go in here -->
-							<img src="No_image_available.svg" class="gallery-image" id="im1" alt="image_title">
-							<img src="No_image_available.svg" class="gallery-image" id="im2" alt="image_title">
-							<img src="No_image_available.svg" class="gallery-image" id="im3" alt="image_title">
-							<img src="No_image_available.svg" class="gallery-image" id="im4" alt="image_title">
-							<img src="No_image_available.svg" class="gallery-image" id="im5" alt="image_title">
-							<img src="No_image_available.svg" class="gallery-image" id="im4" alt="image_title">
-							<img src="No_image_available.svg" class="gallery-image" id="im5" alt="image_title">
 						</div>
 					</div>
-					<i class="fas fa-arrow-right" id="nextBtn"></i>
+					<i class="fas fa-arrow-right" id="nextBtn" onclick="slideNext()"></i>
 				</div>
 			</div>
 		</div>

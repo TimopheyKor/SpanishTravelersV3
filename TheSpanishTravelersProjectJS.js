@@ -7,6 +7,7 @@ The general structure of this JS is learned from an example of a similar project
 The design is made in accordance with MAM guidelines.
 */
 
+//TODO: Separate the JS code into a collection of files with a main that executes everything
 // Declare general variables to store the Leaflet map and the esri basemap
 var spainMap;
 var esriBase;
@@ -31,12 +32,18 @@ esriBase = L.esri.basemapLayer('Imagery');
 esriBase.addTo(spainMap);
 
 // Importing georeferenced tile layers (historical maps) and adding them to the base map
-var spainTileLayer = L.esri.tiledMapLayer({
-	url: "https://tiles.arcgis.com/tiles/O7h3OCRVxKceyg19/arcgis/rest/services/Espagne1860/MapServer"
-});
-var granadaTileLayer = L.esri.tiledMapLayer({
-	url: "https://tiles.arcgis.com/tiles/O7h3OCRVxKceyg19/arcgis/rest/services/Granada_1894/MapServer"
-});
+var spainTileLayer = L.tileLayer(
+	'https://api.maptiler.com/tiles/bd9d2250-587c-4447-b942-f322e65be0d1/{z}/{x}/{y}.png?key=VQGDLzTLM54Idfavr6jT',
+	{
+		attribution: 'Rendered with <a href="https://www.maptiler.com/desktop/">MapTiler Desktop</a>',
+		crossOrigin: true
+	});
+var granadaTileLayer = L.tileLayer(
+	'https://api.maptiler.com/tiles/71cac88f-c3e4-4fcf-a7eb-c49aee6ca935/{z}/{x}/{y}.png?key=VQGDLzTLM54Idfavr6jT',
+	{
+		attribution: 'Rendered with <a href="https://www.maptiler.com/desktop/">MapTiler Desktop</a>',
+		crossOrigin: true
+	});
 var alhambraTileLayer = L.tileLayer(
 	'https://api.maptiler.com/tiles/5e33a9ca-c3b1-4aea-90d9-1f061d12c31d/{z}/{x}/{y}.png?key=VQGDLzTLM54Idfavr6jT',
 	{
@@ -44,33 +51,33 @@ var alhambraTileLayer = L.tileLayer(
 		crossOrigin: true
 	});
 var sevillaTileLayer = L.tileLayer(
-	'https://api.maptiler.com/tiles/1dd002a8-5a13-4dc2-8a9d-b76fceb938de/{z}/{x}/{y}.png?key=VQGDLzTLM54Idfavr6jT',
+	'https://api.maptiler.com/tiles/d00a1774-8be9-4cee-9de2-a38eed61bddc/{z}/{x}/{y}.png?key=VQGDLzTLM54Idfavr6jT',
 	{
-		attribution: 'None',
+		attribution: 'Rendered with <a href="https://www.maptiler.com/desktop/">MapTiler Desktop</a>',
 		crossOrigin: true
 	});
 var toledoTileLayer = L.tileLayer(
-	'https://api.maptiler.com/tiles/0519954d-8c4b-4ed5-a5f4-b85dc71fed62/{z}/{x}/{y}.png?key=VQGDLzTLM54Idfavr6jT',
+	'https://api.maptiler.com/tiles/13537747-45f5-41f2-8c5d-5d61f107b9f3/{z}/{x}/{y}.png?key=VQGDLzTLM54Idfavr6jT',
 	{
-		attribution: 'None',
+		attribution: 'Rendered with <a href="https://www.maptiler.com/desktop/">MapTiler Desktop</a>',
 		crossOrigin: true
 	});
 var segoviaTileLayer = L.tileLayer(
-	'https://api.maptiler.com/tiles/e0d913ca-7e11-4f94-8a6e-3b4916729e44/{z}/{x}/{y}.png?key=VQGDLzTLM54Idfavr6jT',
+	'https://api.maptiler.com/tiles/43253aa7-95e5-4dbc-9bf1-df82f9b97d1c/{z}/{x}/{y}.png?key=VQGDLzTLM54Idfavr6jT',
 	{
-		attribution: 'None',
+		attribution: 'Rendered with <a href="https://www.maptiler.com/desktop/">MapTiler Desktop</a>',
 		crossOrigin: true
 	});
 var cordobaTileLayer = L.tileLayer(
-	'https://api.maptiler.com/tiles/b79483e6-57d0-45fc-b9e5-c31406e12d0c/{z}/{x}/{y}?key=VQGDLzTLM54Idfavr6jT',
+	'https://api.maptiler.com/tiles/b09e91c8-f84e-4779-886f-f85759e0b7c0/{z}/{x}/{y}.png?key=VQGDLzTLM54Idfavr6jT',
 	{
-		attribution: 'None',
+		attribution: 'Rendered with <a href="https://www.maptiler.com/desktop/">MapTiler Desktop</a>',
 		crossOrigin: true
 	});
 var alicanteTileLayer = L.tileLayer(
-	'https://api.maptiler.com/tiles/d392ad34-b58a-4e2c-a99d-e1c468712a8f/{z}/{x}/{y}.png?key=VQGDLzTLM54Idfavr6jT',
+	'https://api.maptiler.com/tiles/d39dcfaa-af43-4dfe-9993-ffe7e467e2c0/{z}/{x}/{y}.png?key=VQGDLzTLM54Idfavr6jT',
 	{
-		attribution: 'None',
+		attribution: 'Rendered with <a href="https://www.maptiler.com/desktop/">MapTiler Desktop</a>',
 		crossOrigin: true
 	});
 spainTileLayer.addTo(spainMap);
@@ -80,6 +87,7 @@ segoviaTileLayer.addTo(spainMap);
 sevillaTileLayer.addTo(spainMap);
 toledoTileLayer.addTo(spainMap);
 cordobaTileLayer.addTo(spainMap);
+alicanteTileLayer.addTo(spainMap);
 var overlayMaps = {
 	"Spain" : spainTileLayer,
 	"Granada" : granadaTileLayer,
@@ -94,7 +102,7 @@ var overlayMaps = {
 L.control.layers(null, overlayMaps).addTo(spainMap);
 
 // Importing a .json file, which contains data on exhibition peicces to be displayed on the site, and using the markerCluster plugin to create interactive points on the map
-$.ajax("https://raw.githubusercontent.com/TimopheyKor/SpanishTravelersV3/master/testPoints.json", {
+$.ajax("https://raw.githubusercontent.com/TimopheyKor/SpanishTravelersV3/master/Map_Points_Data.json", {
 	dataType: "json",
 	success: function(response){
 		// Create custom marker style
@@ -141,6 +149,8 @@ function openPopup(feature, layer) {
 }
 function closePopup() {
 	document.getElementById("my-popup").style.height = "0";
+	document.querySelector('.gallery-slide').innerHTML = "";
+	counter = 0;
 	showTitle();
 }
 
@@ -155,63 +165,150 @@ function showTitle() {
 
 // Helper function to assign point-specific content to poups when they open, with data drawn from the .json file
 function getPopupContent(feature, layer) {
-	console.log("Getting PopupContent Variables");
-	// First, get all the variables needed from the .json file
-	var name = feature.properties.name;
-	var pictureURL = feature.properties.imgURL;
-	var tombstone = feature.properties.tombstone;
-	if (feature.properties.relation_1 != null) {
-		var relation_1 = feature.properties.relation_1;
-		relation_1 = relation_1.split("|");
-		console.log(relation_1);
-	} 
-	else {
-		var relation_1 = null
-	}
-	if (feature.properties.relation_2 != null) {var relation_2 = feature.properties.relation_2.split("|");} else {var relation_2 = null}
-	if (feature.properties.relation_3 != null) {var relation_3 = feature.properties.relation_3.split("|");} else {var relation_3 = null}
-	if (feature.properties.relation_4 != null) {var relation_4 = feature.properties.relation_4.split("|");} else {var relation_4 = null} 
-	if (feature.properties.relation_5 != null) {var relation_5 = feature.properties.relation_5.split("|");} else {var relation_5 = null}
-	if (feature.properties.relation_6 != null) {var relation_6 = feature.properties.relation_6.split("|");} else {var relation_6 = null}
-	if (feature.properties.relation_7 != null) {var relation_7 = feature.properties.relation_7.split("|");} else {var relation_7 = null}
+	console.log("getPopupContent() called:")
+	// Get the list of images for the popup gallery from the .json file
+	var imageArray = feature.properties.images;
+	console.log("=>Retrieved imageArray")
+	console.log(imageArray)
+	// Populate the popup gallery with the images from the imageArray
+	createGallery(imageArray);
+	// Select the first image in the array to be injected into HTML when the popup opens
+	//selectImage(galleryImages[0], imageArray[0].imgURL, 0);
+	selectImage(galleryImages[0], imageArray[0].imgURL, imageArray[0].tombstone);
+	// Add an event listener to all the images in the gallery so that they'll call selectImage() on click
+	activateImageSelection(galleryImages, imageArray);
+}
 
-
-	console.log("Changing innerHTML of Popup");
-	// Then, assign them to their spots in the innerHTML accordingly
-	document.getElementById("my-popup-title").innerHTML = '<h2 id="specific-image-title">' + name + '</h2>';
-	document.getElementById("my-popup-subtitle").innerHTML = '<h3 id="specific-image-subtitle">  </h2>';
-	document.getElementById("my-popup-image").innerHTML = '<img id = "specific-image" src = "' + pictureURL + '" alt="' + name + '">';
-	document.getElementById("my-popup-tombstone").innerHTML = '<p>' + tombstone + '<br /> </p>';
-	document.getElementById('im1').alt = relation_1[2];
-	document.getElementById('im1').src = relation_1[6];
-	document.getElementById('im2').alt = relation_2[2];
-	document.getElementById('im2').src = relation_2[6];
-	document.getElementById('im3').alt = relation_3[2];
-	document.getElementById('im3').src = relation_3[6];
-	document.getElementById('im4').alt = relation_4[2];
-	document.getElementById('im4').src = relation_4[6];
-	document.getElementById('im5').alt = relation_5[2];
-	document.getElementById('im5').src = relation_5[6];
-	if (relation_6 != null) {
-		document.getElementById('im6').alt = relation_6[2];
-		document.getElementById('im6').src = relation_6[6];
+//TODO: Create a helper function that goes through all the images of a feature and creates a gallery out of them
+function createGallery(imageArray){
+	console.log("=>createGallery() called:")
+	var imageGallery = document.querySelector('.gallery-slide');
+	var titleField = document.getElementById("my-popup-title");
+	// Temporary search through the tombstone field for the title of the image, will be replaced
+	console.log("==>Getting popup title")
+	var popupTitle = imageArray[0].tombstone.split('\n');
+	console.log(popupTitle);
+	popupTitle = popupTitle[1].split(',');
+	console.log(popupTitle);
+	popupTitle = popupTitle[0];
+	console.log(popupTitle);
+	// End of temporary title scan
+	titleField.innerHTML = '<h1>' + popupTitle + '</h1>';
+	var galleryLength = imageArray.length;
+	var i;
+	console.log("==>Populating images:")
+	for (i = 0; i < galleryLength; i++){
+		var imageURL = imageArray[i].imgURL;
+		var tombstone = imageArray[i].tombstone;
+		var imageEntry = document.createElement("img")
+		imageEntry.src = imageURL;
+		imageEntry.className = "gallery-image"
+		imageEntry.title = i.toString();
+		imageGallery.appendChild(imageEntry)
+		console.log("===>Appended gallery image " + i)
 	}
-	if (relation_7 != null) {
-		document.getElementById('im7').alt = relation_7[2];
-		document.getElementById('im7').src = relation_7[6];
+	// Updating variables needed for interactive gallery
+	galleryImages = document.querySelectorAll('.gallery-slide img')
+	console.log("==>Created galleryImages array:")
+	console.log(galleryImages)
+	size = 400;
+}
+// function createGallery(imageArray){
+// 	console.log("=>createGallery() called:")
+// 	var imageGallery = document.querySelector('.gallery-slide');
+// 	var galleryLength = imageArray.length;
+// 	var i;
+// 	console.log("==>Populating images:")
+// 	for (i = 0; i < galleryLength; i++){
+// 		var imageURL = imageArray[i].imgURL;
+// 		var imageEntry = document.createElement("img")
+// 		imageEntry.src = imageURL;
+// 		imageEntry.className = "gallery-image"
+// 		imageEntry.onclick = ""
+// 		imageGallery.appendChild(imageEntry)
+// 		console.log("===>Appended gallery image " + i)
+// 	}
+// 	// Updating variables needed for interactive gallery
+// 	galleryImages = document.querySelectorAll('.gallery-slide img')
+// 	console.log("==>Created galleryImages array:")
+// 	console.log(galleryImages)
+// 	size = galleryImages[0].clientWidth * imageWidthOffset;
+// 	console.log("==>galleryImages[0] size = " + size)
+// }
+
+//TODO: Create image objects to consolidate all the messy data in the selectImage() function into one var per image
+function selectImage(clickedImage, imgURL, tombstone, description) {
+	// console.log("=>selectImage() called on galleryIndex " + galleryIndex)
+	console.log("=>selectImage called on image:")
+	// console.log(imageData)
+	// Get the HTML fields which contain the image, tombstone, and description
+	var mainImageField = document.getElementById("my-popup-image");
+	var tombstoneField = document.getElementById("my-popup-tombstone");
+	var descriptionField = document.getElementById("my-popup-description");
+	// Inject the data of the selected image into the HTML fields
+	mainImageField.innerHTML = '<img id = "specific-image" src = "' + imgURL + '">'
+	//console.log(mainImageField.innerHTML);
+	tombstoneField.innerHTML = '<p>' + tombstone + '</p>';
+	// Adding the description for non-main-image items
+	if (description == null) {
+		description = "";
+	}
+	descriptionField.innerHTML = '<p>' + description + '</p>';
+}
+
+// function selectImage(clickedImage, imageArray, galleryIndex) {
+// 	// console.log("=>selectImage() called on galleryIndex " + galleryIndex)
+// 	console.log("=>selectImage called on image:")
+// 	console.log(imageArray[galleryIndex])
+// 	// Get the HTML fields which contain the image, tombstone, and description
+// 	var mainImageField = document.getElementById("my-popup-image");
+// 	var tombstoneField = document.getElementById("my-popup-tombstone");
+// 	var descriptionField = document.getElementById("my-popup-description");
+// 	// Inject the data of the selected image into the HTML fields
+// 	mainImageField.innerHTML = '<img id = "specific-image" src = "' + imageArray[galleryIndex].imgURL + '">'
+// 	//console.log(mainImageField.innerHTML);
+// 	tombstoneField.innerHTML = '<p>' + imageArray[galleryIndex].tombstone + '<br /> </p>';
+// 	// Darken the selected image in the gallery to show it's selected
+// 	clickedImage.style.opacity = 0.5;
+// }
+
+// Helper function that gives each image in the gallery the selectImage() function on click
+function  activateImageSelection(galleryImages, imageArray) {
+	console.log("=>activateImageSelection() called:")
+	var i;
+	var tombstoneArray = [];
+	var descriptionArray = [];
+	for (i = 0; i < galleryImages.length; i++) {
+		image = galleryImages[i]
+		var imgURL = imageArray[i].imgURL;
+		var tombstone = imageArray[i].tombstone;
+		tombstoneArray.push(imageArray[i].tombstone);
+		if (i == 0) {
+			descriptionArray.push(null);
+		} else {
+			descriptionArray.push(imageArray[i].description)
+		}
+		image.addEventListener('click', function() {
+			console.log("==>Added event listener to image " + i + "containing URL " + imgURL + "and tombstone " + tombstone)
+			// selectImage(image, imgURL, tombstone);
+			selectImage(image, this.src, tombstoneArray[parseInt(this.title)], descriptionArray[parseInt(this.title)]);
+			// Need to add descriptions to the select image function
+		});
 	}
 }
 
-// Implementing the gallery, using a YouTube tutorial by Dev Ed with my own adjustments to fit the site, and adding image swapping functionality
+// Implementing an interactive gallery
+// Setting and initializing necessary variables; galleryImages and size are updated each time a new gallery is created.
 const gallerySlide = document.querySelector('.gallery-slide');
-const galleryImages = document.querySelectorAll('.gallery-slide img');
+var galleryImages;
+var size;
 
 const prevBtn = document.querySelector('#prevBtn');
 const nextBtn = document.querySelector('#nextBtn');
 
 // Counter for image tracking
 let counter = 0;
-let size = galleryImages[0].clientWidth;
+
 
 // Setting the position of the gallery
 gallerySlide.style.transform = 'translateX(' + (-size * counter ) + 'px)';
@@ -229,22 +326,23 @@ function activateBtn(btn) {
 
 // Slide Button Listeners
 function slideNext() {
+	console.log("slideNext() click registered")
 	gallerySlide.style.transition = "transform 0.4s ease-in-out";
-	if(counter < (galleryImages.length-2)) {
+	if(counter < (galleryImages.length-1)) {
 		counter++;
 		gallerySlide.style.transform = 'translateX(' + (-size * counter ) + 'px)';
 		activateBtn(prevBtn);
 	} else {
 		console.log('Last image reached: no next');
 	}
-	if(counter == (galleryImages.length-2)){
+	if(counter == (galleryImages.length-1)){ // Goes one past the final image
 		darkenBtn(nextBtn);
 	}
 }
-nextBtn.addEventListener('click', slideNext);
+//nextBtn.addEventListener('click', slideNext);
 
 function slidePrev(){
-	console.log("click registered");
+	console.log("slidePrev() click registered");
 	gallerySlide.style.transition = "transform 0.4s ease-in-out";
 	if(counter > 0) {
 		counter--;
@@ -257,29 +355,16 @@ function slidePrev(){
 		darkenBtn(prevBtn);
 	}
 }
-prevBtn.addEventListener('click', slidePrev);
+//prevBtn.addEventListener('click', slidePrev);
 
 // Event listeners for selecting specific images from the gallery
-galleryImages.forEach(image => {
-	image.addEventListener('click', event => {
-		//var mainImage = document.getElementById("specific-image").src;
-		var selectedImage = document.getElementById("specific-image");
-		var selectedImageTitle = document.getElementById("specific-image-subtitle");
-		document.getElementById("my-popup-tombstone").innerHTML = '<p>  <br /> </p>';
-		var prevSelected = selectedImage.src;
-		var prevSelectedTitle = selectedImageTitle.textContent;
-		console.log(prevSelected);
-		var newSelected = image.src;
-		var newSelectedTitle = image.alt;
-		console.log(newSelected);
-		selectedImage.src = newSelected;
-		selectedImageTitle.textContent = newSelectedTitle;
-		image.src = prevSelected;
-		image.alt = prevSelectedTitle;
-	});
-});
+// galleryImages.forEach(image => {
+// 	image.addEventListener('click', event => {
+// 		// Code to select / swap images when they're clicked
+// 	});
+// });
 
 // TODO: Implement gallery scalability, probably needs to be done with helper functions that are then used inside of the popup creation functions. 
-// Must first update JSON files, work on Python script
+
 // TODO: Write helper functions and iterative code for gallery images and data reading. The gallery functions need to be able to interact with the data, so it 
 // might be a good idea to create getter/setter functions with return statements to allow json data to be accessed outside of functions which take it in as a parameter.

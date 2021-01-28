@@ -29,7 +29,7 @@ data["features"] = []              # Empty Feature List
 # Helper function to take in one row of data from the .xlsx file and output a JSON feature.
 def appendData(longitude, latitude, imageArray):
     return {
-        "type": "feature",
+        "type": "Feature",
         "geometry": {
             "type": "Point",
             "coordinates": [
