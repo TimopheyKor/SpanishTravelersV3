@@ -78,6 +78,7 @@ for row in sheet.iter_rows(max_row=15, max_col=20, min_row=2, min_col=1):
             tempImageObject["imgURL"] = imgLink
             print(tempImageObject)
             tempImageArray.append(tempImageObject)
+            tempImageObject = {}
         # Column G contains the latitude of the feature
         if ".G" in cellName:
             latitude = cell.value
