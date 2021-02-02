@@ -12,6 +12,11 @@ The design is made in accordance with MAM guidelines.
 var spainMap;
 var esriBase;
 
+// Programming constants
+const MAIN_IMAGE = 0;
+const prevQuote = document.querySelector('#qScrollBtnLeft');
+const nextQuote = document.querySelector('#qScrollBtnRight');
+
 /* Additional map variables:
 == Lat/Long coordinates of relevant locations ==
 [40.9429, -4.1088]; - Segovia
@@ -80,6 +85,12 @@ var alicanteTileLayer = L.tileLayer(
 		attribution: 'Rendered with <a href="https://www.maptiler.com/desktop/">MapTiler Desktop</a>',
 		crossOrigin: true
 	});
+var balearicIslandsTileLayer = L.tileLayer(
+	'https://api.maptiler.com/tiles/0be2d66e-fd95-4e13-98e7-553bf7083fdc/{z}/{x}/{y}.png?key=VQGDLzTLM54Idfavr6jT',
+	{
+		attribution: 'Rendered with <a href="https://www.maptiler.com/desktop/">MapTiler Desktop</a>',
+		crossOrigin: true
+	});
 spainTileLayer.addTo(spainMap);
 granadaTileLayer.addTo(spainMap);
 alhambraTileLayer.addTo(spainMap);
@@ -88,6 +99,7 @@ sevillaTileLayer.addTo(spainMap);
 toledoTileLayer.addTo(spainMap);
 cordobaTileLayer.addTo(spainMap);
 alicanteTileLayer.addTo(spainMap);
+balearicIslandsTileLayer.addTo(spainMap);
 var overlayMaps = {
 	"Spain" : spainTileLayer,
 	"Granada" : granadaTileLayer,
@@ -96,7 +108,8 @@ var overlayMaps = {
 	"Segovia" : segoviaTileLayer,
 	"Sevilla" : sevillaTileLayer,
 	"Cordoba" : cordobaTileLayer,
-	"Alicante" : alicanteTileLayer
+	"Alicante" : alicanteTileLayer,
+	"Balearic Islands": balearicIslandsTileLayer
 };
 // Adding a layer control box
 L.control.layers(null, overlayMaps).addTo(spainMap);
@@ -168,32 +181,24 @@ function getPopupContent(feature, layer) {
 	console.log("getPopupContent() called:")
 	// Get the list of images for the popup gallery from the .json file
 	var imageArray = feature.properties.images;
-	console.log("=>Retrieved imageArray")
-	console.log(imageArray)
+	var popupTitle = feature.properties.name;
+	console.log("=>Retrieved popupTitle and imageArray")
+	console.log(popupTitle, imageArray)
 	// Populate the popup gallery with the images from the imageArray
-	createGallery(imageArray);
+	createGallery(popupTitle, imageArray);
 	// Select the first image in the array to be injected into HTML when the popup opens
 	//selectImage(galleryImages[0], imageArray[0].imgURL, 0);
-	selectImage(galleryImages[0], imageArray[0].imgURL, imageArray[0].tombstone);
+	selectImage(galleryImages[MAIN_IMAGE], imageArray[MAIN_IMAGE].imgURL, imageArray[MAIN_IMAGE].tombstone, imageArray[MAIN_IMAGE].description);
 	// Add an event listener to all the images in the gallery so that they'll call selectImage() on click
 	activateImageSelection(galleryImages, imageArray);
 }
 
 //TODO: Create a helper function that goes through all the images of a feature and creates a gallery out of them
-function createGallery(imageArray){
+function createGallery(popupTitle, imageArray){
 	console.log("=>createGallery() called:")
 	var imageGallery = document.querySelector('.gallery-slide');
 	var titleField = document.getElementById("my-popup-title");
-	// Temporary search through the tombstone field for the title of the image, will be replaced
-	console.log("==>Getting popup title")
-	var popupTitle = imageArray[0].tombstone.split('\n');
-	console.log(popupTitle);
-	popupTitle = popupTitle[1].split(',');
-	console.log(popupTitle);
-	popupTitle = popupTitle[0];
-	console.log(popupTitle);
-	// End of temporary title scan
-	titleField.innerHTML = '<h1>' + popupTitle + '</h1>';
+	titleField.innerHTML = '<h2>' + popupTitle + '</h2>';
 	var galleryLength = imageArray.length;
 	var i;
 	console.log("==>Populating images:")
@@ -212,29 +217,9 @@ function createGallery(imageArray){
 	console.log("==>Created galleryImages array:")
 	console.log(galleryImages)
 	size = 400;
+	counter = 0;
+	gallerySlide.style.transform = 'translateX(' + (-size * counter ) + 'px)';
 }
-// function createGallery(imageArray){
-// 	console.log("=>createGallery() called:")
-// 	var imageGallery = document.querySelector('.gallery-slide');
-// 	var galleryLength = imageArray.length;
-// 	var i;
-// 	console.log("==>Populating images:")
-// 	for (i = 0; i < galleryLength; i++){
-// 		var imageURL = imageArray[i].imgURL;
-// 		var imageEntry = document.createElement("img")
-// 		imageEntry.src = imageURL;
-// 		imageEntry.className = "gallery-image"
-// 		imageEntry.onclick = ""
-// 		imageGallery.appendChild(imageEntry)
-// 		console.log("===>Appended gallery image " + i)
-// 	}
-// 	// Updating variables needed for interactive gallery
-// 	galleryImages = document.querySelectorAll('.gallery-slide img')
-// 	console.log("==>Created galleryImages array:")
-// 	console.log(galleryImages)
-// 	size = galleryImages[0].clientWidth * imageWidthOffset;
-// 	console.log("==>galleryImages[0] size = " + size)
-// }
 
 //TODO: Create image objects to consolidate all the messy data in the selectImage() function into one var per image
 function selectImage(clickedImage, imgURL, tombstone, description) {
@@ -248,29 +233,76 @@ function selectImage(clickedImage, imgURL, tombstone, description) {
 	// Inject the data of the selected image into the HTML fields
 	mainImageField.innerHTML = '<img id = "specific-image" src = "' + imgURL + '">'
 	//console.log(mainImageField.innerHTML);
-	tombstoneField.innerHTML = '<p>' + tombstone + '</p>';
+	formatTombstone(tombstone, tombstoneField);
 	// Adding the description for non-main-image items
 	if (description == null) {
 		description = "";
 	}
-	descriptionField.innerHTML = '<p>' + description + '</p>';
+	disableQuoteScroll();
+	if (description.includes("|")) {
+		descriptionArray = description.split("|\n");
+		descriptionField.innerHTML = '<p>' + descriptionArray[0] + '</p>';
+		enableQuoteScroll(descriptionArray);
+	} else {
+		descriptionField.innerHTML = '<p>' + description + '</p>';
+	}
 }
 
-// function selectImage(clickedImage, imageArray, galleryIndex) {
-// 	// console.log("=>selectImage() called on galleryIndex " + galleryIndex)
-// 	console.log("=>selectImage called on image:")
-// 	console.log(imageArray[galleryIndex])
-// 	// Get the HTML fields which contain the image, tombstone, and description
-// 	var mainImageField = document.getElementById("my-popup-image");
-// 	var tombstoneField = document.getElementById("my-popup-tombstone");
-// 	var descriptionField = document.getElementById("my-popup-description");
-// 	// Inject the data of the selected image into the HTML fields
-// 	mainImageField.innerHTML = '<img id = "specific-image" src = "' + imageArray[galleryIndex].imgURL + '">'
-// 	//console.log(mainImageField.innerHTML);
-// 	tombstoneField.innerHTML = '<p>' + imageArray[galleryIndex].tombstone + '<br /> </p>';
-// 	// Darken the selected image in the gallery to show it's selected
-// 	clickedImage.style.opacity = 0.5;
-// }
+function formatTombstone(tombstone, tombstoneField) {
+	tombstoneLines = tombstone.split("\n")
+	if (tombstoneLines.length < 3) { // Checks if the tombstone isn't a proper multi-line one
+		tombstoneField.innerHTML = '<p>' + tombstone + '</p>';
+	} else {
+		var lineOne = tombstoneLines[0];
+		var lineOneSplit = lineOne.split("("); // Splitting the artist's name and their info: ARTIST NAME (INFO)
+		var artistName = lineOneSplit[0]; // Extracting the artist's name to bold it
+		var artistInfo = lineOneSplit[1];
+		var lineTwo = tombstoneLines[1];
+		var lineTwoSplit = lineTwo.split(",");
+		var imageName = lineTwoSplit[0]; // Extracting the image's name to italicize it
+		var lineTwoEnd = ""; // Variable to put the rest of line 2 back together in: this is due to variation in array length
+		console.log("lineTwoSplit: ", lineTwoSplit);
+		console.log("lineTwoEnd: ");
+		var i;
+		for (i = 1; i < lineTwoSplit.length; i++) { // Starting at position 1, immediately after the image name
+			console.log(i);
+			console.log(lineTwoEnd);
+			lineTwoEnd = lineTwoEnd + ", " + lineTwoSplit[i];
+		}
+		console.log("tombstoneLines: ", tombstoneLines);
+		console.log("tombstoneRemainder: ");
+		var tombstoneRemainder = ""; // Variable to put the rest of the tombstone back into, undoing the first split, minus the first two lines
+		for (i = 2; i < tombstoneLines.length; i++) { // Starting at position 2, immediately after line two
+			console.log(i);
+			console.log(tombstoneRemainder);
+			tombstoneRemainder = tombstoneRemainder + "\n" + tombstoneLines[i];
+		}
+		tombstoneField.innerHTML = '<p><b>' + artistName + '</b> (' + artistInfo + '<br><i>' + imageName + '</i>' + lineTwoEnd + tombstoneRemainder + '</p>';
+	}
+}
+
+function enableQuoteScroll(descriptionArray) {
+	var descriptionField = document.getElementById("my-popup-description");
+	nextQuote.style.display = "block";
+	nextQuote.onclick = function () {
+		console.log("clicked");
+		descriptionField.innerHTML = '<p>' + descriptionArray[1] + '</p>'
+		nextQuote.style.display = "none";
+		prevQuote.style.display = "block";
+	};
+	prevQuote.onclick = function () {
+		descriptionField.innerHTML = '<p>' + descriptionArray[0] + '</p>'
+		nextQuote.style.display = "block";
+		prevQuote.style.display = "none";
+	};
+}
+
+function disableQuoteScroll() {
+	nextQuote.style.display = "none";
+	nextQuote.onclick = "";
+	prevQuote.style.display = "none";
+	prevQuote.onclick = "";
+}
 
 // Helper function that gives each image in the gallery the selectImage() function on click
 function  activateImageSelection(galleryImages, imageArray) {
@@ -283,16 +315,10 @@ function  activateImageSelection(galleryImages, imageArray) {
 		var imgURL = imageArray[i].imgURL;
 		var tombstone = imageArray[i].tombstone;
 		tombstoneArray.push(imageArray[i].tombstone);
-		if (i == 0) {
-			descriptionArray.push(null);
-		} else {
-			descriptionArray.push(imageArray[i].description)
-		}
+		descriptionArray.push(imageArray[i].description)
 		image.addEventListener('click', function() {
 			console.log("==>Added event listener to image " + i + "containing URL " + imgURL + "and tombstone " + tombstone)
-			// selectImage(image, imgURL, tombstone);
 			selectImage(image, this.src, tombstoneArray[parseInt(this.title)], descriptionArray[parseInt(this.title)]);
-			// Need to add descriptions to the select image function
 		});
 	}
 }
@@ -307,7 +333,7 @@ const prevBtn = document.querySelector('#prevBtn');
 const nextBtn = document.querySelector('#nextBtn');
 
 // Counter for image tracking
-let counter = 0;
+var counter = 0;
 
 
 // Setting the position of the gallery
@@ -328,18 +354,17 @@ function activateBtn(btn) {
 function slideNext() {
 	console.log("slideNext() click registered")
 	gallerySlide.style.transition = "transform 0.4s ease-in-out";
-	if(counter < (galleryImages.length-1)) {
+	if(counter < (galleryImages.length-2)) {
 		counter++;
 		gallerySlide.style.transform = 'translateX(' + (-size * counter ) + 'px)';
 		activateBtn(prevBtn);
 	} else {
 		console.log('Last image reached: no next');
 	}
-	if(counter == (galleryImages.length-1)){ // Goes one past the final image
+	if(counter == (galleryImages.length-2)){ // Goes one past the final image
 		darkenBtn(nextBtn);
 	}
 }
-//nextBtn.addEventListener('click', slideNext);
 
 function slidePrev(){
 	console.log("slidePrev() click registered");
@@ -355,16 +380,3 @@ function slidePrev(){
 		darkenBtn(prevBtn);
 	}
 }
-//prevBtn.addEventListener('click', slidePrev);
-
-// Event listeners for selecting specific images from the gallery
-// galleryImages.forEach(image => {
-// 	image.addEventListener('click', event => {
-// 		// Code to select / swap images when they're clicked
-// 	});
-// });
-
-// TODO: Implement gallery scalability, probably needs to be done with helper functions that are then used inside of the popup creation functions. 
-
-// TODO: Write helper functions and iterative code for gallery images and data reading. The gallery functions need to be able to interact with the data, so it 
-// might be a good idea to create getter/setter functions with return statements to allow json data to be accessed outside of functions which take it in as a parameter.

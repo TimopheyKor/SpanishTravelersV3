@@ -1,7 +1,17 @@
 /* Custom CSS for The Spanish Travelers Project V3 */
-@font-face{
-	font-family: "PostGrotesk";
-	src: url('./PostGrotesk Fonts/PostGrotesk-Black.otf')
+@font-face {
+	font-family: "Post Grotesk Black";
+	src: url('./Post/Post/PostGrotesk-Black.otf') format("opentype")
+}
+
+@font-face {
+	font-family: "Post Grotesk";
+	src: url('./Post/Post/PostGrotesk-Book.otf') format("opentype"),
+}
+
+@font-face {
+	font-family: "Sagona SemiBold";
+	src: url('./Rene/Rene\ Bieder\ -\ Sagona-SemiBold.otf') format("opentype")
 }
 
 #title h1{
@@ -9,9 +19,7 @@
 	left: 60px;
 	top: 20px;
 	z-index: 20;
-	font-family: "PostGrotesk", sans-serif;
-	font-weight: black;
-	font-style: normal;
+	font-family: "Post Grotesk Black", sans-serif;
 	font-size: 60px;
 	color: white;
 	text-shadow: 0px 0px 25px black;
@@ -21,8 +29,7 @@
 }
 
 h2{
-	font-family: "PostGrotesk", sans-serif;
-	font-weight: bold;
+	font-family: "Sagona SemiBold";
 	font-size: 50px;
 }
 
@@ -33,9 +40,13 @@ h3{
 }
 
 p {
-	font-family: "Rene Bieder", serif;
-	font-weight: normal;
+	font-family: "Post Grotesk", sans-serif;
+	font-weight: lighter;
 	font-size: 20px;
+}
+
+b {
+	font-family: "Post Grotesk Black", sans-serif;
 }
 
 hr.solid {
@@ -129,6 +140,7 @@ html{
 	font-size: 20px;
 	text-align: left;
 	margin: 0px;
+	top: -20px;
 }
 
 #my-popup-tombstone {
@@ -155,6 +167,20 @@ html{
 	overflow: hidden;
 	margin: auto;
 	height: 200px;
+}
+
+#qScrollBtnLeft {
+	position: absolute;
+    left: 20px;
+    top: 320px;
+	display: none;
+}
+
+#qScrollBtnRight {
+	top: 320px;
+    position: absolute;
+	right: 20px;
+	display: none;
 }
 
 #prevBtn {
