@@ -217,6 +217,16 @@
                         "imgURL": "https://mam.org/images/artist-travellers/Lawson,%20Segovia/Hill,%20View%20of%20Segovia,%20BMA,%20Dr.%20Linn.jpg",
                         "tombstone": "Carrie Hill (American, 1875\u20131957)\nView of Segovia, ca. 1925\nOil on canvas\nBirmingham Museum of Art; Promised gift of Dr. Julius E. Linn, Jr. ",
                         "description": "Hill\u2019s version of Segovia appears even more distorted than Lawson\u2019s, bringing to mind Spanish old master El Greco\u2019s attenuated and colorful views of Toledo."
+                    },
+                    {
+                        "imgURL": "https://mam.org/images/artist-travellers/Lawson,%20Segovia/Laurent,%20Sergovia,%20Roman%20Aquaduct,%20Chrysler,%202019.27.2.jpg",
+                        "tombstone": "Jean Laurent (French/Spanish, 1816\u20131886)\nSegovia\u2013382. General Visit of the Roman Aqueduct, ca. 1870\nAlbumen print on original mount\nChrysler Museum of Art, Museum purchase, in memory of Alice R. and Sol B. Frank ",
+                        "description": "Laurent\u2019s photograph of Segovia\u2019s famous Roman aqueduct presents a different, albeit equally popular, tourist attraction to the city."
+                    },
+                    {
+                        "imgURL": "https://mam.org/images/artist-travellers/Lawson,%20Segovia/Segovia%20from%20the%20Alcazar.jpg",
+                        "tombstone": "Current view of Segovia from the Alc\u00e1zar ",
+                        "description": "This photograph of Segovia is a current view of the city from the perspective of the Alc\u00e1zar.\n\n"
                     }
                 ]
             }
@@ -252,6 +262,11 @@
                         "imgURL": "https://mam.org/images/artist-travellers/Darley,%20Frontispiece,%20The%20Alhambra/Titcomb,%20The%20Alhambra,%20Chrysler,%202018.25.1.jpg",
                         "tombstone": "Mary Bradish Titcomb (American, 1858\u20131927) \nThe Alhambra, ca. 1906 \nOil on canvas\nChrysler Museum of Art, Museum purchase with funds given in memory of Joan Foy French by her daughters Wendy and Christina ",
                         "description": "The Comares Tower, also prominent in Roberts\u2019s panorama, was among the most popular sites of the Alhambra. Artists had a convenient point of view from the Darro River to capture the sight."
+                    },
+                    {
+                        "imgURL": "https://mam.org/images/artist-travellers/Roberts,%20The%20Alhambra/View%20toward%20the%20Alhambra,%20Torre%20de%20la%20Comares,%202.jpg",
+                        "tombstone": "Current view of the Tower of Comares ",
+                        "description": "It was a challenge for artists to find a viewpoint of the Alhambra that allowed them to capture the entire complex. The closest location was beneath a steep hill, which dwarfed the grand structure, making it look less imposing.\n"
                     }
                 ]
             }
@@ -392,6 +407,11 @@
                         "imgURL": "https://mam.org/images/artist-travellers/Titcomb,%20The%20Alhambra/View%20toward%20the%20Alhambra,%20Torre%20de%20la%20Comares,%202.jpg",
                         "tombstone": "Current view towards the Alhambra, Torre de la Comares ",
                         "description": "This contemporary photograph highlights the difficulty in capturing the Comares Tower from the perspective seen in many paintings and prints of the building."
+                    },
+                    {
+                        "imgURL": "https://mam.org/images/artist-travellers/Titcomb,%20The%20Alhambra/Pennell,%20The%20Generalif,%20pen%20and%20ink,%20MAM,%20M1953.19.jpg",
+                        "tombstone": "Joseph Pennell (American, 1860\u20131926)\nThe Generalife, Granada, 1894\nPen and ink on paper\nMilwaukee Art Museum, gift of The Art Institute of Chicago ",
+                        "description": "Pennell\u2019s drawing is from the same perspective as many artistic views of the Alhambra\u2019s Comares Tower, but it shows the Generalife, the summer palace of the Alhambra\u2019s Nasrid rulers."
                     }
                 ]
             }

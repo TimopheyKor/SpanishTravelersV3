@@ -44,7 +44,7 @@ def appendData(longitude, latitude, imageArray, galleryName):
     }
 
 # Iterating through the sheet to get URL / image location values
-for row in sheet.iter_rows(max_row=15, max_col=20, min_row=2, min_col=1):
+for row in sheet.iter_rows(max_row=15, max_col=30, min_row=2, min_col=1):
     # Temporary variables to hold and create image objects.
     tempImageArray = []
     tempImageObject = {}
