@@ -14,7 +14,7 @@
                 "name": "Toledo",
                 "images": [
                     {
-                        "tombstone": "Robert Frederick Blum (American, 1857\u20131903)\nSpanish Courtyard, 1883\nOil on canvas\nCincinnati Art Museum, Gift of Joni Herschede and Museum Purchase with funds from the Fanny Bryce Lehmer Endowment\n",
+                        "tombstone": "<b>Robert Frederick Blum</b> (American, 1857\u20131903)\n<i>Spanish Courtyard</i>, 1883\nOil on canvas\nCincinnati Art Museum, Gift of Joni Herschede and Museum Purchase with funds from the Fanny Bryce Lehmer Endowment\n",
                         "description": "Many of the houses are built in the Moorish style, round patios, or courts, cooled by fountains, and open to the sky; and as the inhabitants pass much of their time in these courts, and on the terraced roofs, during the summer season, it follows that many a glance at their domestic life may be obtained by an aerial spectator like myself, who can look down on them from the clouds.\n\nGeoffrey Crayon [Washington Irving], Tales of the Alhambra, 1832",
                         "imgURL": "https://mam.org/images/artist-travellers/Blum,%20Spanish%20Courtyard/Blum,%20Spanish%20Courtyard,%20Cincinnati,%202002.104.jpg"
                     },
@@ -101,7 +101,7 @@
                     {
                         "tombstone": "Mariano Fortuny (Spanish, 1838\u20131874)\nThe Slaughter of the Abencerrajes, 1870\nOil on canvas\nMuseu Nacional d\u2019Art de Catalunya, purchased 1949\n",
                         "description": "On the opposite side of the Court of Lions, is the Hall of the Abencerrages [sic]; so called from the gallant cavaliers of that illustrious line who were here perfidiously massacred. There are some who doubt the whole truth of this story; but our humble attendant, Mateo, pointed out the very wicket of the portal through which they are said to have been introduced, one by one; and the white marble fountain in the centre of the hall, where they were beheaded.\n\nGeoffrey Crayon [Washington Irving], Tales of the Alhambra, 1832\n",
-                        "imgURL": "https://mam.org/images/artist-travellers/Fortuny,%20The%20Slaughter%20of%20Abencerrajes/"
+                        "imgURL": "https://mam.org/images/artist-travellers/Fortuny,%20The%20Slaughter%20of%20Abencerrajes/Fortuny,%20The%20Slaughter%20of%20the%20Abencerrajes,%20Museu%20Nacional%20Catalyuna,%20044189-000.jpg"
                     },
                     {
                         "imgURL": "https://mam.org/images/artist-travellers/Fortuny,%20The%20Slaughter%20of%20Abencerrajes/Laurent,%20Granada,%20Templete%20del%20Patio%20de%20los%20Leones%20(Alhambra).jpg",
@@ -114,7 +114,7 @@
                         "description": "The location of Fortuny\u2019s scene, the Hall of the Abencerrajes, is right off the Patio de los Leones. Photographs often capture the patio from this hall.\n"
                     },
                     {
-                        "imgURL": "https://lh3.googleusercontent.com/pw/ACtC-3eO2P4itPlO2NrrqoLBhwU58DGjvKZ-Le9ovii5iATwzUBybUVZXQKd1eT9Wq1eBjYaPEDZuY4Att06McMyqXZyfruyZ2JmyoKLKR6AosLsp8I1219f1Jje4NSZk2OW4mWX_8FZTw-cUtJ2UqZ4XlAFHQ=w1000-h716-no?authuser=0",
+                        "imgURL": "https://photos.google.com/share/AF1QipM4m4K-ou9HEIbQzkoZy-gRYtiJ7K_B5htBLuqhElBKjPIKlndAF-7KgpaGMdikhQ/photo/AF1QipM20yQunooayVO8Bpvy7FoDbHc8YkGMwrc8znDH?key=eVo3ejZ1dVRMYnRNa2ZZZ1Ruc2wtd0taODlNZGV3",
                         "tombstone": "Jean Laurent (French/Spanish, 1816\u20131886)\nGranada\u2013Alhambra. The Hall of the Abencerrajes, 1863\u20131880\nCollodion glass plate stereoscopic negative\nFototeca del Patrimonio Hist\u00f3rico, Ministerio de Educaci\u00f3n, Cultura y Deporte, Madrid ",
                         "description": "Stereoscopic photographs such as this offered an immersive experience of the legendary location that Fortuny had populated with members of the Abencerrajes family. "
                     }
@@ -145,7 +145,7 @@
                     },
                     {
                         "imgURL": "https://mam.org/images/artist-travellers/Gay,%20Cigarette%20Girls/Dor%c3%a9,%20Cigarerras%20at%20Work%20in%20the%20Fabrica%20de%20Tabacos%20of%20Seville,%20Davillier's%20Spain-p1esjm5nh25j6vmj1fti1l7t107u.jpg",
-                        "tombstone": "Gustave Dor\u00e9 (French, 1832\u20131883)\nCigarerras at Work in the Fabrica de Tabacos of Seville, from Jean-Charles Davillier, Spain: Social Life and Customs.\nLondon: Bickers and Son, 1881\nWood engraving\nFrom the American Geographical Society Library, University of Wisconsin-Milwaukee Libraries ",
+                        "tombstone": "Gustave Dor\u00e9 (French, 1832\u20131883)\nCigarerras at Work in the Fabrica de Tabacos of Seville, from Jean-Charles Davillier, Spain: Social Life and Customs\nLondon: Bickers and Son, 1881\nWood engraving\nFrom the American Geographical Society Library, University of Wisconsin-Milwaukee Libraries ",
                         "description": "Dor\u00e9\u2019s image of Seville\u2019s Royal Tobacco Factory shows the dual exploitation of women as mothers and workers. This socially progressive idea was absent from the usual exoticising representations of the cigarreras."
                     },
                     {
@@ -161,12 +161,12 @@
             "geometry": {
                 "type": "Point",
                 "coordinates": [
-                    0.102558,
-                    38.842021
+                    0.106751764090943,
+                    38.8420606515066
                 ]
             },
             "properties": {
-                "name": "Away from the tourist gaze (D\u00e9nia, Ronda)",
+                "name": "Away from the tourist gaze (D\u00e9nia and Ronda)",
                 "images": [
                     {
                         "tombstone": "Childe Hassam (American, 1859\u20131935)\nChurch Procession, Spain, ca. 1883\nOil on canvas\nPrivate collection\n",
@@ -200,7 +200,7 @@
                 "images": [
                     {
                         "tombstone": "Ernest Lawson (American, 1873\u20131939)\nSegovia, ca. 1916\nOil on canvas\nMinneapolis Institute of Arts, The John R. Van Derlip Fund\n",
-                        "description": "<i> I am glad you like the Spanish monastery picture as it seemed to me that I got some of the austere quality of Spain in it.</i> Spain is not all gaiety and sunshine, and especially in the centre part has a character of ruggedness and gloom part of the time.\n \nErnest Lawson letter to Sallie Casey Thayer, April 26, 1921, in Charles C. Eldredge, \u201cErnest Lawson\u2019s Spain,\u201d American Art, 2003\n",
+                        "description": "I am glad you like the Spanish monastery picture as it seemed to me that I got some of the austere quality of Spain in it. Spain is not all gaiety and sunshine, and especially in the centre part has a character of ruggedness and gloom part of the time.\n \nErnest Lawson letter to Sallie Casey Thayer, April 26, 1921, in Charles C. Eldredge, \u201cErnest Lawson\u2019s Spain,\u201d American Art, 2003\n",
                         "imgURL": "https://mam.org/images/artist-travellers/Lawson,%20Segovia/Lawson,%20Segovia,%20Mia,%2039.54.jpg"
                     },
                     {
@@ -421,8 +421,8 @@
             "geometry": {
                 "type": "Point",
                 "coordinates": [
-                    -3.588498,
-                    37.181108
+                    -4.779342,
+                    37.878865
                 ]
             },
             "properties": {
