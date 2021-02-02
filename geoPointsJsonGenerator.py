@@ -95,7 +95,7 @@ for row in sheet.iter_rows(max_row=15, max_col=20, min_row=2, min_col=1):
         if cellName in ".L.O.R.U.X":
             relation = str(cell.value)
             # Split the relation image data by the separating |'s used in the .xlsx file
-            relationArray = relation.split("|") 
+            relationArray = relation.split("|\n") 
             # To prevent OOB errors:
             # This is to ensure that at least the three required fields are in the array.
             if len(relationArray) >= MINIMUM_RELATIONS:
