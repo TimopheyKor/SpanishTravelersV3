@@ -22,8 +22,7 @@ JSON File in use for mapping as of latest version: testPoints.json
 As of the latest version, many images are still local and not included in the Git files. Most local images will eventually be replaced with hosted images.
 
 ## Planned Updates
-  - Changes to Python update automation code to reflect new format
-  - Changes to HTML / CSS of home page and mapping application to reflect MAM's design
+  - Update fonts once licensing is figured out
   - Remove local Leaflet files
   - Code cleanup and refactoring
   
