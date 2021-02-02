@@ -15,12 +15,12 @@
                 "images": [
                     {
                         "tombstone": "<b>Robert Frederick Blum</b> (American, 1857\u20131903)\n<i>Spanish Courtyard</i>, 1883\nOil on canvas\nCincinnati Art Museum, Gift of Joni Herschede and Museum Purchase with funds from the Fanny Bryce Lehmer Endowment\n",
-                        "description": "Many of the houses are built in the Moorish style, round patios, or courts, cooled by fountains, and open to the sky; and as the inhabitants pass much of their time in these courts, and on the terraced roofs, during the summer season, it follows that many a glance at their domestic life may be obtained by an aerial spectator like myself, who can look down on them from the clouds.\n\nGeoffrey Crayon [Washington Irving], Tales of the Alhambra, 1832",
+                        "description": "Many of the houses are built in the Moorish style, round patios, or courts, cooled by fountains, and open to the sky; and as the inhabitants pass much of their time in these courts, and on the terraced roofs, during the summer season, it follows that many a glance at their domestic life may be obtained by an aerial spectator like myself, who can look down on them from the clouds.\n\nGeoffrey Crayon [Washington Irving], <i>Tales of the Alhambra</i>, 1832",
                         "imgURL": "https://mam.org/images/artist-travellers/Blum,%20Spanish%20Courtyard/Blum,%20Spanish%20Courtyard,%20Cincinnati,%202002.104.jpg"
                     },
                     {
                         "imgURL": "https://mam.org/images/artist-travellers/Chase,%20Sunny%20Spain/Blum,%20Toledo%20Water-Carrier,%20Fred%20Baker%20Collection.jpg",
-                        "tombstone": "Robert Frederick Blum (American, 1857\u20131903)\nToledo Water-Carrier, 1882\nOil on panel\nBaker/Pisano Collection ",
+                        "tombstone": "<b>Robert Frederick Blum</b> (American, 1857\u20131903)\n<i>Toledo Water-Carrier</i>, 1882\nOil on panel\nBaker/Pisano Collection ",
                         "description": "Courtyards, gardens, and patios, as well as their entryways, were popular subjects for American artists visiting Spain."
                     }
                 ]
@@ -39,18 +39,18 @@
                 "name": "Toledo and Madrid",
                 "images": [
                     {
-                        "tombstone": "William Merritt Chase (American, 1849\u20131916)\nSunny Spain, 1882\nOil on canvas\nCollection of Lois and Arthur Stainman\n",
-                        "description": "Mr. Chase shows a Scene Near Madrid and Sunny Spain. The former is rich in tone, full of warm, subdued color, giving the effect of sunlight delicately, without glare. If [it has] any fault at all, it is too dry and too juiceless. . . . [Sunny Spain] seems to be a study of the deadening, drying, sapping effect of sunlight in tropical climes, reached without the cheap effect of dazzling highlights or bottomless-pit shadows. The effect of heat; stagnating, absorbing heat, as well as light, are rendered. Textures of roof and wall and sand are well given. \n\n\u201cArt Loan Exhibition,\u201d Indianapolis Journal, November 7, 1883                                                                                                                    ",
+                        "tombstone": "<b>William Merritt Chase</b> (American, 1849\u20131916)\n<i>Sunny Spain</i>, 1882\nOil on canvas\nCollection of Lois and Arthur Stainman\n",
+                        "description": "Mr. Chase shows a <i>Scene Near Madrid</i> and <i>Sunny Spain</i>. The former is rich in tone, full of warm, subdued color, giving the effect of sunlight delicately, without glare. If [it has] any fault at all, it is too dry and too juiceless. . . . [<i>Sunny Spain</i>] seems to be a study of the deadening, drying, sapping effect of sunlight in tropical climes, reached without the cheap effect of dazzling highlights or bottomless-pit shadows. The effect of heat; stagnating, absorbing heat, as well as light, are rendered. Textures of roof and wall and sand are well given. \n\n\u201cArt Loan Exhibition,\u201d <i>Indianapolis Journal</i>, November 7, 1883                                                                                                                    ",
                         "imgURL": "https://mam.org/images/artist-travellers/Chase,%20Outskirts%20of%20Madrid/Chase,%20Sunny%20Spain,%201882,%20Private%20Collection.jpg"
                     },
                     {
                         "imgURL": "https://mam.org/images/artist-travellers/Chase,%20Sunny%20Spain/Chase,%20Outskirts%20of%20Madrid,%20Yale,%201939.265.jpg",
-                        "tombstone": "William Merritt Chase (American, 1849\u20131916)\nOutskirts of Madrid, 1882\nOil on canvas\nYale University Art Gallery, Gift of Duncan Phillips, B.A. ",
-                        "description": "This painting features fewer conventional Spanish themes than Chase\u2019s Sunny Spain, and the factory smokestack in the background speaks to increasing modernization and its problems."
+                        "tombstone": "<b>William Merritt Chase</b> (American, 1849\u20131916)\n<i>Outskirts of Madrid</i>, 1882\nOil on canvas\nYale University Art Gallery, Gift of Duncan Phillips, B.A. ",
+                        "description": "This painting features fewer conventional Spanish themes than Chase\u2019s <i>Sunny Spain</i>, and the factory smokestack in the background speaks to increasing modernization and its problems."
                     },
                     {
                         "imgURL": "https://mam.org/images/artist-travellers/Chase,%20Sunny%20Spain/Blum,%20Toledo%20Water-Carrier,%20Fred%20Baker%20Collection.jpg",
-                        "tombstone": "Robert Frederick Blum (American, 1857\u20131903)\nToledo Water-Carrier, 1882\nOil on panel\nBaker/Pisano Collection ",
+                        "tombstone": "<b>Robert Frederick Blum</b> (American, 1857\u20131903)\n<i>Toledo Water-Carrier</i>, 1882\nOil on panel\nBaker/Pisano Collection ",
                         "description": "Mules and muleteers were popular subjects among artists from the United States and feature prominently in their Spanish landscapes, reinforcing the country\u2019s reputation for preindustrial labor."
                     }
                 ]
@@ -69,13 +69,13 @@
                 "name": "Granada",
                 "images": [
                     {
-                        "tombstone": "Samuel Colman (American, 1832\u20131920)\nWashing Day, Granada, ca. 1872\nOil on canvas, tacked over panel\nPrivate collection\n",
-                        "description": "Mr. Samuel Colman, our most picturesque landscape painter, whose greatest successes have been in painting the splendors of a time and country not his own, offers us one of his most important pictures. The beauty and the merits of this work are obvious. Its faults escape us because Mr. Colman first pleases us in general effects, next interests us with the materials of his work. We look at this landscape, we see the glare and feel the heat of the afternoon sun; we almost, in fancy, mingle with the crowds below the castle\u2019s towering walls and delight in the dusty splendors of days filled with the glory of the Spaniard and the Moor.\n\n\u201cArt: Exhibition of the National Academy of Design,\u201d The Round Table: A Saturday Review of Politics, Finance, Literature, Society and Art, May 7, 1864                                                                  ",
+                        "tombstone": "<b>Samuel Colman</b> (American, 1832\u20131920)\n<i>Washing Day, Granada</i>, ca. 1872\nOil on canvas, tacked over panel\nPrivate collection\n",
+                        "description": "Mr. Samuel Colman, our most picturesque landscape painter, whose greatest successes have been in painting the splendors of a time and country not his own, offers us one of his most important pictures. The beauty and the merits of this work are obvious. Its faults escape us because Mr. Colman first pleases us in general effects, next interests us with the materials of his work. We look at this landscape, we see the glare and feel the heat of the afternoon sun; we almost, in fancy, mingle with the crowds below the castle\u2019s towering walls and delight in the dusty splendors of days filled with the glory of the Spaniard and the Moor.\n\n\u201cArt: Exhibition of the National Academy of Design,\u201d <i>The Round Table: A Saturday Review of Politics, Finance, Literature, Society and Art</i>, May 7, 1864                                                                  ",
                         "imgURL": "https://mam.org/images/artist-travellers/Colman,%20Washing%20Day,%20Granada/Colman,%20Samuel%20Washing%20Day,%20ca%201872,%20PC.jpg"
                     },
                     {
                         "imgURL": "https://mam.org/images/artist-travellers/Colman,%20Washing%20Day,%20Granada/Lewis,%20Alhambra%20from%20the%20Alameda,%20V_A%20E.240-1932.jpg",
-                        "tombstone": "John Frederick Lewis (English, 1804\u20131876) \nPart of the Alhambra from the Alameda del Darro, from Lewis\u2019s Sketches and Drawings of the Alhambra, made during a Residence in Granada in the years 1833\u201334, 1835\nLithograph\nVictoria and Albert Museum ",
+                        "tombstone": "<b>John Frederick Lewis</b> (English, 1804\u20131876) \n<i>Part of the Alhambra from the Alameda del Darro</i>, from Lewis\u2019s <i>Sketches and Drawings of the Alhambra, made during a Residence in Granada in the years 1833\u201334</i>, 1835\nLithograph\nVictoria and Albert Museum ",
                         "description": "Images that featured Granada\u2019s ancient bridges, arches, and buildings along the Darro River were popular subjects for artists of the time, as seen in Coleman\u2019s painting and Lewis\u2019s print."
                     },
                     {
@@ -99,23 +99,23 @@
                 "name": "Granada, The Alhambra",
                 "images": [
                     {
-                        "tombstone": "Mariano Fortuny (Spanish, 1838\u20131874)\nThe Slaughter of the Abencerrajes, 1870\nOil on canvas\nMuseu Nacional d\u2019Art de Catalunya, purchased 1949\n",
-                        "description": "On the opposite side of the Court of Lions, is the Hall of the Abencerrages [sic]; so called from the gallant cavaliers of that illustrious line who were here perfidiously massacred. There are some who doubt the whole truth of this story; but our humble attendant, Mateo, pointed out the very wicket of the portal through which they are said to have been introduced, one by one; and the white marble fountain in the centre of the hall, where they were beheaded.\n\nGeoffrey Crayon [Washington Irving], Tales of the Alhambra, 1832\n",
+                        "tombstone": "<b>Mariano Fortuny</b> (Spanish, 1838\u20131874)\n<i>The Slaughter of the Abencerrajes</i>, 1870\nOil on canvas\nMuseu Nacional d\u2019Art de Catalunya, purchased 1949\n",
+                        "description": "On the opposite side of the Court of Lions, is the Hall of the Abencerrages [<i>sic</i>]; so called from the gallant cavaliers of that illustrious line who were here perfidiously massacred. There are some who doubt the whole truth of this story; but our humble attendant, Mateo, pointed out the very wicket of the portal through which they are said to have been introduced, one by one; and the white marble fountain in the centre of the hall, where they were beheaded.\n\nGeoffrey Crayon [Washington Irving], <i>Tales of the Alhambra</i>, 1832\n",
                         "imgURL": "https://mam.org/images/artist-travellers/Fortuny,%20The%20Slaughter%20of%20Abencerrajes/Fortuny,%20The%20Slaughter%20of%20the%20Abencerrajes,%20Museu%20Nacional%20Catalyuna,%20044189-000.jpg"
                     },
                     {
                         "imgURL": "https://mam.org/images/artist-travellers/Fortuny,%20The%20Slaughter%20of%20Abencerrajes/Laurent,%20Granada,%20Templete%20del%20Patio%20de%20los%20Leones%20(Alhambra).jpg",
-                        "tombstone": "Jean Laurent (French/Spanish, 1816\u20131886)\nGranada\u2013Temple of the Patio of Lions (Alhambra), 1860\u201386\nPhoto on collodion glass\nFototeca del Patrimonio Hist\u00f3rico, Ministerio de Educaci\u00f3n, Cultura y Deporte, Madrid ",
+                        "tombstone": "<b>Jean Laurent</b> (French/Spanish, 1816\u20131886)\n<i>Granada\u2013Temple of the Patio of Lions (Alhambra)</i>, 1860\u201386\nPhoto on collodion glass\nFototeca del Patrimonio Hist\u00f3rico, Ministerio de Educaci\u00f3n, Cultura y Deporte, Madrid ",
                         "description": "Nineteenth-century artists often used Laurent\u2019s photographs of the Alhambra for inspiration or verification of the building\u2019s architectural details for their paintings."
                     },
                     {
                         "imgURL": "https://mam.org/images/artist-travellers/Fortuny,%20The%20Slaughter%20of%20Abencerrajes/Camino,%20Granada,%20Patio%20de%20los%20Leones,%20Alhambra,%20Chrysler,%202018.38.1-p1esjm913ddq01o2v16n719gi1844.jpg",
-                        "tombstone": "Camino (Spanish, died 1888) \nGranada, Courtyard of the Lions (Alhambra), ca. 1880 \nAlbumen print from wet collodion negative \nChrysler Museum of Art, Museum purchase ",
+                        "tombstone": "<b>Camino</b> (Spanish, died 1888) \n<i>Granada, Courtyard of the Lions (Alhambra)</i>, ca. 1880 \nAlbumen print from wet collodion negative \nChrysler Museum of Art, Museum purchase ",
                         "description": "The location of Fortuny\u2019s scene, the Hall of the Abencerrajes, is right off the Patio de los Leones. Photographs often capture the patio from this hall.\n"
                     },
                     {
                         "imgURL": "https://photos.google.com/share/AF1QipM4m4K-ou9HEIbQzkoZy-gRYtiJ7K_B5htBLuqhElBKjPIKlndAF-7KgpaGMdikhQ/photo/AF1QipM20yQunooayVO8Bpvy7FoDbHc8YkGMwrc8znDH?key=eVo3ejZ1dVRMYnRNa2ZZZ1Ruc2wtd0taODlNZGV3",
-                        "tombstone": "Jean Laurent (French/Spanish, 1816\u20131886)\nGranada\u2013Alhambra. The Hall of the Abencerrajes, 1863\u20131880\nCollodion glass plate stereoscopic negative\nFototeca del Patrimonio Hist\u00f3rico, Ministerio de Educaci\u00f3n, Cultura y Deporte, Madrid ",
+                        "tombstone": "<b>Jean Laurent</b> (French/Spanish, 1816\u20131886)\n<i>Granada\u2013Alhambra. The Hall of the Abencerrajes</i>, 1863\u20131880\nCollodion glass plate stereoscopic negative\nFototeca del Patrimonio Hist\u00f3rico, Ministerio de Educaci\u00f3n, Cultura y Deporte, Madrid ",
                         "description": "Stereoscopic photographs such as this offered an immersive experience of the legendary location that Fortuny had populated with members of the Abencerrajes family. "
                     }
                 ]
@@ -134,24 +134,24 @@
                 "name": "Seville",
                 "images": [
                     {
-                        "tombstone": "Walter Gay (American, 1856\u20131937)\nCigarette Girls, Seville, 1895\nOil on canvas\nColby College Museum of Art, Gift of Mr. and Mrs. Bronson Griscom\n",
-                        "description": "We were taken to the work-rooms where the leaves are rolled into cigars. As soon as we were taken in the room, we were assailed by a hurricane of noise: they were all talking, singing, and quarreling at the same time. I have never heard such an uproar. They were for the most part young, and some of them were very pretty. The extreme negligence of their dress enabled one to appreciate their charms in full liberty.\n\n\u201cGreat Tobacco Factory of Spain,\u201d Flag of Our Union, vol. 22, June 1867\n",
+                        "tombstone": "<b>Walter Gay</b> (American, 1856\u20131937)\n<i>Cigarette Girls, Seville</i>, 1895\nOil on canvas\nColby College Museum of Art, Gift of Mr. and Mrs. Bronson Griscom\n",
+                        "description": "We were taken to the work-rooms where the leaves are rolled into cigars. As soon as we were taken in the room, we were assailed by a hurricane of noise: they were all talking, singing, and quarreling at the same time. I have never heard such an uproar. They were for the most part young, and some of them were very pretty. The extreme negligence of their dress enabled one to appreciate their charms in full liberty.\n\n\u201cGreat Tobacco Factory of Spain,\u201d <i>Flag of Our Union</i>, vol. 22, June 1867\n",
                         "imgURL": "https://mam.org/images/artist-travellers/Gay,%20Cigarette%20Girls/Gay,%20Cigarette%20Girls,%20Colby%20College,%201968.008.jpg"
                     },
                     {
                         "imgURL": "https://mam.org/images/artist-travellers/Gay,%20Cigarette%20Girls/Gay,%20Cigar%20Makers%20at%20Seville,%20Musee%20d'Orsay,%20RF%20892.jpg",
-                        "tombstone": "Walter Gay (American, 1856\u20131937)\nLas Cigarerras, 1894\nOil on canvas\nGoya Museum, Castres, France, Mus\u00e9e d'Orsay ",
+                        "tombstone": "<b>Walter Gay</b> (American, 1856\u20131937)\n<i>Las Cigarerras</i>, 1894\nOil on canvas\nGoya Museum, Castres, France, Mus\u00e9e d'Orsay ",
                         "description": "As the first establishment of its kind in Europe, the Royal Tobacco Factory in Seville was a major tourist attraction during the nineteenth century. Its popularity among travelers was not unrelated to the fact that it mainly employed women."
                     },
                     {
                         "imgURL": "https://mam.org/images/artist-travellers/Gay,%20Cigarette%20Girls/Dor%c3%a9,%20Cigarerras%20at%20Work%20in%20the%20Fabrica%20de%20Tabacos%20of%20Seville,%20Davillier's%20Spain-p1esjm5nh25j6vmj1fti1l7t107u.jpg",
-                        "tombstone": "Gustave Dor\u00e9 (French, 1832\u20131883)\nCigarerras at Work in the Fabrica de Tabacos of Seville, from Jean-Charles Davillier, Spain: Social Life and Customs\nLondon: Bickers and Son, 1881\nWood engraving\nFrom the American Geographical Society Library, University of Wisconsin-Milwaukee Libraries ",
+                        "tombstone": "<b>Gustave Dor\u00e9</b> (French, 1832\u20131883)\n<i>Cigarerras at Work in the Fabrica de Tabacos of Seville</i>, from Jean-Charles Davillier, <i>Spain: Social Life and Customs</i>\nLondon: Bickers and Son, 1881\nWood engraving\nFrom the American Geographical Society Library, University of Wisconsin-Milwaukee Libraries ",
                         "description": "Dor\u00e9\u2019s image of Seville\u2019s Royal Tobacco Factory shows the dual exploitation of women as mothers and workers. This socially progressive idea was absent from the usual exoticising representations of the cigarreras."
                     },
                     {
                         "imgURL": "https://mam.org/images/artist-travellers/Gay,%20Cigarette%20Girls/Laurent_La%20Cigarerra_MCP.jpg",
-                        "tombstone": "Jean Laurent (French/Spanish, 1816\u20131886)\nSevilla\u2013La cigarrera (natural), 1860\u20131886\nGlass plate negative\nFototeca del Patrimonio Hist\u00f3rico, Ministerio de Educaci\u00f3n, Cultura y Deporte, Madrid ",
-                        "description": "The cigarreras of Seville (women workers in the Royal Tobacco Factory) rose to literary fame following the publication of Prosper Merim\u00e9e\u2019s novella Carmen in 1847 and achieved even greater heights with Georges Bizet\u2019s 1875 opera of the same name. Laurent\u2019s photo from his series \u201cReal Types\u201d casts an actual cigarrera as a stage character.\n"
+                        "tombstone": "<b>Jean Laurent</b> (French/Spanish, 1816\u20131886)\n<i>Sevilla\u2013La cigarrera (natural)</i>, 1860\u20131886\nGlass plate negative\nFototeca del Patrimonio Hist\u00f3rico, Ministerio de Educaci\u00f3n, Cultura y Deporte, Madrid ",
+                        "description": "The <i>cigarreras</i> of Seville (women workers in the Royal Tobacco Factory) rose to literary fame following the publication of Prosper Merim\u00e9e\u2019s novella Carmen in 1847 and achieved even greater heights with Georges Bizet\u2019s 1875 opera of the same name. Laurent\u2019s photo from his series \u201cReal Types\u201d casts an actual cigarrera as a stage character.\n"
                     }
                 ]
             }
@@ -169,18 +169,18 @@
                 "name": "Away from the tourist gaze (D\u00e9nia and Ronda)",
                 "images": [
                     {
-                        "tombstone": "Childe Hassam (American, 1859\u20131935)\nChurch Procession, Spain, ca. 1883\nOil on canvas\nPrivate collection\n",
-                        "description": "[Our ship] stopped at some of the Spanish ports. . . . to take on freight. So that we would sometimes stay for several days or a week at some of the ports. In that way we went through the Alhambra. . . . I made some watercolors there in the Alhambra. \n\nChilde Hassam interview with DeWitt Lockman, 1927, quoted in Childe Hassam: American Impressionist, Metropolitan Museum of Art, 2004 |\nWe walked from Grandia to Denia; the Mediterranean on our left, blue and calm as a lake, and on our right a country rich in the relics of antiquity. Denia takes its name from a temple consecrated to the Great Diana of Ephesus. We noticed on our way a ruined tower, bearing the name of Sertorius.\n\nFrom Denie to Alcoy the country is extremely fertile, appearing indeed to be one immense orchard, with palms here and there, rearing their graceful heads high above the orange and pomegranate trees. The gathering of the carobs was just over, and one saw garlands suspended over the white walls of cottages, which lighted by an African sun, shone with great brilliancy through the rich masses of foliage.\n\nBaron Ch. Davillier, Spain: Social Life and Customs, translated by J. Thomson, 1876                                                   ",
+                        "tombstone": "<b>Childe Hassam</b> (American, 1859\u20131935)\n<i>Church Procession, Spain</i>, ca. 1883\nOil on canvas\nPrivate collection\n",
+                        "description": "[Our ship] stopped at some of the Spanish ports. . . . to take on freight. So that we would sometimes stay for several days or a week at some of the ports. In that way we went through the Alhambra. . . . I made some watercolors there in the Alhambra. \n\nChilde Hassam interview with DeWitt Lockman, 1927, quoted in <i>Childe Hassam: American Impressionist</i>, Metropolitan Museum of Art, 2004 |\n\nWe walked from Grandia to Denia; the Mediterranean on our left, blue and calm as a lake, and on our right a country rich in the relics of antiquity. Denia takes its name from a temple consecrated to the Great Diana of Ephesus. We noticed on our way a ruined tower, bearing the name of Sertorius.\n\nFrom Denie to Alcoy the country is extremely fertile, appearing indeed to be one immense orchard, with palms here and there, rearing their graceful heads high above the orange and pomegranate trees. The gathering of the carobs was just over, and one saw garlands suspended over the white walls of cottages, which lighted by an African sun, shone with great brilliancy through the rich masses of foliage.\n\nBaron Ch. Davillier, <i>Spain: Social Life and Customs</i>, translated by J. Thomson, 1876                                                   ",
                         "imgURL": "https://mam.org/images/artist-travellers/Hassam,%20Spanish%20Procession/Hassam,%20Church%20Procession,%20ca.%201883,%20Private%20Collection.jpg"
                     },
                     {
                         "imgURL": "https://lh3.googleusercontent.com/pw/ACtC-3f1wlkOsNHlR-tB1Gws2dCqWdrGFTOem-I1PzW1cPLlfGWSoyHviQr_L6kQ6anmZm6s5xhCStSrkCrQoB2RoPpZrlr6ozVL3hEvfHZsD5B68_CZNgYQLsTYmuaJXLFA1-ywOFCMSBh3sxzHFEoyc6MWdQ=w1177-h790-no?authuser=0",
-                        "tombstone": "Ant\u00f3nio Passaporte (Portuguese,1901\u20131983)\nD\u00e9nia, the Pier and the Castle, ca. 1927\u201336\nPhotograph\nFototeca del Patrimonio Hist\u00f3rico, Ministerio de Educaci\u00f3n, Cultura y Deporte, Madrid ",
+                        "tombstone": "<b>Ant\u00f3nio Passaporte</b> (Portuguese,1901\u20131983)\n<i>D\u00e9nia, the Pier and the Castle</i>, ca. 1927\u201336\nPhotograph\nFototeca del Patrimonio Hist\u00f3rico, Ministerio de Educaci\u00f3n, Cultura y Deporte, Madrid ",
                         "description": "In Hassam\u2019s time, in the late 1800s, the steep esplanade of the D\u00e9nia Castle was used as a terraced vineyard. In 1920, the terrains were divided into twenty lots and sold to different owners. This later photograph features in the background the giant figure of Christ that was erected in 1927 and destroyed in 1938."
                     },
                     {
                         "imgURL": "https://mam.org/images/artist-travellers/Hassam,%20Spanish%20Procession/Hassam,%20Plaza%20de%20la%20Merced,%20Thyssen-Bornemisza,1996.22.jpg",
-                        "tombstone": "Childe Hassam (American, 1859\u20131935)\nPlaza de la Merced, Ronda, 1910\nOil on panel\nCarmen Thyssen-Bornemisza Collection, \non loan at the Museo Nacional Thyssen-Bornemisza, Madrid ",
+                        "tombstone": "<b>Childe Hassam</b> (American, 1859\u20131935)\n<i>Plaza de la Merced, Ronda</i>, 1910\nOil on panel\nCarmen Thyssen-Bornemisza Collection, \non loan at the Museo Nacional Thyssen-Bornemisza, Madrid ",
                         "description": "Hassam\u2019s painting of Ronda demonstrates his continuing quest for locations and scenes hidden from the eyes of a usual tourist. Just as Church Procession, Spain, this painting shows that the artist was more interested in light, color, and movement than in the people. \n"
                     }
                 ]
@@ -199,28 +199,28 @@
                 "name": "Segovia",
                 "images": [
                     {
-                        "tombstone": "Ernest Lawson (American, 1873\u20131939)\nSegovia, ca. 1916\nOil on canvas\nMinneapolis Institute of Arts, The John R. Van Derlip Fund\n",
-                        "description": "I am glad you like the Spanish monastery picture as it seemed to me that I got some of the austere quality of Spain in it. Spain is not all gaiety and sunshine, and especially in the centre part has a character of ruggedness and gloom part of the time.\n \nErnest Lawson letter to Sallie Casey Thayer, April 26, 1921, in Charles C. Eldredge, \u201cErnest Lawson\u2019s Spain,\u201d American Art, 2003\n",
+                        "tombstone": "<b>Ernest Lawson</b> (American, 1873\u20131939)\n<i>Segovia</i>, ca. 1916\nOil on canvas\nMinneapolis Institute of Arts, The John R. Van Derlip Fund\n",
+                        "description": "I am glad you like the Spanish monastery picture as it seemed to me that I got some of the austere quality of Spain in it. Spain is not all gaiety and sunshine, and especially in the centre part has a character of ruggedness and gloom part of the time.\n \nErnest Lawson letter to Sallie Casey Thayer, April 26, 1921, in Charles C. Eldredge, \u201cErnest Lawson\u2019s Spain,\u201d <i>American Art</i>, 2003\n",
                         "imgURL": "https://mam.org/images/artist-travellers/Lawson,%20Segovia/Lawson,%20Segovia,%20Mia,%2039.54.jpg"
                     },
                     {
                         "imgURL": "https://mam.org/images/artist-travellers/Lawson,%20Segovia/Laurent%20Segovia%20IPCE.jpg\n\n",
-                        "tombstone": "Jean Laurent (French/Spanish, 1816\u20131886) and His Studio\nSeville\u2013View of the Alc\u00e1zar and the Cathedral of Toledo from Fuencisla, ca. 1870\nGlass plate negative\nFototeca del Patrimonio Hist\u00f3rico, Ministerio de Educaci\u00f3n, Cultura y Deporte, Madrid ",
+                        "tombstone": "<b>Jean Laurent</b> (French/Spanish, 1816\u20131886) <b>and His Studio</b>\n<i>Seville\u2013View of the Alc\u00e1zar and the Cathedral of Toledo from Fuencisla</i>, ca. 1870\nGlass plate negative\nFototeca del Patrimonio Hist\u00f3rico, Ministerio de Educaci\u00f3n, Cultura y Deporte, Madrid ",
                         "description": "The similarities between Laurent\u2019s and Lawson\u2019s landscapes are as striking as their differences: the two artists used the same point of view, but, in his painting, Lawson changed the scale, making the cathedral belltower seem much higher. The Alc\u00e1zar, still in ruins at the time of the photograph, was restored in the early twentieth century."
                     },
                     {
                         "imgURL": "https://mam.org/images/artist-travellers/Lawson,%20Segovia/Henri,%20Segovia,%20Spain,%20Collection%20of%20Stephen%20and%20Miriam%20Seidel,%201.jpg",
-                        "tombstone": "Robert Henri (American, 1865\u20131929)\nSegovia, Spain, 1906\nOil on panel\nCourtesy of Stephen and Miriam Seidel ",
+                        "tombstone": "<b>Robert Henri</b> (American, 1865\u20131929)\n<i>Segovia, Spain</i>, 1906\nOil on panel\nCourtesy of Stephen and Miriam Seidel ",
                         "description": "Henri visited Segovia in 1906. His painting offers a less detailed and more impressionistic view of the town and cathedral than the landscapes by Laurent and Lawson."
                     },
                     {
                         "imgURL": "https://mam.org/images/artist-travellers/Lawson,%20Segovia/Hill,%20View%20of%20Segovia,%20BMA,%20Dr.%20Linn.jpg",
-                        "tombstone": "Carrie Hill (American, 1875\u20131957)\nView of Segovia, ca. 1925\nOil on canvas\nBirmingham Museum of Art; Promised gift of Dr. Julius E. Linn, Jr. ",
+                        "tombstone": "<b>Carrie Hill</b> (American, 1875\u20131957)\n<i>View of Segovia</i>, ca. 1925\nOil on canvas\nBirmingham Museum of Art; Promised gift of Dr. Julius E. Linn, Jr. ",
                         "description": "Hill\u2019s version of Segovia appears even more distorted than Lawson\u2019s, bringing to mind Spanish old master El Greco\u2019s attenuated and colorful views of Toledo."
                     },
                     {
                         "imgURL": "https://mam.org/images/artist-travellers/Lawson,%20Segovia/Laurent,%20Sergovia,%20Roman%20Aquaduct,%20Chrysler,%202019.27.2.jpg",
-                        "tombstone": "Jean Laurent (French/Spanish, 1816\u20131886)\nSegovia\u2013382. General Visit of the Roman Aqueduct, ca. 1870\nAlbumen print on original mount\nChrysler Museum of Art, Museum purchase, in memory of Alice R. and Sol B. Frank ",
+                        "tombstone": "<b>Jean Laurent</b> (French/Spanish, 1816\u20131886)\n<i>Segovia\u2013382. General Visit of the Roman Aqueduct</i>, ca. 1870\nAlbumen print on original mount\nChrysler Museum of Art, Museum purchase, in memory of Alice R. and Sol B. Frank ",
                         "description": "Laurent\u2019s photograph of Segovia\u2019s famous Roman aqueduct presents a different, albeit equally popular, tourist attraction to the city."
                     },
                     {
@@ -244,8 +244,8 @@
                 "name": "Granada",
                 "images": [
                     {
-                        "tombstone": "David Roberts (Scottish, 1796\u20131864)\nThe Fortress of the Alhambra, Granada, 1836\nOil on canvas\nHarvard Art Museums/Fogg Museum, Gift of Richard L. Feigen\n",
-                        "description": "The fact is, that nothing is known of Spain; those who could have appreciated the richness of its architecture have generally gone to Italy or Greece. My portfolio is getting rich, the subjects are not only good, but of a very novel character. I begin to doubt whether I shall be able to paint half of them, they already amount to nearly 100, and I have yet six towns to visit, from which I expect many fine subjects. \n\nLetter dated January 30, 1833 |\nGranada is the most beautiful situation that can be imagined. It lies at the foot of a ridge of high mountains, called the Sierra Nevada, or Mountain of Snow. So great is their height that even in the intense heat of summer they are covered in snow. In front of the city stretches an immense plain called the Vega, at least 20 miles in length, highly cultivated, and, although it is still winter with you at home, here the spring is far advanced. So hot is the sun during the day that I cannot stand to sketch for ten minutes together, but am obliged to cross into the shade. On a hill immediately above Granada rises the old Moorish palace of the Alhambra, a great part of which is in the most perfect preservation. Courts, halls, terraces, galleries, and fountains out of number are here, and golden fish still disport themselves in the numerous ponds. The gardens are filled with orange and lemon trees laden with fruit, and even at this early season the flowers are in full bloom and beauty. \n\nLetter dated February 13, 1833\n \nBoth published in: James Ballantine, The Life of David Roberts, R.A.: Compiled from His Journals and Other Sources, 1866                                                         \n",
+                        "tombstone": "<b>David Roberts</b> (Scottish, 1796\u20131864)\n<i>The Fortress of the Alhambra, Granada</i>, 1836\nOil on canvas\nHarvard Art Museums/Fogg Museum, Gift of Richard L. Feigen\n",
+                        "description": "The fact is, that nothing is known of Spain; those who could have appreciated the richness of its architecture have generally gone to Italy or Greece. My portfolio is getting rich, the subjects are not only good, but of a very novel character. I begin to doubt whether I shall be able to paint half of them, they already amount to nearly 100, and I have yet six towns to visit, from which I expect many fine subjects. \n\nLetter dated January 30, 1833 |\n\nGranada is the most beautiful situation that can be imagined. It lies at the foot of a ridge of high mountains, called the Sierra Nevada, or Mountain of Snow. So great is their height that even in the intense heat of summer they are covered in snow. In front of the city stretches an immense plain called the Vega, at least 20 miles in length, highly cultivated, and, although it is still winter with you at home, here the spring is far advanced. So hot is the sun during the day that I cannot stand to sketch for ten minutes together, but am obliged to cross into the shade. On a hill immediately above Granada rises the old Moorish palace of the Alhambra, a great part of which is in the most perfect preservation. Courts, halls, terraces, galleries, and fountains out of number are here, and golden fish still disport themselves in the numerous ponds. The gardens are filled with orange and lemon trees laden with fruit, and even at this early season the flowers are in full bloom and beauty. \n\nLetter dated February 13, 1833\n \nBoth published in: James Ballantine, <i>The Life of David Roberts, R.A.: Compiled from His Journals and Other Sources</i>, 1866                                                         \n",
                         "imgURL": "https://mam.org/images/artist-travellers/Roberts,%20The%20Alhambra/Roberts,%20Fortress%20of%20the%20Alhambra,%20Harvard,%201967.72.jpg"
                     },
                     {
@@ -255,12 +255,12 @@
                     },
                     {
                         "imgURL": "https://mam.org/images/artist-travellers/Roberts,%20Remains%20of%20a%20Moorish%20Bridge/Darely,%20Frontispiece%20the%20Alhambra,%20CMA.jpg",
-                        "tombstone": "Felix Octavius Carr Darley (American, 1822\u20131883)\nFrontispiece, The Alhambra, from Washington Irving\u2019s The Alhambra, 1851, rev. ed. \nNew York: G. P. Putnam\nLithograph\nChrysler Museum of Art, Jean Outland Chrysler Library ",
+                        "tombstone": "<b>Felix Octavius Carr Darley</b> (American, 1822\u20131883)\n<i>Frontispiece, The Alhambra</i>, from Washington Irving\u2019s <i>The Alhambra</i>, 1851, rev. ed. \nNew York: G. P. Putnam\nLithograph\nChrysler Museum of Art, Jean Outland Chrysler Library ",
                         "description": "Darley\u2019s view of the Comares Tower from below is one of the most iconic, published, and reproduced. It appears in any number of portfolios and travel guides through the nineteenth century."
                     },
                     {
                         "imgURL": "https://mam.org/images/artist-travellers/Darley,%20Frontispiece,%20The%20Alhambra/Titcomb,%20The%20Alhambra,%20Chrysler,%202018.25.1.jpg",
-                        "tombstone": "Mary Bradish Titcomb (American, 1858\u20131927) \nThe Alhambra, ca. 1906 \nOil on canvas\nChrysler Museum of Art, Museum purchase with funds given in memory of Joan Foy French by her daughters Wendy and Christina ",
+                        "tombstone": "<b>Mary Bradish Titcomb</b> (American, 1858\u20131927) \n<i>The Alhambra</i>, ca. 1906 \nOil on canvas\nChrysler Museum of Art, Museum purchase with funds given in memory of Joan Foy French by her daughters Wendy and Christina ",
                         "description": "The Comares Tower, also prominent in Roberts\u2019s panorama, was among the most popular sites of the Alhambra. Artists had a convenient point of view from the Darro River to capture the sight."
                     },
                     {
@@ -284,8 +284,8 @@
                 "name": "Valldemossa (Mallorca)",
                 "images": [
                     {
-                        "tombstone": "John Singer Sargent (American, 1856\u20131925)\nIlex Wood, Majorca, 1908\nOil on canvas\nCarmen Thyssen-Bornemisza Collection, on loan at the Museo Nacional Thyssen-Bornemisza, Madrid \n",
-                        "description": "The ascent on leaving Malaga is very long and beautiful, by a zigzag road, cut over the mountains, through banks of cactus (which is planted for the fruit), aloes, vines, and fig-trees, olive woods, orange gardens, cypresses, and other trees. The views on the ascent into the interminable mountains of the interior are exquisite, as well as those commanding the town and sea. We reached the Venta de los Najos just at dusk, having walked down a long and steep descent from the ilex wood; indeed, my companions walked a great part of today\u2019s journey.\n \nElizabeth Mary Leveson-Gower Grosvenor Westminster, Narrative of a Yacht Voyage in the Mediterranean during the Years 1840\u201341, 1842\n",
+                        "tombstone": "<b>John Singer Sargent</b> (American, 1856\u20131925)\n<i>Ilex Wood, Majorca</i>, 1908\nOil on canvas\nCarmen Thyssen-Bornemisza Collection, on loan at the Museo Nacional Thyssen-Bornemisza, Madrid \n",
+                        "description": "The ascent on leaving Malaga is very long and beautiful, by a zigzag road, cut over the mountains, through banks of cactus (which is planted for the fruit), aloes, vines, and fig-trees, olive woods, orange gardens, cypresses, and other trees. The views on the ascent into the interminable mountains of the interior are exquisite, as well as those commanding the town and sea. We reached the Venta de los Najos just at dusk, having walked down a long and steep descent from the ilex wood; indeed, my companions walked a great part of today\u2019s journey.\n \nElizabeth Mary Leveson-Gower Grosvenor Westminster, <i>Narrative of a Yacht Voyage in the Mediterranean during the Years 1840\u201341</i>, 1842\n",
                         "imgURL": "https://mam.org/images/artist-travellers/Sargent,%20Ilex%20Woods/Sargent,%20Ilex%20Wood,%20Majorca,%20Thyssen-Bornemisza,%201997.34.jpg"
                     }
                 ]
@@ -304,18 +304,18 @@
                 "name": "Granada",
                 "images": [
                     {
-                        "tombstone": "John Singer Sargent (American, 1856\u20131925)\nMoorish Courtyard, 1913\nOil on canvas\nMyron Kunin Collection of American Art, Minneapolis, MN\n",
-                        "description": "The Albayz\u00edn (Albaic\u00edn), a still more populous district, served at one time as a refuge to the Moors of Baeza, when their town fell into the hands of the Christians. This suburb, built on a hill in front of the Alhambra, is the quarter of Granada which still preserves its ancient aspect, as much on account of its population as on account of the few Moorish buildings that escaped the general destruction of the old town. One of the most remarkable of these is the Casa del Chapiz, on the hill of the same name. It is entered through a small court, where we noticed a window divided by a slender column, from which there is a view of the hill of the Alhambra. This building still preserves traces of ancient Moorish decoration in marble, stucco, and curious carvings in wood.\n\n\nBaron Ch. Davillier, Spain: Social Life and Customs, translated by J. Thomson, 1876 \n",
+                        "tombstone": "<b>John Singer Sargent</b> (American, 1856\u20131925)\n<i>Moorish Courtyard</i>, 1913\nOil on canvas\nMyron Kunin Collection of American Art, Minneapolis, MN\n",
+                        "description": "The Albayz\u00edn (Albaic\u00edn), a still more populous district, served at one time as a refuge to the Moors of Baeza, when their town fell into the hands of the Christians. This suburb, built on a hill in front of the Alhambra, is the quarter of Granada which still preserves its ancient aspect, as much on account of its population as on account of the few Moorish buildings that escaped the general destruction of the old town. One of the most remarkable of these is the Casa del Chapiz, on the hill of the same name. It is entered through a small court, where we noticed a window divided by a slender column, from which there is a view of the hill of the Alhambra. This building still preserves traces of ancient Moorish decoration in marble, stucco, and curious carvings in wood.\n\n\nBaron Ch. Davillier, <i>Spain: Social Life and Customs</i>, translated by J. Thomson, 1876 \n",
                         "imgURL": "https://mam.org/images/artist-travellers/Sargent,%20Moorish%20Courtyard/Sargent,%20Moorish%20Courtyard,%201913,%20Kunin%20Collection.jpg"
                     },
                     {
                         "imgURL": "https://mam.org/images/artist-travellers/Sargent,%20Moorish%20Courtyard/Laurent,%20Patio%20de%20una%20casa,%20V&A,%20E.2966-1955.jpg",
-                        "tombstone": "Jean Laurent (French/Spanish, 1816\u20131886)\nPatio of a Moorish House in the Albaic\u00edn, ca. 1860\nAlbumen print\nVictoria and Albert Museum ",
+                        "tombstone": "<b>Jean Laurent</b> (French/Spanish, 1816\u20131886)\n<i>Patio of a Moorish House in the Albaic\u00edn</i>, ca. 1860\nAlbumen print\nVictoria and Albert Museum ",
                         "description": "Like many nineteenth-century artists, Laurent focused on the dilapidated, multifamily nature of the once grand Casa del Chapiz."
                     },
                     {
                         "imgURL": "https://mam.org/images/artist-travellers/Sargent,%20Moorish%20Courtyard/Trevi%c3%b1o%20&%20Arroyo,%20Casa%20del%20Chapiz,%201910,%20Museo%20Sorolla..jpg",
-                        "tombstone": "Trevi\u00f1o and Arroyo (Firm active ca. 1900)\nCasa del Ch\u00e1piz, 1910\nPhotograph, old positive\nMuseo Sorolla ",
+                        "tombstone": "<b>Trevi\u00f1o and Arroyo</b> (Firm active ca. 1900)\n<i>Casa del Ch\u00e1piz</i>, 1910\nPhotograph, old positive\nMuseo Sorolla ",
                         "description": "This photograph shows a more intimate and detailed view of the Casa del Chapiz in Granada's Albaic\u00edn quarter."
                     }
                 ]
@@ -334,14 +334,14 @@
                 "name": "Granada",
                 "images": [
                     {
-                        "tombstone": "\nJoaqu\u00edn Sorolla y Bastida (Spanish, 1863\u20131923)\nStreet in Granada, ca. 1909\nOil on canvas\nMuseo Sorolla\n",
-                        "description": "We turned up the alley, passed from it into another, and from that into a third, always ascending, without seeing anything extraordinary, although I looked curiously in every direction. Narrow streets, squalid old houses, old women dozing on the doorsteps, mothers carefully inspecting their children\u2019s heads, gaping dogs, crowing cocks, ragged boys running and shouting, and the other things that one always sees in the suburbs; but in those streets nothing more. But gradually, as we ascended, the appearance of the houses and the people began to change; the roofs became lower, the windows fewer, the doors smaller, and the people more ragged. In the middle of every street ran a little stream in a walled gutter in the Moorish style; here and there over the doors and around the windows one saw the remains of arabesques and fragments of columns, and in the corners of the squares fountains and well-curbs of the time of the Moorish dominion. At every hundred steps it seemed as if we had gone back fifty years toward the age of the caliphs. \n\nEdmondo De Amicis, Spain and the Spaniards, 1895                                                                                                                 \n",
+                        "tombstone": "\n<b>Joaqu\u00edn Sorolla y Bastida</b> (Spanish, 1863\u20131923)\n<i>Street in Granada</i>, ca. 1909\nOil on canvas\nMuseo Sorolla\n",
+                        "description": "We turned up the alley, passed from it into another, and from that into a third, always ascending, without seeing anything extraordinary, although I looked curiously in every direction. Narrow streets, squalid old houses, old women dozing on the doorsteps, mothers carefully inspecting their children\u2019s heads, gaping dogs, crowing cocks, ragged boys running and shouting, and the other things that one always sees in the suburbs; but in those streets nothing more. But gradually, as we ascended, the appearance of the houses and the people began to change; the roofs became lower, the windows fewer, the doors smaller, and the people more ragged. In the middle of every street ran a little stream in a walled gutter in the Moorish style; here and there over the doors and around the windows one saw the remains of arabesques and fragments of columns, and in the corners of the squares fountains and well-curbs of the time of the Moorish dominion. At every hundred steps it seemed as if we had gone back fifty years toward the age of the caliphs. \n\nEdmondo De Amicis, <i>Spain and the Spaniards</i>, 1895                                                                                                                 \n",
                         "imgURL": "https://mam.org/images/artist-travellers/Sorolla,%20Street%20in%20Granada/Sorolla,%20Calle%20de%20Granada,%20Museo%20Sorolla,%202.jpg"
                     },
                     {
                         "imgURL": "https://mam.org/images/artist-travellers/Sorolla,%20Street%20in%20Granada/Firth,%20Gipsy%20Town,%20Granada,%20V_A,%20E.20815281994.jpg",
-                        "tombstone": "Francis Frith (English, 1822\u20131898) \nGipsy Town. Granada, ca. 1871 \nWhole-plate albumen print from wet collodion glass negative\nVictoria and Albert Museum ",
-                        "description": "Frith\u2019s photograph shows the Albaic\u00edn, the historically Islamic and Romani neighborhood of narrow, winding streets and white carmens, homes surrounded by high walls. Sorolla\u2019s painting Calle de Granada is a more intimate view of the neighborhood and pictures the entrance to the Realejo, Granada\u2019s Jewish quarter."
+                        "tombstone": "<b>Francis Frith</b> (English, 1822\u20131898) \n<i>Gipsy Town. Granada</i>, ca. 1871 \nWhole-plate albumen print from wet collodion glass negative\nVictoria and Albert Museum ",
+                        "description": "Frith\u2019s photograph shows the Albaic\u00edn, the historically Islamic and Romani neighborhood of narrow, winding streets and white carmens, homes surrounded by high walls. Sorolla\u2019s painting <i>Calle de Granada</i> is a more intimate view of the neighborhood and pictures the entrance to the Realejo, Granada\u2019s Jewish quarter."
                     },
                     {
                         "imgURL": "https://mam.org/images/artist-travellers/Sorolla,%20Street%20in%20Granada/View%20of%20the%20Albaicin%20from%20the%20Alhambra.jpg",
@@ -364,13 +364,13 @@
                 "name": "Granada, The Alhambra",
                 "images": [
                     {
-                        "tombstone": "Joaqu\u00edn Sorolla y Bastida (Spanish, 1863\u20131923)\nHall of the Ambassadors, Alhambra, Granada, 1909\nOil on canvas\nThe J. Paul Getty Museum, Los Angeles\n",
-                        "description": "From this court they passed to the great Hall of the Ambassadors, which occupies the centre of the Tower of Comares, and is the most imposing single apartment of the palace. It was the Sultan's audience-chamber, and was well calculated to impress the visitor with his magnificence. Its lofty dome, seventy-five feet in height, like the palace of King Solomon, is \"ceiled in cedar and painted with vermilion.\"\n\nLizzie W. Champney, Three Vassar Girls Abroad, 1883.\n",
+                        "tombstone": "<b>Joaqu\u00edn Sorolla y Bastida</b> (Spanish, 1863\u20131923)\n<i>Hall of the Ambassadors, Alhambra, Granada</i>, 1909\nOil on canvas\nThe J. Paul Getty Museum, Los Angeles\n",
+                        "description": "From this court they passed to the great Hall of the Ambassadors, which occupies the centre of the Tower of Comares, and is the most imposing single apartment of the palace. It was the Sultan's audience-chamber, and was well calculated to impress the visitor with his magnificence. Its lofty dome, seventy-five feet in height, like the palace of King Solomon, is \"ceiled in cedar and painted with vermilion.\"\n\nLizzie W. Champney, <i>Three Vassar Girls Abroad</i>, 1883.\n",
                         "imgURL": "https://mam.org/images/artist-travellers/Sorolla,%20Hall%20of%20the%20Ambassadors/Sorolla,%20Hall%20of%20the%20Ambassadors,%20Getty%2079.PA.154.jpg"
                     },
                     {
                         "imgURL": "https://mam.org/images/artist-travellers/Sorolla,%20Hall%20of%20the%20Ambassadors/Firth,%20The%20Ambassadors'%20Court,%20Granada,%20V&A,%20E.20815331994.jpg",
-                        "tombstone": "Francis Frith (English, 1822\u20131898) \nThe Ambassadors\u2019 Court. Granada, ca. 1871 \nWhole-plate albumen print from wet collodion glass negative\nVictoria and Albert Museum ",
+                        "tombstone": "<b>Francis Frith</b> (English, 1822\u20131898) \n<i>The Ambassadors\u2019 Court. Granada</i>, ca. 1871 \nWhole-plate albumen print from wet collodion glass negative\nVictoria and Albert Museum ",
                         "description": "Frith\u2019s photograph\u2014and Sorolla\u2019s painting\u2014shows one of the most popular, and oft-depicted, views of Granada: the Comares Tower\u2019s Ambassadors\u2019 Court in the Alhambra.\n\n\n"
                     }
                 ]
@@ -389,18 +389,18 @@
                 "name": "Granada, The Alhambra",
                 "images": [
                     {
-                        "tombstone": "Mary Bradish Titcomb (American, 1858\u20131927) \nThe Alhambra, ca. 1906 \nOil on canvas\nChrysler Museum of Art, Museum purchase with funds given in memory of Joan Foy French by her daughters Wendy and Christina",
-                        "description": "North of Granada rises a long ridge of rocky land between two rivers, the Darro and Xenil; the ridge slopes downwards towards the town, intersected by a long avenue of elm-trees, but spreading out near the top into two tablelands, or broad terraces, bordered by steep ravines. On the western terrace stands the Alhambra, its base washed by the Darro. On the eastern one stand the Vermilion Towers, beyond which the land slopes more gently down into the precincts of the town of Granada. These two terraces were formerly girt with walls and towers and connected together with winding lanes; and within the circuit thus fortified, stood the palaces and villas of the Caliphs of Granada, as well as their chief fortresses; so many that the enclosure was called a city.\n\nSusan Hale, A Family Flight Through Spain, 1883                                                                                                                                                                                                                                      \n",
+                        "tombstone": "<b>Mary Bradish Titcomb</b> (American, 1858\u20131927) \n<i>The Alhambra</i>, ca. 1906 \nOil on canvas\nChrysler Museum of Art, Museum purchase with funds given in memory of Joan Foy French by her daughters Wendy and Christina",
+                        "description": "North of Granada rises a long ridge of rocky land between two rivers, the Darro and Xenil; the ridge slopes downwards towards the town, intersected by a long avenue of elm-trees, but spreading out near the top into two tablelands, or broad terraces, bordered by steep ravines. On the western terrace stands the Alhambra, its base washed by the Darro. On the eastern one stand the Vermilion Towers, beyond which the land slopes more gently down into the precincts of the town of Granada. These two terraces were formerly girt with walls and towers and connected together with winding lanes; and within the circuit thus fortified, stood the palaces and villas of the Caliphs of Granada, as well as their chief fortresses; so many that the enclosure was called a city.\n\nSusan Hale, <i>A Family Flight Through Spain</i>, 1883                                                                                                                                                                                                                                      \n",
                         "imgURL": "https://mam.org/images/artist-travellers/Titcomb,%20The%20Alhambra/Titcomb,%20The%20Alhambra,%20Chrysler,%202018.25.1.jpg"
                     },
                     {
                         "imgURL": "https://mam.org/images/artist-travellers/Titcomb,%20The%20Alhambra/Roberts,%20Tower%20of%20Comares,%20Landscape%20Annual,%20Chrysler.jpg",
-                        "tombstone": "David Roberts (Scottish, 1796\u20131864)\nTower of Comares, from Thomas Roscoe's The Tourist in Spain, Granada, 1835\nLondon: Robert Jennings and Co.\nEngraving\nChrysler Museum of Art, Jean Outland Chrysler Library ",
+                        "tombstone": "<b>David Roberts</b> (Scottish, 1796\u20131864)\n<i>Tower of Comares</i>, from Thomas Roscoe's <i>The Tourist in Spain, Granada</i>, 1835\nLondon: Robert Jennings and Co.\nEngraving\nChrysler Museum of Art, Jean Outland Chrysler Library ",
                         "description": "The view that Roberts\u2019s print of the Alhambra\u2019s Comares Tower provides here\u2014seen from the Darro River below\u2014is a fantasy and required great artistic license."
                     },
                     {
                         "imgURL": "https://mam.org/images/artist-travellers/Titcomb,%20The%20Alhambra/Darely,%20Frontispiece%20the%20Alhambra,%20CMA.jpg",
-                        "tombstone": "Felix Octavius Carr Darley (American, 1822\u20131883)\nFrontispiece, The Alhambra, from Washington Irving\u2019s The Alhambra, 1851, rev. ed. \nNew York: G. P. Putnam\nLithograph\nChrysler Museum of Art, Jean Outland Chrysler Library ",
+                        "tombstone": "<b>Felix Octavius Carr Darley</b> (American, 1822\u20131883)\n<i>Frontispiece, The Alhambra</i>, from Washington Irving\u2019s <i>The Alhambra</i>, 1851, rev. ed. \nNew York: G. P. Putnam\nLithograph\nChrysler Museum of Art, Jean Outland Chrysler Library ",
                         "description": "Darley never traveled to Spain, and his lithograph of the Alhambra\u2019s Comares Tower is strikingly similar to Roberts\u2019s. He likely referenced the Scottish artist\u2019s print when making his own. "
                     },
                     {
@@ -410,7 +410,7 @@
                     },
                     {
                         "imgURL": "https://mam.org/images/artist-travellers/Titcomb,%20The%20Alhambra/Pennell,%20The%20Generalif,%20pen%20and%20ink,%20MAM,%20M1953.19.jpg",
-                        "tombstone": "Joseph Pennell (American, 1860\u20131926)\nThe Generalife, Granada, 1894\nPen and ink on paper\nMilwaukee Art Museum, gift of The Art Institute of Chicago ",
+                        "tombstone": "<b>Joseph Pennell</b> (American, 1860\u20131926)\n<i>The Generalife, Granada</i>, 1894\nPen and ink on paper\nMilwaukee Art Museum, gift of The Art Institute of Chicago ",
                         "description": "Pennell\u2019s drawing is from the same perspective as many artistic views of the Alhambra\u2019s Comares Tower, but it shows the Generalife, the summer palace of the Alhambra\u2019s Nasrid rulers."
                     }
                 ]
@@ -429,18 +429,18 @@
                 "name": "Cordoba",
                 "images": [
                     {
-                        "tombstone": "Edwin Lord Weeks (American, 1838\u20131920)\nInterior of a Mosque at Cordova, ca. 1880\nOil on canvas\nThe Walters Art Museum, Baltimore, Maryland\n",
-                        "description": "It is impossible to describe the impression one feels on entering the mosque of Cordova for the first time; the numerous columns which support the vault cross each other like forest trees and form long perspectives, which continually change as one penetrates farther into the interior. A half-obscurity, reigning here, as indeed in all Spanish churches, adds another charm to the poetry of these alleys of marble. The columns now number eight hundred and sixty, but were much more numerous formerly: it is said that there were as many as twelve hundred.\n\nBaron Ch. Davillier, Spain: Social Life and Customs, translated by J. Thomson, 1876\n",
+                        "tombstone": "<b>Edwin Lord Weeks</b> (American, 1838\u20131920)\n<i>Interior of a Mosque at Cordova</i>, ca. 1880\nOil on canvas\nThe Walters Art Museum, Baltimore, Maryland\n",
+                        "description": "It is impossible to describe the impression one feels on entering the mosque of Cordova for the first time; the numerous columns which support the vault cross each other like forest trees and form long perspectives, which continually change as one penetrates farther into the interior. A half-obscurity, reigning here, as indeed in all Spanish churches, adds another charm to the poetry of these alleys of marble. The columns now number eight hundred and sixty, but were much more numerous formerly: it is said that there were as many as twelve hundred.\n\nBaron Ch. Davillier, <i>Spain: Social Life and Customs</i>, translated by J. Thomson, 1876\n",
                         "imgURL": "https://mam.org/images/artist-travellers/Weeks,%20Interior%20of%20a%20Mosque%20at%20Cordova/Lord%20Weeks,%20Edwin_Interior%20of%20a%20Mosque%20at%20Cordova,%20Walters,%2037.169.jpg"
                     },
                     {
                         "imgURL": "https://mam.org/images/artist-travellers/Weeks,%20Interior%20of%20a%20Mosque%20at%20Cordova/Laurent,%20Vista%20interior%20de%20la%20Mezquita,%20Getty%2084.XA.761.26.2.jpg",
-                        "tombstone": "Jean Laurent (French/Spanish, 1816\u20131886)\nInterior View of the Mosque or Cathedral, C\u00f3rdoba, 1875\nAlbumen silver print \nThe J. Paul Getty Museum, Los Angeles ",
+                        "tombstone": "<b>Jean Laurent</b> (French/Spanish, 1816\u20131886)\n<i>Interior View of the Mosque or Cathedral, C\u00f3rdoba</i>, 1875\nAlbumen silver print \nThe J. Paul Getty Museum, Los Angeles ",
                         "description": "Laurent\u2019s photograph of the interior of the Mosque or Cathedral at C\u00f3rdoba highlights the famed columns receding into the distance, a favorite view of nineteenth-century artists.\n"
                     },
                     {
                         "imgURL": "https://mam.org/images/artist-travellers/Weeks,%20Interior%20of%20a%20Mosque%20at%20Cordova/Lewis,%20Mosque%20at%20Cordova,%20V&A,%20E.1863-1927.jpg",
-                        "tombstone": "John Frederick Lewis (English, 1804\u20131876) \nThe Mosque at Cordova, from Lewis\u2019s Sketches and Drawings of the Alhambra, made during a Residence in Granada in the years 1833\u201334, 1835\nLithograph\nVictoria and Albert Museum ",
+                        "tombstone": "<b>John Frederick Lewis</b> (English, 1804\u20131876) \n<i>The Mosque at Cordova</i>, from Lewis\u2019s <i>Sketches and Drawings of the Alhambra, made during a Residence in Granada in the years 1833\u201334</i>, 1835\nLithograph\nVictoria and Albert Museum ",
                         "description": "Like Laurent and his photograph, Lewis underscored the mosque\u2019s cavernous interior and multiple arches and columns. His view also introduces a Catholic ritual, as the building was used as a church at the time."
                     }
                 ]
