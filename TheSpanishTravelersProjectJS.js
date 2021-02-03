@@ -14,8 +14,8 @@ var esriBase;
 
 // Programming constants
 const MAIN_IMAGE = 0;
-const prevQuote = document.querySelector('#qScrollBtnLeft');
-const nextQuote = document.querySelector('#qScrollBtnRight');
+// const prevQuote = document.querySelector('#qScrollBtnLeft');
+// const nextQuote = document.querySelector('#qScrollBtnRight');
 
 /* Additional map variables:
 == Lat/Long coordinates of relevant locations ==
@@ -191,6 +191,7 @@ function getPopupContent(feature, layer) {
 	selectImage(galleryImages[MAIN_IMAGE], imageArray[MAIN_IMAGE].imgURL, imageArray[MAIN_IMAGE].tombstone, imageArray[MAIN_IMAGE].description);
 	// Add an event listener to all the images in the gallery so that they'll call selectImage() on click
 	activateImageSelection(galleryImages, imageArray);
+	// Check to see if the description goes out of bounds of the popupinfo div
 }
 
 //TODO: Create a helper function that goes through all the images of a feature and creates a gallery out of them
@@ -221,6 +222,47 @@ function createGallery(popupTitle, imageArray){
 	gallerySlide.style.transform = 'translateX(' + (-size * counter ) + 'px)';
 }
 
+function activateReadMoreButton() {
+	var readMoreButton = document.querySelector(".read-more-button");
+	readMoreButton.style.display = "block";
+	readMoreButton.disabled = false;
+}
+
+function disableReadMoreButton() {
+	var readMoreButton = document.querySelector(".read-more-button");
+	readMoreButton.style.display = "none";
+	readMoreButton.disabled = true;
+}
+
+function enableScroll() {
+	var popupInfo = document.getElementById("my-popup-info");
+	var descriptionDiv = document.getElementById("my-popup-description");
+	popupInfo.style.overflow = "scroll";
+	descriptionDiv.scrollIntoView({behavior: "smooth", block: "end"});
+	$("#my-popup-info").removeClass('stop-scrolling');
+	disableReadMoreButton()
+}
+
+function disabeScroll() {
+	var popupInfo = document.getElementById("my-popup-info");
+	popupInfo.style.overflow = "hidden";
+	$("#my-popup-info").addClass('stop-scrolling');
+}
+
+function checkOverflow() {
+	var popupInfo = document.getElementById("my-popup-info");
+	var tombstoneDiv = document.getElementById("my-popup-tombstone");
+	var titleDiv = document.getElementById("my-popup-title");
+	var descriptionDiv = document.getElementById("my-popup-description");
+	var popupInfoBound = popupInfo.getBoundingClientRect();
+	console.log(descriptionDiv.scrollHeight, popupInfoBound.height-(tombstoneDiv.scrollHeight + titleDiv.scrollHeight + 120));
+	if (descriptionDiv.scrollHeight > popupInfoBound.height-(tombstoneDiv.scrollHeight + titleDiv.scrollHeight + 120)) {
+		console.log("Description out of bounds!");
+		return true;
+	}
+	return false;
+}
+
 //TODO: Create image objects to consolidate all the messy data in the selectImage() function into one var per image
 function selectImage(clickedImage, imgURL, tombstone, description) {
 	// console.log("=>selectImage() called on galleryIndex " + galleryIndex)
@@ -230,79 +272,90 @@ function selectImage(clickedImage, imgURL, tombstone, description) {
 	var mainImageField = document.getElementById("my-popup-image");
 	var tombstoneField = document.getElementById("my-popup-tombstone");
 	var descriptionField = document.getElementById("my-popup-description");
+	var titleField = document.getElementById("my-popup-title");
+	if (document.getElementById("my-popup").style.height == "100%") {
+		titleField.scrollIntoView({behavior: "smooth", block: "end"});
+	}
 	// Inject the data of the selected image into the HTML fields
 	mainImageField.innerHTML = '<img id = "specific-image" src = "' + imgURL + '">'
 	//console.log(mainImageField.innerHTML);
-	formatTombstone(tombstone, tombstoneField);
+	tombstoneField.innerHTML = '<p>' + tombstone + '</p>'
+	// formatTombstone(tombstone, tombstoneField);
 	// Adding the description for non-main-image items
 	if (description == null) {
 		description = "";
-	}
-	disableQuoteScroll();
-	if (description.includes("|")) {
-		descriptionArray = description.split("|\n");
-		descriptionField.innerHTML = '<p>' + descriptionArray[0] + '</p>';
-		enableQuoteScroll(descriptionArray);
 	} else {
 		descriptionField.innerHTML = '<p>' + description + '</p>';
 	}
-}
-
-function formatTombstone(tombstone, tombstoneField) {
-	tombstoneLines = tombstone.split("\n")
-	if (tombstoneLines.length < 3) { // Checks if the tombstone isn't a proper multi-line one
-		tombstoneField.innerHTML = '<p>' + tombstone + '</p>';
-	} else {
-		var lineOne = tombstoneLines[0];
-		var lineOneSplit = lineOne.split("("); // Splitting the artist's name and their info: ARTIST NAME (INFO)
-		var artistName = lineOneSplit[0]; // Extracting the artist's name to bold it
-		var artistInfo = lineOneSplit[1];
-		var lineTwo = tombstoneLines[1];
-		var lineTwoSplit = lineTwo.split(",");
-		var imageName = lineTwoSplit[0]; // Extracting the image's name to italicize it
-		var lineTwoEnd = ""; // Variable to put the rest of line 2 back together in: this is due to variation in array length
-		console.log("lineTwoSplit: ", lineTwoSplit);
-		console.log("lineTwoEnd: ");
-		var i;
-		for (i = 1; i < lineTwoSplit.length; i++) { // Starting at position 1, immediately after the image name
-			console.log(i);
-			console.log(lineTwoEnd);
-			lineTwoEnd = lineTwoEnd + ", " + lineTwoSplit[i];
-		}
-		console.log("tombstoneLines: ", tombstoneLines);
-		console.log("tombstoneRemainder: ");
-		var tombstoneRemainder = ""; // Variable to put the rest of the tombstone back into, undoing the first split, minus the first two lines
-		for (i = 2; i < tombstoneLines.length; i++) { // Starting at position 2, immediately after line two
-			console.log(i);
-			console.log(tombstoneRemainder);
-			tombstoneRemainder = tombstoneRemainder + "\n" + tombstoneLines[i];
-		}
-		tombstoneField.innerHTML = '<p><b>' + artistName + '</b> (' + artistInfo + '<br><i>' + imageName + '</i>' + lineTwoEnd + tombstoneRemainder + '</p>';
+	disabeScroll();
+	disableReadMoreButton();
+	if (checkOverflow()) {
+		// Activate Read More button if checkOverflow returns true
+		activateReadMoreButton();
 	}
+	// disableQuoteScroll();
+	// if (description.includes("|")) {
+	// 	descriptionArray = description.split("|\n");
+	// 	descriptionField.innerHTML = '<p>' + descriptionArray[0] + '</p>';
+	// 	enableQuoteScroll(descriptionArray);
+	// } 
 }
 
-function enableQuoteScroll(descriptionArray) {
-	var descriptionField = document.getElementById("my-popup-description");
-	nextQuote.style.display = "block";
-	nextQuote.onclick = function () {
-		console.log("clicked");
-		descriptionField.innerHTML = '<p>' + descriptionArray[1] + '</p>'
-		nextQuote.style.display = "none";
-		prevQuote.style.display = "block";
-	};
-	prevQuote.onclick = function () {
-		descriptionField.innerHTML = '<p>' + descriptionArray[0] + '</p>'
-		nextQuote.style.display = "block";
-		prevQuote.style.display = "none";
-	};
-}
+// function formatTombstone(tombstone, tombstoneField) {
+// 	tombstoneLines = tombstone.split("\n")
+// 	if (tombstoneLines.length < 3) { // Checks if the tombstone isn't a proper multi-line one
+// 		tombstoneField.innerHTML = '<p>' + tombstone + '</p>';
+// 	} else {
+// 		var lineOne = tombstoneLines[0];
+// 		var lineOneSplit = lineOne.split("("); // Splitting the artist's name and their info: ARTIST NAME (INFO)
+// 		var artistName = lineOneSplit[0]; // Extracting the artist's name to bold it
+// 		var artistInfo = lineOneSplit[1];
+// 		var lineTwo = tombstoneLines[1];
+// 		var lineTwoSplit = lineTwo.split(",");
+// 		var imageName = lineTwoSplit[0]; // Extracting the image's name to italicize it
+// 		var lineTwoEnd = ""; // Variable to put the rest of line 2 back together in: this is due to variation in array length
+// 		console.log("lineTwoSplit: ", lineTwoSplit);
+// 		console.log("lineTwoEnd: ");
+// 		var i;
+// 		for (i = 1; i < lineTwoSplit.length; i++) { // Starting at position 1, immediately after the image name
+// 			console.log(i);
+// 			console.log(lineTwoEnd);
+// 			lineTwoEnd = lineTwoEnd + ", " + lineTwoSplit[i];
+// 		}
+// 		console.log("tombstoneLines: ", tombstoneLines);
+// 		console.log("tombstoneRemainder: ");
+// 		var tombstoneRemainder = ""; // Variable to put the rest of the tombstone back into, undoing the first split, minus the first two lines
+// 		for (i = 2; i < tombstoneLines.length; i++) { // Starting at position 2, immediately after line two
+// 			console.log(i);
+// 			console.log(tombstoneRemainder);
+// 			tombstoneRemainder = tombstoneRemainder + "\n" + tombstoneLines[i];
+// 		}
+// 		tombstoneField.innerHTML = '<p><b>' + artistName + '</b> (' + artistInfo + '<br><i>' + imageName + '</i>' + lineTwoEnd + tombstoneRemainder + '</p>';
+// 	}
+// }
 
-function disableQuoteScroll() {
-	nextQuote.style.display = "none";
-	nextQuote.onclick = "";
-	prevQuote.style.display = "none";
-	prevQuote.onclick = "";
-}
+// function enableQuoteScroll(descriptionArray) {
+// 	var descriptionField = document.getElementById("my-popup-description");
+// 	nextQuote.style.display = "block";
+// 	nextQuote.onclick = function () {
+// 		console.log("clicked");
+// 		descriptionField.innerHTML = '<p>' + descriptionArray[1] + '</p>'
+// 		nextQuote.style.display = "none";
+// 		prevQuote.style.display = "block";
+// 	};
+// 	prevQuote.onclick = function () {
+// 		descriptionField.innerHTML = '<p>' + descriptionArray[0] + '</p>'
+// 		nextQuote.style.display = "block";
+// 		prevQuote.style.display = "none";
+// 	};
+// }
+
+// function disableQuoteScroll() {
+// 	nextQuote.style.display = "none";
+// 	nextQuote.onclick = "";
+// 	prevQuote.style.display = "none";
+// 	prevQuote.onclick = "";
+// }
 
 // Helper function that gives each image in the gallery the selectImage() function on click
 function  activateImageSelection(galleryImages, imageArray) {
