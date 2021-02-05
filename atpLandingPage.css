@@ -1,0 +1,193 @@
+/* Custom CSS for The Artist-Travelers Project Landing Page*/
+@font-face {
+	font-family: 'Post Grotesk';
+	src: url('https://mam.org/_asset/font/PostGrotesk-Book.eot'); /* IE9 Compat Modes */
+	src: url('https://mam.org/_asset/font/PostGrotesk-Book.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+		 url('https://mam.org/_asset/font/PostGrotesk-Book.woff') format('woff'), /* Modern Browsers */
+		 url('https://mam.org/_asset/font/PostGrotesk-Book.ttf')  format('truetype'); /* Safari, Android, iOS */
+	font-weight: 300;
+  }
+@font-face {
+	font-family: 'Post Grotesk';
+	src: url('https://mam.org/_asset/font/PostGrotesk-Bold.eot'); /* IE9 Compat Modes */
+	src: url('https://mam.org/_asset/font/PostGrotesk-Bold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+		 url('https://mam.org/_asset/font/PostGrotesk-Bold.woff') format('woff'), /* Modern Browsers */
+		 url('https://mam.org/_asset/font/PostGrotesk-Bold.ttf')  format('truetype'); /* Safari, Android, iOS */
+	font-weight: 600;
+}
+@font-face {
+	font-family: 'Post Grotesk';
+	src: url('https://mam.org/_asset/font/PostGrotesk-Black.eot'); /* IE9 Compat Modes */
+	src: url('https://mam.org/_asset/font/PostGrotesk-Black.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+		 url('https://mam.org/_asset/font/PostGrotesk-Black.woff') format('woff'), /* Modern Browsers */
+		 url('https://mam.org/_asset/font/PostGrotesk-Black.ttf')  format('truetype'); /* Safari, Android, iOS */
+	font-weight: 800;
+}
+@font-face {
+	font-family: 'Post Grotesk-Italic';
+	src: url('https://mam.org/_asset/font/PostGrotesk-BookItalic.eot'); /* IE9 Compat Modes */
+	src: url('https://mam.org/_asset/font/PostGrotesk-BookItalic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+		 url('https://mam.org/_asset/font/PostGrotesk-BookItalic.woff') format('woff'), /* Modern Browsers */
+		 url('https://mam.org/_asset/font/PostGrotesk-BookItalic.ttf')  format('truetype'); /* Safari, Android, iOS */
+	font-weight: 300;
+}
+@font-face {
+	font-family: "Sagona SemiBold";
+	src: url('./Rene/Rene\ Bieder\ -\ Sagona-SemiBold.otf') format("opentype")
+}
+@font-face {
+	font-family: "Sagona-SemiBold";
+	src: url('webFonts/SagonaSemiBold/font.woff2') format('woff2'), url('webFonts/SagonaSemiBold/font.woff') format('woff');
+}
+@font-face {
+	font-family: "Sagona-Heavy";
+	src: url('webFonts/SagonaHeavy/font.woff2') format('woff2'), url('webFonts/SagonaHeavy/font.woff') format('woff');
+}
+
+body {
+    margin: 0;
+    background-color: rgb(249, 240, 229);
+}
+
+h1 {
+    font-family: "Sagona-SemiBold", serif;
+    font-weight: 600 !important;
+    font-size: 40px;
+}
+
+p {
+    font-family: "Post Grotesk", sans-serif;
+    font-weight: 300;
+}
+
+b {
+    font-weight: 600 !important;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+a:hover {
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+#body-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(249, 240, 229);
+}
+
+#content-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    height: 100%;
+    width: 55%;
+    background-color: rgb(192, 76, 54);
+    transition: 0.2s;
+}
+
+#menu-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+    top: 80px;
+    width: 90%;
+    height: 150px;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.menu-item {
+    color: white;
+    fill: white;
+    font-family: "Post Grotesk", sans-serif;
+    font-weight: 600 !important;
+    font-size: 30px;
+}
+.menu-item:hover {
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3)
+}
+
+#star {
+    height:40px;
+    width: 40px;
+}
+
+.content-div {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100%;
+    width: 90%;
+    margin: auto;
+    margin-bottom: 50px;
+}
+.content-item {
+    height: 100%;
+    width: 100%;
+    margin: auto;
+    font-family: "Post Grotesk", sans-serif;
+    font-size: 30px;
+    font-weight: 300;
+    color: rgb(192, 76, 54);
+}
+
+#atp-logo {
+    height: 80%;
+    width: 80%;
+}
+
+#welcome-div {
+    display: none;
+}
+
+#about-div {
+    display: none;
+}
+
+hr.solid {
+	border-top: 1px solid rgb(192, 76, 54);
+	margin: 0px;
+}
+
+#image-container {
+    height: 100%;
+    flex-basis: 45%;
+    background: url("Spain_Map_Snippet_1.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: 0.2s;
+}
+
+@media all and (max-width: 800px) {
+    #image-container {
+        flex-basis: 0%;
+    }
+    #content-container {
+        width: 100%;
+    }
+}
+@media all and (max-width: 500px) {
+    #menu-container {
+        flex-direction: scroll;
+        height: auto;
+    }
+}
+@media all and (max-height: 590px) {
+    body {
+        overflow: scroll;
+    }
+    #image-container {
+        height: 600px;
+    }
+    #content-container {
+        height: 600px;
+    }
+}
