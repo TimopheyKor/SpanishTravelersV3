@@ -10,7 +10,7 @@
 	<head>
 
 		<meta charset="utf-8">
-		<title>The Spanish Travelers Project V3</title>
+		<title>The Artist-Travelers Project</title>
 
 		<!-- Section for loading in custom CSS, library/plugin CSS, and library/plugin JS -->
 		<!-- Adding (LOCAL) custom CSS sheet -->
@@ -60,7 +60,7 @@
 		<!-- Creating a div for the map and a div for the title -->
 		<div id="map"></div>
 		<div id="title">
-			<h1>The Spanish Travelers Project</h1>
+			<h1>The Artist-Travelers Project</h1>
 		</div>
 		<div id="my-popup">
 			<div id="my-popup-content">
@@ -68,14 +68,13 @@
 					 &times  <!-- "x" -->
 				</a>
 				<!-- Put the tombstone divs inside another div, style to Rachel's design -->
-				<div id="my-popup-image"><!-- Custom HTML content written from JS goes here --></div>
+				<div id="return-to-map-btn" class="unselectable" onclick="closePopup()">↢ Return to Map</div>
+				<div id="my-popup-image" onclick="focusOnImage()"><!-- Custom HTML content written from JS goes here --></div>
 				<div id="my-popup-info">
 					<div id="my-popup-title"><!-- Custom HTML content written from JS goes here --></div>
 					<hr class="solid">
 					<div id="my-popup-tombstone"><!-- Custom HTML content written from JS goes here --></div>
 					<hr class="solid">
-					<!-- <i class="fas fa-arrow-left" id="qScrollBtnLeft" onclick=""></i> -->
-					<!-- <i class="fas fa-arrow-right" id="qScrollBtnRight" onclick=""></i> -->
 					<div id="my-popup-description"><!-- Custom HTML content written from JS goes here --></div>
 					<button class="read-more-button" onclick="enableScroll()">⇃ Read More ⇂</button>
 				</div>

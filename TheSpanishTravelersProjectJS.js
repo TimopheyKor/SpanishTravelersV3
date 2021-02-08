@@ -14,6 +14,7 @@ var esriBase;
 
 // Programming constants
 const MAIN_IMAGE = 0;
+const POPUP_INFO_PADDING = 10;
 // const prevQuote = document.querySelector('#qScrollBtnLeft');
 // const nextQuote = document.querySelector('#qScrollBtnRight');
 
@@ -159,10 +160,12 @@ function openPopup(feature, layer) {
 	hideTitle();
 	getPopupContent(feature, layer);
 	document.getElementById("my-popup").style.height = "100%";
+	document.getElementById("return-to-map-btn").style.display = "block";
 }
 function closePopup() {
 	document.getElementById("my-popup").style.height = "0";
 	document.querySelector('.gallery-slide').innerHTML = "";
+	document.getElementById("return-to-map-btn").style.display = "none";
 	counter = 0;
 	showTitle();
 }
@@ -222,6 +225,36 @@ function createGallery(popupTitle, imageArray){
 	gallerySlide.style.transform = 'translateX(' + (-size * counter ) + 'px)';
 }
 
+//Functions for making the main image full-screen when it's clicked
+function focusOnImage() {
+	var imageDiv = document.getElementById("my-popup-image");
+	var image = document.getElementById("specific-iamge");
+	if (imageDiv.style.height == "100vh") {
+		imageDiv.style.backgroundColor = "rgba(0, 0, 0, 0)"
+		imageDiv.style.height = "";
+		imageDiv.style.width =  "";
+		imageDiv.style.top = "80px";
+		imageDiv.style.left = "40px";
+		imageDiv.style.right = "50vw";
+		imageDiv.style.bottom = "40px";
+		imageDiv.style.zIndex = "0";
+		image.style.height = "95vh";
+		image.style.width = "auto";
+	} else {
+		imageDiv.style.backgroundColor = "rgba(0, 0, 0, 0.9)"
+		imageDiv.style.height = "100vh";
+		imageDiv.style.width =  "100vw";
+		imageDiv.style.top = "0";
+		imageDiv.style.left = "0";
+		imageDiv.style.top = "0";
+		imageDiv.style.left = "0";
+		imageDiv.style.zIndex = "1";
+		image.style.height = "100%";
+		image.style.width = "100%";
+	}
+}
+
+//Functions controlling a button that appears when text is out of bounds, which enables scrolling when clicked.
 function activateReadMoreButton() {
 	var readMoreButton = document.querySelector(".read-more-button");
 	readMoreButton.style.display = "block";
@@ -254,9 +287,10 @@ function checkOverflow() {
 	var tombstoneDiv = document.getElementById("my-popup-tombstone");
 	var titleDiv = document.getElementById("my-popup-title");
 	var descriptionDiv = document.getElementById("my-popup-description");
+	var dividers = document.querySelector('.solid').getBoundingClientRect();
 	var popupInfoBound = popupInfo.getBoundingClientRect();
-	console.log(descriptionDiv.scrollHeight, popupInfoBound.height-(tombstoneDiv.scrollHeight + titleDiv.scrollHeight + 120));
-	if (descriptionDiv.scrollHeight > popupInfoBound.height-(tombstoneDiv.scrollHeight + titleDiv.scrollHeight + 120)) {
+	console.log((descriptionDiv.scrollHeight + tombstoneDiv.scrollHeight + titleDiv.scrollHeight + (dividers.height*2) + (POPUP_INFO_PADDING*10)), popupInfoBound.height);
+	if ((descriptionDiv.scrollHeight + tombstoneDiv.scrollHeight + titleDiv.scrollHeight + (dividers.height*2) + (POPUP_INFO_PADDING*10)) > popupInfoBound.height) {
 		console.log("Description out of bounds!");
 		return true;
 	}
@@ -265,9 +299,7 @@ function checkOverflow() {
 
 //TODO: Create image objects to consolidate all the messy data in the selectImage() function into one var per image
 function selectImage(clickedImage, imgURL, tombstone, description) {
-	// console.log("=>selectImage() called on galleryIndex " + galleryIndex)
 	console.log("=>selectImage called on image:")
-	// console.log(imageData)
 	// Get the HTML fields which contain the image, tombstone, and description
 	var mainImageField = document.getElementById("my-popup-image");
 	var tombstoneField = document.getElementById("my-popup-tombstone");
@@ -278,27 +310,21 @@ function selectImage(clickedImage, imgURL, tombstone, description) {
 	}
 	// Inject the data of the selected image into the HTML fields
 	mainImageField.innerHTML = '<img id = "specific-image" src = "' + imgURL + '">'
-	//console.log(mainImageField.innerHTML);
 	tombstoneField.innerHTML = '<p>' + tombstone + '</p>'
-	// formatTombstone(tombstone, tombstoneField);
-	// Adding the description for non-main-image items
+	// Checking for images without description data to avoid null error
 	if (description == null) {
 		description = "";
 	} else {
 		descriptionField.innerHTML = '<p>' + description + '</p>';
 	}
+	// Resetting defaults for scrollability
 	disabeScroll();
 	disableReadMoreButton();
+	// 
 	if (checkOverflow()) {
 		// Activate Read More button if checkOverflow returns true
 		activateReadMoreButton();
-	}
-	// disableQuoteScroll();
-	// if (description.includes("|")) {
-	// 	descriptionArray = description.split("|\n");
-	// 	descriptionField.innerHTML = '<p>' + descriptionArray[0] + '</p>';
-	// 	enableQuoteScroll(descriptionArray);
-	// } 
+	} 
 }
 
 // function formatTombstone(tombstone, tombstoneField) {

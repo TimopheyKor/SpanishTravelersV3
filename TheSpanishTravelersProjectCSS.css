@@ -1,25 +1,53 @@
-/* Custom CSS for The Spanish Travelers Project V3 */
+/* Custom CSS for The Artist-Travelers Project*/
+@import url("//hello.myfonts.net/count/3d283d");
 @font-face {
-	font-family: "Post Grotesk Black";
-	src: url('./Post/Post/PostGrotesk-Black.otf') format("opentype")
+	font-family: 'Post Grotesk';
+	src: url('https://mam.org/_asset/font/PostGrotesk-Book.eot'); /* IE9 Compat Modes */
+	src: url('https://mam.org/_asset/font/PostGrotesk-Book.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+		 url('https://mam.org/_asset/font/PostGrotesk-Book.woff') format('woff'), /* Modern Browsers */
+		 url('https://mam.org/_asset/font/PostGrotesk-Book.ttf')  format('truetype'); /* Safari, Android, iOS */
+	font-weight: 300;
+  }
+@font-face {
+	font-family: 'Post Grotesk';
+	src: url('https://mam.org/_asset/font/PostGrotesk-Bold.eot'); /* IE9 Compat Modes */
+	src: url('https://mam.org/_asset/font/PostGrotesk-Bold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+		 url('https://mam.org/_asset/font/PostGrotesk-Bold.woff') format('woff'), /* Modern Browsers */
+		 url('https://mam.org/_asset/font/PostGrotesk-Bold.ttf')  format('truetype'); /* Safari, Android, iOS */
+	font-weight: 600;
 }
-
 @font-face {
-	font-family: "Post Grotesk";
-	src: url('./Post/Post/PostGrotesk-Book.otf') format("opentype"),
+	font-family: 'Post Grotesk';
+	src: url('https://mam.org/_asset/font/PostGrotesk-Black.eot'); /* IE9 Compat Modes */
+	src: url('https://mam.org/_asset/font/PostGrotesk-Black.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+		 url('https://mam.org/_asset/font/PostGrotesk-Black.woff') format('woff'), /* Modern Browsers */
+		 url('https://mam.org/_asset/font/PostGrotesk-Black.ttf')  format('truetype'); /* Safari, Android, iOS */
+	font-weight: 800;
 }
-
 @font-face {
-	font-family: "Sagona SemiBold";
-	src: url('./Rene/Rene\ Bieder\ -\ Sagona-SemiBold.otf') format("opentype")
+	font-family: 'Post Grotesk-Italic';
+	src: url('https://mam.org/_asset/font/PostGrotesk-BookItalic.eot'); /* IE9 Compat Modes */
+	src: url('https://mam.org/_asset/font/PostGrotesk-BookItalic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+		 url('https://mam.org/_asset/font/PostGrotesk-BookItalic.woff') format('woff'), /* Modern Browsers */
+		 url('https://mam.org/_asset/font/PostGrotesk-BookItalic.ttf')  format('truetype'); /* Safari, Android, iOS */
+	font-weight: 300;
+}
+@font-face {
+	font-family: "Sagona-SemiBold";
+	src: url('webFonts/SagonaSemiBold/font.woff2') format('woff2'), url('webFonts/SagonaSemiBold/font.woff') format('woff');
+}
+@font-face {
+	font-family: "Sagona-Heavy";
+	src: url('webFonts/SagonaHeavy/font.woff2') format('woff2'), url('webFonts/SagonaHeavy/font.woff') format('woff');
 }
 
 #title h1{
 	position: absolute;
 	left: 60px;
-	top: 20px;
-	z-index: 20;
-	font-family: "Post Grotesk Black", sans-serif;
+	top: 10px;
+	z-index: 1;
+	font-family: "Post Grotesk", sans-serif;
+	font-weight: 800;
 	font-size: 60px;
 	color: white;
 	text-shadow: 0px 0px 25px black;
@@ -29,7 +57,8 @@
 }
 
 h2{
-	font-family: "Sagona SemiBold";
+	font-family: "Sagona-SemiBold", serif;
+	font-weight: 600 !important;
 	font-size: 50px;
 }
 
@@ -41,12 +70,13 @@ h3{
 
 p {
 	font-family: "Post Grotesk", sans-serif;
-	font-weight: lighter;
+	font-weight: 300;
 	font-size: 20px;
 }
 
 b {
-	font-family: "Post Grotesk Black", sans-serif;
+	font-family: "Post Grotesk", sans-serif;
+	font-weight: 600 !important;
 }
 
 hr.solid {
@@ -88,7 +118,6 @@ html{
 	text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
 	transition: 0.2s;
 }
-
 .read-more-button:hover {
 	background-image: linear-gradient(to top, rgba(192, 76, 54, 0.9),  rgba(192, 76, 54, 0.6),  rgba(192, 76, 54, 0.4), rgba(192, 76, 54, 0.2), rgba(192, 76, 54, 0));
 	font-size: 26px;
@@ -96,21 +125,30 @@ html{
 	text-shadow: 4px 4px 10px rgba(0, 0, 0, 1);
 	border: none;
 }
-
 .read-more-button:active {
-	border: none;
+	border: 0px;
 }
+.read-more-button:focus {outline:0;}
 
 .stop-scrolling {
 	height: 100%;
 	overflow: hidden;
 }
 
+.unselectable {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
 #my-popup {
 	position: fixed;
 	height: 0;
 	width: 100%;
-	z-index: 1000;
+	z-index: 0;
 	left: 0;
 	top: 0;
 	background-color: rgba(0, 0, 0, 0.5);
@@ -123,7 +161,28 @@ html{
 	background-color: rgba(0, 0, 0, 0);
 	height: 100vh;
 	width: auto;
+	z-index: 0;
 }
+
+#return-to-map-btn {
+	position: absolute;
+	top: 0px;
+	left: 80px;
+	background-color: rgba(0, 0, 0, 0);
+	font-size: 50px;
+	color: white;
+	opacity: 0.6;
+	z-index: 0;
+}
+#return-to-map-btn:hover {
+	opacity: 1;
+	text-shadow: 4px 4px 10px rgba(0, 0, 0, 1);
+}
+#return-to-map-btn:active {
+	transform: translateY(2px);
+	text-shadow: 2px 2px 10px rgba(0, 0, 0, 1);
+}
+#return-to-map-btn:focus {outline:0;}
 
 #my-popup-info {
 	position: absolute;
@@ -136,6 +195,7 @@ html{
 	right: 80px;
 	height: 55vh;
 	padding: 10px 20px 0px 20px;
+	z-index: 0;
 }
 #my-popup-info::-webkit-scrollbar {
 	display: none;
@@ -153,10 +213,11 @@ html{
 #my-popup-image {
 	position: absolute;
 	background-color: rgba(85, 69, 69, 0);
-	top: 40px;
+	top: 80px;
 	left: 40px;
 	right: 50vw;
 	bottom: 40px;
+	z-index: 0;
 }
 
 #specific-image {
@@ -194,6 +255,7 @@ html{
 	bottom: 80px;
 	overflow: hidden;
 	margin-left: 50px;
+	z-index: 0;
 }
 
 #slide-container {
@@ -204,24 +266,10 @@ html{
 	height: 200px;
 }
 
-#qScrollBtnLeft {
-	position: absolute;
-    left: 20px;
-    top: 320px;
-	display: none;
-}
-
-#qScrollBtnRight {
-	top: 320px;
-    position: absolute;
-	right: 20px;
-	display: none;
-}
-
 #prevBtn {
 	position: absolute;
 	top: 50%;
-	z-index: 10;
+	z-index: 1;
 	left: 0px;
 	font-size: 40px;
 	text-shadow:-5px 10px 15px black;
@@ -235,7 +283,7 @@ html{
 #nextBtn {
 	position: absolute;
 	top: 50%;
-	z-index: 10;
+	z-index: 1;
 	right: 0px;
 	font-size: 40px;
 	text-shadow:-5px 10px 15px black;
@@ -272,7 +320,7 @@ html{
 	color: white;
 	opacity: 0.6;
 	font-size: 70px;
-	z-index: 1000;
+	z-index: 1;
 }
 .close-button:link {
 	color: white;
