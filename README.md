@@ -17,12 +17,10 @@
   **Other**
   - Python (script to read data from xl spreadsheets to create json file)
       
-JSON File in use for mapping as of latest version: testPoints.json
-
-As of the latest version, many images are still local and not included in the Git files. Most local images will eventually be replaced with hosted images.
+JSON File in use for mapping as of latest version: Map_Points_Data.json
+Most images are hosted on MAM's servers.
 
 ## Planned Updates
-  - Update fonts once licensing is figured out
   - Remove local Leaflet files
   - Code cleanup and refactoring
   
