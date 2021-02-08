@@ -228,18 +228,10 @@ function createGallery(popupTitle, imageArray){
 //Functions for making the main image full-screen when it's clicked
 function focusOnImage() {
 	var imageDiv = document.getElementById("my-popup-image");
-	var image = document.getElementById("specific-iamge");
+	var image = document.getElementById("specific-image");
 	if (imageDiv.style.height == "100vh") {
-		imageDiv.style.backgroundColor = "rgba(0, 0, 0, 0)"
-		imageDiv.style.height = "";
-		imageDiv.style.width =  "";
-		imageDiv.style.top = "80px";
-		imageDiv.style.left = "40px";
-		imageDiv.style.right = "50vw";
-		imageDiv.style.bottom = "40px";
-		imageDiv.style.zIndex = "0";
-		image.style.height = "95vh";
-		image.style.width = "auto";
+		console.log("Closing condition activated");
+		closeImage();
 	} else {
 		imageDiv.style.backgroundColor = "rgba(0, 0, 0, 0.9)"
 		imageDiv.style.height = "100vh";
@@ -249,10 +241,41 @@ function focusOnImage() {
 		imageDiv.style.top = "0";
 		imageDiv.style.left = "0";
 		imageDiv.style.zIndex = "1";
+		imageDiv.style.padding = "20px";
+		imageDiv.requestFullscreen();
 		image.style.height = "100%";
-		image.style.width = "100%";
+		image.style.width = "auto";
 	}
 }
+
+function closeImage() {
+	var imageDiv = document.getElementById("my-popup-image");
+	var image = document.getElementById("specific-image");
+	imageDiv.style.backgroundColor = "rgba(0, 0, 0, 0)"
+	imageDiv.style.height = "";
+	imageDiv.style.width =  "";
+	imageDiv.style.top = "80px";
+	imageDiv.style.left = "40px";
+	imageDiv.style.right = "50vw";
+	imageDiv.style.bottom = "40px";
+	imageDiv.style.zIndex = "0";
+	imageDiv.style.padding = "0";
+	document.exitFullscreen();
+	image.style.height = "100%";
+	image.style.width = "100%";
+}
+
+// Making sure that if the user presses escape to close instead of clicking again, it closes
+document.addEventListener("keyup", function(event) {
+	var x = event.code;
+	console.log(x);
+	if (x == "Escape") {
+		console.log("escape pressed");
+		if (document.getElementById("my-popup-image").style.height == "100vh") {
+			closeImage();
+		}
+	}
+})
 
 //Functions controlling a button that appears when text is out of bounds, which enables scrolling when clicked.
 function activateReadMoreButton() {
