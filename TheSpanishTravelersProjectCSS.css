@@ -195,6 +195,7 @@ html{
 	right: 80px;
 	height: 55vh;
 	padding: 10px 20px 0px 20px;
+	padding-bottom: 0px;
 	z-index: 0;
 }
 #my-popup-info::-webkit-scrollbar {

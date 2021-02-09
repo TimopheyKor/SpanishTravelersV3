@@ -338,7 +338,7 @@ function selectImage(clickedImage, imgURL, tombstone, description) {
 	if (description == null) {
 		description = "";
 	} else {
-		descriptionField.innerHTML = '<p>' + description + '</p>';
+		descriptionField.innerHTML = '<p>' + description + '</br></br></p>';
 	}
 	// Resetting defaults for scrollability
 	disabeScroll();
