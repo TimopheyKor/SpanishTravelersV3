@@ -156,7 +156,7 @@ for (var i = 0; i < regions.length; i++) {
 	}, tooltipClass);
 	regionPolygon.on('mouseover', function (e) {
 		this.openTooltip();
-		//setTimeout(() => { this.closeTooltip(); }, 5000);
+		setTimeout(() => { this.closeTooltip(); }, 5000);
 	});
 	regionPolygon.on('mouseout', function (e) {
 		this.closeTooltip();
