@@ -68,9 +68,6 @@ a {
     text-decoration: none;
     color: black;
 }
-a:hover {
-    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
-}
 
 #body-container {
     display: flex;
@@ -113,7 +110,7 @@ a:hover {
     margin: 10px;
 }
 .menu-item:hover {
-    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3)
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3) !important;
 }
 
 #star {
@@ -156,13 +153,13 @@ a:hover {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: left;
     align-items: left;
 }
 .company-logo {
     height: 80px;
     width: auto;
-    margin: 10px;
+    margin-right: 10px;
 }
 
 hr.solid {
