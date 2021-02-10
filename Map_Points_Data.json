@@ -61,8 +61,8 @@
             "geometry": {
                 "type": "Point",
                 "coordinates": [
-                    -3.597596,
-                    37.175759
+                    -3.59721417049811,
+                    37.1755566283216
                 ]
             },
             "properties": {
@@ -76,12 +76,12 @@
                     {
                         "imgURL": "https://mam.org/images/artist-travellers/Colman,%20Washing%20Day,%20Granada/Lewis,%20Alhambra%20from%20the%20Alameda,%20V_A%20E.240-1932.jpg",
                         "tombstone": "<b>John Frederick Lewis</b> (English, 1804\u20131876) \n<i>Part of the Alhambra from the Alameda del Darro</i>, from Lewis\u2019s <i>Sketches and Drawings of the Alhambra, made during a Residence in Granada in the years 1833\u201334</i>, 1835\nLithograph\nVictoria and Albert Museum ",
-                        "description": "Images that featured Granada\u2019s ancient bridges, arches, and buildings along the Darro River were popular subjects for artists of the time, as seen in Coleman\u2019s painting and Lewis\u2019s print."
+                        "description": "Images that featured Granada\u2019s ancient bridges, arches, and buildings along the Darro River were popular subjects for artists of the time, as seen in Colman\u2019s painting and Lewis\u2019s print."
                     },
                     {
                         "imgURL": "https://mam.org/images/artist-travellers/Colman,%20Washing%20Day,%20Granada/View%20up%20the%20Darro.jpg",
                         "tombstone": "Current view of a section of the Darro ",
-                        "description": "The location of Coleman\u2019s scene, the embankment of the Darro River, is now unrecognizable. Already in Coleman\u2019s time, work on a new street, the Calle de Reyes Cat\u00f3licos, had begun to encase the river. The close proximity of the river and the buildings was a trademark of Granada\u2019s early architecture. "
+                        "description": "The location of Colman\u2019s scene, the embankment of the Darro River, is now unrecognizable. Already in Colman\u2019s time, work on a new street, the Calle de Reyes Cat\u00f3licos, had begun to encase the river. The close proximity of the river and the buildings was a trademark of Granada\u2019s early architecture. "
                     }
                 ]
             }
@@ -96,7 +96,7 @@
                 ]
             },
             "properties": {
-                "name": "Granada, The Alhambra",
+                "name": "Granada, la Alhambra",
                 "images": [
                     {
                         "tombstone": "<b>Mariano Fortuny</b> (Spanish, 1838\u20131874)\n<i>The Slaughter of the Abencerrajes</i>, 1870\nOil on canvas\nMuseu Nacional d\u2019Art de Catalunya, purchased 1949\n",
@@ -131,7 +131,7 @@
                 ]
             },
             "properties": {
-                "name": "Seville",
+                "name": "Sevilla",
                 "images": [
                     {
                         "tombstone": "<b>Walter Gay</b> (American, 1856\u20131937)\n<i>Cigarette Girls, Seville</i>, 1895\nOil on canvas\nColby College Museum of Art, Gift of Mr. and Mrs. Bronson Griscom\n",
@@ -166,11 +166,11 @@
                 ]
             },
             "properties": {
-                "name": "Away from the tourist gaze (D\u00e9nia and Ronda)",
+                "name": "D\u00e9nia",
                 "images": [
                     {
                         "tombstone": "<b>Childe Hassam</b> (American, 1859\u20131935)\n<i>Church Procession, Spain</i>, ca. 1883\nOil on canvas\nPrivate collection\n",
-                        "description": "[Our ship] stopped at some of the Spanish ports. . . . to take on freight. So that we would sometimes stay for several days or a week at some of the ports. In that way we went through the Alhambra. . . . I made some watercolors there in the Alhambra. \n\nChilde Hassam interview with DeWitt Lockman, 1927, quoted in <i>Childe Hassam: American Impressionist</i>, Metropolitan Museum of Art, 2004 |\n\nWe walked from Grandia to Denia; the Mediterranean on our left, blue and calm as a lake, and on our right a country rich in the relics of antiquity. Denia takes its name from a temple consecrated to the Great Diana of Ephesus. We noticed on our way a ruined tower, bearing the name of Sertorius.\n\nFrom Denie to Alcoy the country is extremely fertile, appearing indeed to be one immense orchard, with palms here and there, rearing their graceful heads high above the orange and pomegranate trees. The gathering of the carobs was just over, and one saw garlands suspended over the white walls of cottages, which lighted by an African sun, shone with great brilliancy through the rich masses of foliage.\n\nBaron Ch. Davillier, <i>Spain: Social Life and Customs</i>, translated by J. Thomson, 1876                                                   ",
+                        "description": "[Our ship] stopped at some of the Spanish ports. . . . to take on freight. So that we would sometimes stay for several days or a week at some of the ports. In that way we went through the Alhambra. . . . I made some watercolors there in the Alhambra. \n\nChilde Hassam interview with DeWitt Lockman, 1927, quoted in <i>Childe Hassam: American Impressionist</i>, Metropolitan Museum of Art, 2004 \n\nWe walked from Grandia to Denia; the Mediterranean on our left, blue and calm as a lake, and on our right a country rich in the relics of antiquity. Denia takes its name from a temple consecrated to the Great Diana of Ephesus. We noticed on our way a ruined tower, bearing the name of Sertorius.\n\nFrom Denie to Alcoy the country is extremely fertile, appearing indeed to be one immense orchard, with palms here and there, rearing their graceful heads high above the orange and pomegranate trees. The gathering of the carobs was just over, and one saw garlands suspended over the white walls of cottages, which lighted by an African sun, shone with great brilliancy through the rich masses of foliage.\n\nBaron Ch. Davillier, <i>Spain: Social Life and Customs</i>, translated by J. Thomson, 1876                                                   ",
                         "imgURL": "https://mam.org/images/artist-travellers/Hassam,%20Spanish%20Procession/Hassam,%20Church%20Procession,%20ca.%201883,%20Private%20Collection.jpg"
                     },
                     {
@@ -181,7 +181,7 @@
                     {
                         "imgURL": "https://mam.org/images/artist-travellers/Hassam,%20Spanish%20Procession/Hassam,%20Plaza%20de%20la%20Merced,%20Thyssen-Bornemisza,1996.22.jpg",
                         "tombstone": "<b>Childe Hassam</b> (American, 1859\u20131935)\n<i>Plaza de la Merced, Ronda</i>, 1910\nOil on panel\nCarmen Thyssen-Bornemisza Collection, \non loan at the Museo Nacional Thyssen-Bornemisza, Madrid ",
-                        "description": "Hassam\u2019s painting of Ronda demonstrates his continuing quest for locations and scenes hidden from the eyes of a usual tourist. Just as Church Procession, Spain, this painting shows that the artist was more interested in light, color, and movement than in the people. \n"
+                        "description": "Hassam\u2019s painting of Ronda demonstrates his continuing quest for locations and scenes hidden from the eyes of a usual tourist. Just as <i>Church Procession, Spain</i>, this painting shows that the artist was more interested in light, color, and movement than in the monuments or even the people. \n"
                     }
                 ]
             }
@@ -245,7 +245,7 @@
                 "images": [
                     {
                         "tombstone": "<b>David Roberts</b> (Scottish, 1796\u20131864)\n<i>The Fortress of the Alhambra, Granada</i>, 1836\nOil on canvas\nHarvard Art Museums/Fogg Museum, Gift of Richard L. Feigen\n",
-                        "description": "The fact is, that nothing is known of Spain; those who could have appreciated the richness of its architecture have generally gone to Italy or Greece. My portfolio is getting rich, the subjects are not only good, but of a very novel character. I begin to doubt whether I shall be able to paint half of them, they already amount to nearly 100, and I have yet six towns to visit, from which I expect many fine subjects. \n\nLetter dated January 30, 1833 |\n\nGranada is the most beautiful situation that can be imagined. It lies at the foot of a ridge of high mountains, called the Sierra Nevada, or Mountain of Snow. So great is their height that even in the intense heat of summer they are covered in snow. In front of the city stretches an immense plain called the Vega, at least 20 miles in length, highly cultivated, and, although it is still winter with you at home, here the spring is far advanced. So hot is the sun during the day that I cannot stand to sketch for ten minutes together, but am obliged to cross into the shade. On a hill immediately above Granada rises the old Moorish palace of the Alhambra, a great part of which is in the most perfect preservation. Courts, halls, terraces, galleries, and fountains out of number are here, and golden fish still disport themselves in the numerous ponds. The gardens are filled with orange and lemon trees laden with fruit, and even at this early season the flowers are in full bloom and beauty. \n\nLetter dated February 13, 1833\n \nBoth published in: James Ballantine, <i>The Life of David Roberts, R.A.: Compiled from His Journals and Other Sources</i>, 1866                                                         \n",
+                        "description": "The fact is, that nothing is known of Spain; those who could have appreciated the richness of its architecture have generally gone to Italy or Greece. My portfolio is getting rich, the subjects are not only good, but of a very novel character. I begin to doubt whether I shall be able to paint half of them, they already amount to nearly 100, and I have yet six towns to visit, from which I expect many fine subjects. \n\nLetter dated January 30, 1833\n\nGranada is the most beautiful situation that can be imagined. It lies at the foot of a ridge of high mountains, called the Sierra Nevada, or Mountain of Snow. So great is their height that even in the intense heat of summer they are covered in snow. In front of the city stretches an immense plain called the Vega, at least 20 miles in length, highly cultivated, and, although it is still winter with you at home, here the spring is far advanced. So hot is the sun during the day that I cannot stand to sketch for ten minutes together, but am obliged to cross into the shade. On a hill immediately above Granada rises the old Moorish palace of the Alhambra, a great part of which is in the most perfect preservation. Courts, halls, terraces, galleries, and fountains out of number are here, and golden fish still disport themselves in the numerous ponds. The gardens are filled with orange and lemon trees laden with fruit, and even at this early season the flowers are in full bloom and beauty. \n\nLetter dated February 13, 1833\n \nBoth published in: James Ballantine, <i>The Life of David Roberts, R.A.: Compiled from His Journals and Other Sources</i>, 1866                                                         \n",
                         "imgURL": "https://mam.org/images/artist-travellers/Roberts,%20The%20Alhambra/Roberts,%20Fortress%20of%20the%20Alhambra,%20Harvard,%201967.72.jpg"
                     },
                     {
@@ -256,7 +256,7 @@
                     {
                         "imgURL": "https://mam.org/images/artist-travellers/Roberts,%20Remains%20of%20a%20Moorish%20Bridge/Darely,%20Frontispiece%20the%20Alhambra,%20CMA.jpg",
                         "tombstone": "<b>Felix Octavius Carr Darley</b> (American, 1822\u20131883)\n<i>Frontispiece, The Alhambra</i>, from Washington Irving\u2019s <i>The Alhambra</i>, 1851, rev. ed. \nNew York: G. P. Putnam\nLithograph\nChrysler Museum of Art, Jean Outland Chrysler Library ",
-                        "description": "Darley\u2019s view of the Comares Tower from below is one of the most iconic, published, and reproduced. It appears in any number of portfolios and travel guides through the nineteenth century."
+                        "description": "Darley\u2019s view of the Comares Tower from below is one of the most iconic, frequently published, and reproduced. It appears in any number of portfolios and travel guides throughout the nineteenth century."
                     },
                     {
                         "imgURL": "https://mam.org/images/artist-travellers/Roberts,%20The%20Alhambra/Titcomb,%20The%20Alhambra,%20Chrysler,%202018.25.1.jpg",
@@ -281,7 +281,7 @@
                 ]
             },
             "properties": {
-                "name": "Valldemossa (Mallorca)",
+                "name": "Mallorca",
                 "images": [
                     {
                         "tombstone": "<b>John Singer Sargent</b> (American, 1856\u20131925)\n<i>Ilex Wood, Majorca</i>, 1908\nOil on canvas\nCarmen Thyssen-Bornemisza Collection, on loan at the Museo Nacional Thyssen-Bornemisza, Madrid \n",
@@ -341,7 +341,7 @@
                     {
                         "imgURL": "https://mam.org/images/artist-travellers/Sorolla,%20Street%20in%20Granada/Firth,%20Gipsy%20Town,%20Granada,%20V_A,%20E.20815281994.jpg",
                         "tombstone": "<b>Francis Frith</b> (English, 1822\u20131898) \n<i>Gipsy Town. Granada</i>, ca. 1871 \nWhole-plate albumen print from wet collodion glass negative\nVictoria and Albert Museum ",
-                        "description": "Frith\u2019s photograph shows the Albaic\u00edn, the historically Islamic and Romani neighborhood of narrow, winding streets and white carmens, homes surrounded by high walls. Sorolla\u2019s painting <i>Calle de Granada</i> is a more intimate view of the neighborhood and pictures the entrance to the Realejo, Granada\u2019s Jewish quarter."
+                        "description": "Frith\u2019s photograph shows the Albaic\u00edn, the historically Islamic and Romani neighborhood of narrow, winding streets and white <i>carmens</i>, homes surrounded by high walls. Sorolla\u2019s painting <i>Calle de Granada</i> is a more intimate view of the neighborhood and pictures the entrance to the Realejo, Granada\u2019s Jewish quarter."
                     },
                     {
                         "imgURL": "https://mam.org/images/artist-travellers/Sorolla,%20Street%20in%20Granada/View%20of%20the%20Albaicin%20from%20the%20Alhambra.jpg",
@@ -361,7 +361,7 @@
                 ]
             },
             "properties": {
-                "name": "Granada, The Alhambra",
+                "name": "Granada, a Alhambra",
                 "images": [
                     {
                         "tombstone": "<b>Joaqu\u00edn Sorolla y Bastida</b> (Spanish, 1863\u20131923)\n<i>Hall of the Ambassadors, Alhambra, Granada</i>, 1909\nOil on canvas\nThe J. Paul Getty Museum, Los Angeles\n",
@@ -386,7 +386,7 @@
                 ]
             },
             "properties": {
-                "name": "Granada, The Alhambra",
+                "name": "Granada, la Alhambra",
                 "images": [
                     {
                         "tombstone": "<b>Mary Bradish Titcomb</b> (American, 1858\u20131927) \n<i>The Alhambra</i>, ca. 1906 \nOil on canvas\nChrysler Museum of Art, Museum purchase with funds given in memory of Joan Foy French by her daughters Wendy and Christina",
@@ -426,7 +426,7 @@
                 ]
             },
             "properties": {
-                "name": "Cordoba",
+                "name": "C\u00f3rdoba",
                 "images": [
                     {
                         "tombstone": "<b>Edwin Lord Weeks</b> (American, 1838\u20131920)\n<i>Interior of a Mosque at Cordova</i>, ca. 1880\nOil on canvas\nThe Walters Art Museum, Baltimore, Maryland\n",

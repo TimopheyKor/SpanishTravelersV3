@@ -15,25 +15,12 @@ var esriBase;
 // Programming constants
 const MAIN_IMAGE = 0;
 const POPUP_INFO_PADDING = 10;
-// const prevQuote = document.querySelector('#qScrollBtnLeft');
-// const nextQuote = document.querySelector('#qScrollBtnRight');
-
-/* Additional map variables:
-== Lat/Long coordinates of relevant locations ==
-[40.9429, -4.1088]; - Segovia
-[37.39075, -5.99845] - Sevilla
-[37.18, -3.59] - Alhambra
-[39.85880, -4.02543] - Toledo
-[39.85880, -2.6] - At zoom level 7, centers the spain map on a 1920x1080 screen.
-*/
-
-// Set variables for the initial field of view and maximum zoom allowed on the map
-var centerCoordinates = [39.85880, -2.6];
-var initialZoom = 7;
-var maxZoom = 13;
+const INITIAL_ZOOM = 7
+const LOCAL_ZOOM = 15;
+const CENTER = [39.85880, -2.6];
 
 // Set the map variables to their proper values. spainMap appears in the "map" div of the HTML
-spainMap = L.map('map').setView(centerCoordinates, initialZoom);
+spainMap = L.map('map').setView(CENTER, INITIAL_ZOOM);
 esriBase = L.esri.basemapLayer('Imagery');
 esriBase.addTo(spainMap);
 
@@ -115,13 +102,78 @@ var overlayMaps = {
 // Adding a layer control box
 L.control.layers(null, overlayMaps).addTo(spainMap);
 
+// Adding regional indicators around the maps
+var regions = [ 
+	{
+		"name": "Segovia",
+		"coordinates": [40.9429, -4.1088]
+	},
+	{
+		"name": "Toledo",
+		"coordinates": [39.85880, -4.02543]
+	},
+	{
+		"name": "Córdoba",
+		"coordinates": [37.8885, -4.7895]
+	},
+	{
+		"name": "Granada",
+		"coordinates": [37.1773, -3.5986]
+	},
+	{
+		"name": "Sevilla",
+		"coordinates": [37.39075, -5.99845]
+	},
+	{
+		"name": "Dénia",
+		"coordinates": [38.8388, 0.1051]
+	},
+	{
+		"name": "Mallorca",
+		"coordinates": [39.7043301, 2.6290279]
+	}
+]
+
+var tooltipClass = {
+	'className': 'class-tooltip'
+}
+
+for (var i = 0; i < regions.length; i++) {
+	var regionName = regions[i].name;
+	var latlng = regions[i].coordinates;
+	console.log(regionName);
+	console.log(latlng);
+	var regionPolygon = L.circle(latlng, {
+		color: 'rgba(192, 76, 54, 0.8)',
+		weight: 4,
+		fillOpacity: 0,
+		radius: 30000
+	}).addTo(spainMap);
+	regionPolygon.bindTooltip(regionName, {
+		direction: 'top',
+		offset: [0, -20],
+		...tooltipClass
+	}, tooltipClass);
+	regionPolygon.on('mouseover', function (e) {
+		this.openTooltip();
+		//setTimeout(() => { this.closeTooltip(); }, 5000);
+	});
+	regionPolygon.on('mouseout', function (e) {
+		this.closeTooltip();
+	});
+}
+
+function zoomToRegion(center) {
+	spainMap.setView(center, LOCAL_ZOOM);
+}
+
 // Importing a .json file, which contains data on exhibition peicces to be displayed on the site, and using the markerCluster plugin to create interactive points on the map
 $.ajax("https://raw.githubusercontent.com/TimopheyKor/SpanishTravelersV3/master/Map_Points_Data.json", {
 	dataType: "json",
 	success: function(response){
 		// Create custom marker style
 		var geojsonMarkerOptions = {
-			radius: 15,
+			radius: 14,
          	fillColor: "#00d458",
         	color: "#000",
         	weight: 2,
@@ -142,7 +194,12 @@ $.ajax("https://raw.githubusercontent.com/TimopheyKor/SpanishTravelersV3/master/
 				// Check on inputs
 				console.log("Feature: " + feature + " layer: " + layer);
 				layer.on('click', function(e) {
-					openPopup(feature, layer); // Custom helper function to create custom popup
+					if (spainMap.getZoom() < LOCAL_ZOOM) {
+						zoomToRegion([feature.geometry.coordinates[1], feature.geometry.coordinates[0]]);
+						setTimeout(() => { openPopup(feature, layer); }, 2000); // Custom helper function to create custom popup
+					} else {
+						openPopup(feature, layer);
+					}
 				});
 			}
 		});
@@ -349,62 +406,6 @@ function selectImage(clickedImage, imgURL, tombstone, description) {
 		activateReadMoreButton();
 	} 
 }
-
-// function formatTombstone(tombstone, tombstoneField) {
-// 	tombstoneLines = tombstone.split("\n")
-// 	if (tombstoneLines.length < 3) { // Checks if the tombstone isn't a proper multi-line one
-// 		tombstoneField.innerHTML = '<p>' + tombstone + '</p>';
-// 	} else {
-// 		var lineOne = tombstoneLines[0];
-// 		var lineOneSplit = lineOne.split("("); // Splitting the artist's name and their info: ARTIST NAME (INFO)
-// 		var artistName = lineOneSplit[0]; // Extracting the artist's name to bold it
-// 		var artistInfo = lineOneSplit[1];
-// 		var lineTwo = tombstoneLines[1];
-// 		var lineTwoSplit = lineTwo.split(",");
-// 		var imageName = lineTwoSplit[0]; // Extracting the image's name to italicize it
-// 		var lineTwoEnd = ""; // Variable to put the rest of line 2 back together in: this is due to variation in array length
-// 		console.log("lineTwoSplit: ", lineTwoSplit);
-// 		console.log("lineTwoEnd: ");
-// 		var i;
-// 		for (i = 1; i < lineTwoSplit.length; i++) { // Starting at position 1, immediately after the image name
-// 			console.log(i);
-// 			console.log(lineTwoEnd);
-// 			lineTwoEnd = lineTwoEnd + ", " + lineTwoSplit[i];
-// 		}
-// 		console.log("tombstoneLines: ", tombstoneLines);
-// 		console.log("tombstoneRemainder: ");
-// 		var tombstoneRemainder = ""; // Variable to put the rest of the tombstone back into, undoing the first split, minus the first two lines
-// 		for (i = 2; i < tombstoneLines.length; i++) { // Starting at position 2, immediately after line two
-// 			console.log(i);
-// 			console.log(tombstoneRemainder);
-// 			tombstoneRemainder = tombstoneRemainder + "\n" + tombstoneLines[i];
-// 		}
-// 		tombstoneField.innerHTML = '<p><b>' + artistName + '</b> (' + artistInfo + '<br><i>' + imageName + '</i>' + lineTwoEnd + tombstoneRemainder + '</p>';
-// 	}
-// }
-
-// function enableQuoteScroll(descriptionArray) {
-// 	var descriptionField = document.getElementById("my-popup-description");
-// 	nextQuote.style.display = "block";
-// 	nextQuote.onclick = function () {
-// 		console.log("clicked");
-// 		descriptionField.innerHTML = '<p>' + descriptionArray[1] + '</p>'
-// 		nextQuote.style.display = "none";
-// 		prevQuote.style.display = "block";
-// 	};
-// 	prevQuote.onclick = function () {
-// 		descriptionField.innerHTML = '<p>' + descriptionArray[0] + '</p>'
-// 		nextQuote.style.display = "block";
-// 		prevQuote.style.display = "none";
-// 	};
-// }
-
-// function disableQuoteScroll() {
-// 	nextQuote.style.display = "none";
-// 	nextQuote.onclick = "";
-// 	prevQuote.style.display = "none";
-// 	prevQuote.onclick = "";
-// }
 
 // Helper function that gives each image in the gallery the selectImage() function on click
 function  activateImageSelection(galleryImages, imageArray) {

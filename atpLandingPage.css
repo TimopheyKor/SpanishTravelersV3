@@ -109,7 +109,8 @@ a:hover {
     fill: white;
     font-family: "Post Grotesk", sans-serif;
     font-weight: 600 !important;
-    font-size: 30px;
+    font-size: 25px;
+    margin: 10px;
 }
 .menu-item:hover {
     text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3)
@@ -134,7 +135,7 @@ a:hover {
     width: 100%;
     margin: auto;
     font-family: "Post Grotesk", sans-serif;
-    font-size: 30px;
+    font-size: 20px;
     font-weight: 300;
     color: rgb(192, 76, 54);
 }
@@ -150,6 +151,18 @@ a:hover {
 
 #about-div {
     display: none;
+}
+#logo-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: left;
+}
+.company-logo {
+    height: 80px;
+    width: auto;
+    margin: 10px;
 }
 
 hr.solid {
@@ -174,10 +187,16 @@ hr.solid {
         width: 100%;
     }
 }
-@media all and (max-width: 500px) {
+@media all and (max-width: 680px) {
     #menu-container {
-        flex-direction: scroll;
+        flex-direction: column;
         height: auto;
+    }
+    #image-container {
+        flex-basis: 0%;
+    }
+    #content-container {
+        width: 100%;
     }
 }
 @media all and (max-height: 590px) {
