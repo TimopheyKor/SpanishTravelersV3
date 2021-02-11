@@ -18,9 +18,16 @@ const POPUP_INFO_PADDING = 10;
 const INITIAL_ZOOM = 7
 const LOCAL_ZOOM = 15;
 const CENTER = [39.85880, -2.6];
+var corner1 = L.latLng(46.270583, -14.947324),
+corner2 = L.latLng(30.780441, 9.621250),
+maximumBounds = L.latLngBounds(corner1, corner2);
 
 // Set the map variables to their proper values. spainMap appears in the "map" div of the HTML
-spainMap = L.map('map').setView(CENTER, INITIAL_ZOOM);
+spainMap = L.map('map', {
+	center: CENTER,
+	zoom: INITIAL_ZOOM,
+	maxBounds: maximumBounds
+})
 esriBase = L.esri.basemapLayer('Imagery');
 esriBase.addTo(spainMap);
 
