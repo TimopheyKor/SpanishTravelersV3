@@ -61,8 +61,8 @@
             "geometry": {
                 "type": "Point",
                 "coordinates": [
-                    -3.59721417049811,
-                    37.1755566283216
+                    -3.59878090216925,
+                    37.1714091263212
                 ]
             },
             "properties": {
@@ -334,7 +334,7 @@
                 "name": "Granada",
                 "images": [
                     {
-                        "tombstone": "\n<b>Joaqu\u00edn Sorolla y Bastida</b> (Spanish, 1863\u20131923)\n<i>Street in Granada</i>, ca. 1909\nOil on canvas\nMuseo Sorolla\n",
+                        "tombstone": "<b>Joaqu\u00edn Sorolla y Bastida</b> (Spanish, 1863\u20131923)\n<i>Street in Granada</i>, ca. 1909\nOil on canvas\nMuseo Sorolla\n",
                         "description": "We turned up the alley, passed from it into another, and from that into a third, always ascending, without seeing anything extraordinary, although I looked curiously in every direction. Narrow streets, squalid old houses, old women dozing on the doorsteps, mothers carefully inspecting their children\u2019s heads, gaping dogs, crowing cocks, ragged boys running and shouting, and the other things that one always sees in the suburbs; but in those streets nothing more. But gradually, as we ascended, the appearance of the houses and the people began to change; the roofs became lower, the windows fewer, the doors smaller, and the people more ragged. In the middle of every street ran a little stream in a walled gutter in the Moorish style; here and there over the doors and around the windows one saw the remains of arabesques and fragments of columns, and in the corners of the squares fountains and well-curbs of the time of the Moorish dominion. At every hundred steps it seemed as if we had gone back fifty years toward the age of the caliphs. \n\nEdmondo De Amicis, <i>Spain and the Spaniards</i>, 1895                                                                                                                 \n",
                         "imgURL": "https://mam.org/images/artist-travellers/Sorolla,%20Street%20in%20Granada/Sorolla,%20Calle%20de%20Granada,%20Museo%20Sorolla,%202.jpg"
                     },
@@ -361,7 +361,7 @@
                 ]
             },
             "properties": {
-                "name": "Granada, a Alhambra",
+                "name": "Granada, la Alhambra",
                 "images": [
                     {
                         "tombstone": "<b>Joaqu\u00edn Sorolla y Bastida</b> (Spanish, 1863\u20131923)\n<i>Hall of the Ambassadors, Alhambra, Granada</i>, 1909\nOil on canvas\nThe J. Paul Getty Museum, Los Angeles\n",
