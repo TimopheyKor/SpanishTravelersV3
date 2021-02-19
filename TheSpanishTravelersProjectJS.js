@@ -15,8 +15,9 @@ var esriBase;
 // Programming constants
 const MAIN_IMAGE = 0;
 const POPUP_INFO_PADDING = 10;
-const INITIAL_ZOOM = 7
+const INITIAL_ZOOM = 7;
 const LOCAL_ZOOM = 15;
+const MAX_ZOOM = 20;
 const CENTER = [39.85880, -2.6];
 var corner1 = L.latLng(46.270583, -14.947324),
 corner2 = L.latLng(30.780441, 9.621250),
@@ -26,6 +27,8 @@ maximumBounds = L.latLngBounds(corner1, corner2);
 spainMap = L.map('map', {
 	center: CENTER,
 	zoom: INITIAL_ZOOM,
+	minZoom: 5,
+	maxZoom: MAX_ZOOM,
 	maxBounds: maximumBounds
 })
 esriBase = L.esri.basemapLayer('Imagery');
