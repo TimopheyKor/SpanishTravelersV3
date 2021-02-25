@@ -1,0 +1,99 @@
+ <!--
+	This is the third iteration of The Spanish Travelers Project, previously dubbed The Artist Travels, for the Milwaukee Art Museum.
+	The main difference in this version is that it will use GeoJSON data instead of an ArcGIS layer to preload and cluster the points.
+	Additionally, the JS will be structured so that the data is preloaded before appearing on the website,
+	and the UI will be updated with Bootstrap.
+-->
+<!DOCTYPE html>
+<html>
+
+	<head>
+
+		<meta charset="utf-8">
+		<title>The Artist-Travelers Project</title>
+
+		<!-- Section for loading in custom CSS, library/plugin CSS, and library/plugin JS -->
+		<!-- Adding (LOCAL) custom CSS sheet -->
+		<link rel="stylesheet" href="TheSpanishTravelersProjectCSS.css">
+
+		<!-- Adding jQuery -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+		<!-- Adding Bootstrap -->
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+		<!-- Adding Leaflet -->
+		<link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css" integrity="sha512-07I2e+7D8p6he1SIM+1twR5TIrhUQn9+I6yjqD53JQjFiMf8EtC93ty0/5vJTZGF8aAocvHYNEDJajGdNx1IsQ==" crossorigin="">
+		<script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet-src.js" integrity="sha512-WXoSHqw/t26DszhdMhOXOkI7qCiv5QWXhH9R7CgvgZMHz1ImlkVQ3uNsiQKu5wwbbxtPzFXd1hK4tzno2VqhpA==" crossorigin=""></script>
+			<!-- Adding Leaflet-AJAX plugin-->
+		<script src="leaflet-ajax/dist/leaflet.ajax.min.js"></script>
+
+    	<!-- Leaflet markerClusterGroup plugin and CSS-->
+    	<link rel="stylesheet" href="Leaflet.markercluster-1.0.0-beta.2.0/dist/MarkerCluster.css">
+    	<script src="https://unpkg.com/leaflet.markercluster@1.4.1/dist/"></script>
+    	<link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.css">
+    	<link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.Default.css">
+		<script src="Leaflet.markercluster-1.0.0-beta.2.0/dist/leaflet.markercluster-src.js"></script>
+
+		<!-- Adding Esri -->
+		<meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+		<script src="https://unpkg.com/esri-leaflet@2.2.4/dist/esri-leaflet.js"
+    	integrity="sha512-tyPum7h2h36X52O2gz+Pe8z/3l+Y9S1yEUscbVs5r5aEY5dFmP1WWRY/WLLElnFHa+k1JBQZSCDGwEAnm2IxAQ=="
+    	crossorigin=""></script>   
+    	<script src="https://unpkg.com/esri-leaflet-renderers@2.0.6/dist/esri-leaflet-renderers.js"
+    	integrity="sha512-mhpdD3igvv7A/84hueuHzV0NIKFHmp2IvWnY5tIdtAHkHF36yySdstEVI11JZCmSY4TCvOkgEoW+zcV/rUfo0A=="
+    	crossorigin=""></script>
+
+		<!-- Adding Google Fonts -->
+		<link href="https://fonts.googleapis.com/css?family=Lato:400,900i&display=swap" rel="stylesheet">
+
+		<!-- Adding FontAwesome for Icons -->
+		<script src="https://kit.fontawesome.com/d1094010fc.js" crossorigin="anonymous"></script>
+
+	</head>
+
+	<body>
+
+		<!-- Research Bootstrap, categorize HTML parts into <meta>s -->
+
+		<!-- Creating a div for the map and a div for the title -->
+		<div id="map"></div>
+		<div id="title">
+			<h1>The Artist-Travelers Project</h1>
+		</div>
+		<button class="zoom-button" onclick="spainMap.setView(CENTER, INITIAL_ZOOM)">Reset Zoom</button>
+		<div id="my-popup">
+			<div id="my-popup-content">
+				<a class="close-button" href="javascript:void(0)" onclick="closePopup()">
+					 &times  <!-- "x" -->
+				</a>
+				<!-- Put the tombstone divs inside another div, style to Rachel's design -->
+				<div id="return-to-map-btn" class="unselectable" onclick="closePopup()">↢ Return to Map</div>
+				<div id="my-popup-image" onclick="focusOnImage()" onkeydown="keyCode(event)"><!-- Custom HTML content written from JS goes here --></div>
+				<div id="my-popup-info">
+					<div id="my-popup-title"><!-- Custom HTML content written from JS goes here --></div>
+					<hr class="solid">
+					<div id="my-popup-tombstone"><!-- Custom HTML content written from JS goes here --></div>
+					<hr class="solid">
+					<div id="my-popup-description"><!-- Custom HTML content written from JS goes here --></div>
+					<button class="read-more-button" onclick="enableScroll()">⇃ Read More ⇂</button>
+				</div>
+				<div id="my-popup-gallery">
+					<i class="fas fa-arrow-left" id="prevBtn" onclick="slidePrev()"></i>
+					<div id="slide-container">
+						<div class="gallery-slide">
+							<!-- Related images will go in here -->
+						</div>
+					</div>
+					<i class="fas fa-arrow-right" id="nextBtn" onclick="slideNext()"></i>
+				</div>
+			</div>
+		</div>
+
+		<!-- Linking (LOCAL) JS for map creation -->
+		<script type="text/javascript" src="TheSpanishTravelersProjectJS.js"></script>
+
+	</body>
+
+</html>
