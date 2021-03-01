@@ -205,11 +205,12 @@ $.ajax("https://raw.githubusercontent.com/TimopheyKor/SpanishTravelersV3/master/
 				console.log("Feature: " + feature + " layer: " + layer);
 				layer.on('click', function(e) {
 					if (spainMap.getZoom() < LOCAL_ZOOM) {
-						zoomToRegion([feature.geometry.coordinates[1], feature.geometry.coordinates[0]]);
-						setTimeout(() => { openPopup(feature, layer); }, 2000); // Custom helper function to create custom popup
-					} else {
-						openPopup(feature, layer);
+						var pointLoction = L.latLng(feature.geometry.coordinates[1], feature.geometry.coordinates[0]);
+						spainMap.flyTo(pointLoction, LOCAL_ZOOM);
+						//zoomToRegion([feature.geometry.coordinates[1], feature.geometry.coordinates[0]]);
+						//setTimeout(() => { openPopup(feature, layer); }, 2000); // Custom helper function to create custom popup
 					}
+					openPopup(feature, layer);
 				});
 			}
 		});
